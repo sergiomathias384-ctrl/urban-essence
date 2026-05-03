@@ -7,37 +7,90 @@
             background-color: #111;
             color: white;
             font-family: Arial;
-            text-align: center;
             margin: 0;
+            text-align: center;
         }
+
         header {
             background-color: black;
             padding: 20px;
         }
+
         h1 {
             color: gold;
         }
+
+        .productos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #222;
+            padding: 15px;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
         .btn {
             background-color: gold;
             color: black;
-            padding: 12px 25px;
+            padding: 10px;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: green;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            text-decoration: none;
         }
     </style>
 </head>
+
 <body>
 
 <header>
     <h1>🔥 Esencia Urbana</h1>
+    <p>Billeteras y fragancias con estilo urbano</p>
 </header>
 
-<p>Billeteras y fragancias con estilo urbano.</p>
+<h2>🛍️ Productos</h2>
 
-<br>
+<div class="productos">
 
-<a class="btn" href="#">Comprar ahora</a>
+    <div class="card">
+        <img src="https://via.placeholder.com/200" alt="Billetera">
+        <h3>Billetera Premium</h3>
+        <p>S/ 49.90</p>
+        <a class="btn" href="#">Comprar</a>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/200" alt="Perfume">
+        <h3>Colonia Fresh</h3>
+        <p>S/ 59.90</p>
+        <a class="btn" href="#">Comprar</a>
+    </div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/986788414">💬</a>
 
 </body>
 </html>
