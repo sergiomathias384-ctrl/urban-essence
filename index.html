@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Esencia Urbana</title>
+    <title>Urban Essence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
+            margin: 0;
+            font-family: Arial;
             background-color: #111;
             color: white;
-            font-family: Arial;
-            margin: 0;
-            text-align: center;
         }
 
         header {
-            background-color: black;
+            background: black;
             padding: 20px;
+            text-align: center;
         }
 
         h1 {
             color: gold;
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
         }
 
         .productos {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            margin: 30px;
-            flex-wrap: wrap;
         }
 
         .card {
-            background-color: #222;
+            background: #1c1c1c;
+            border-radius: 12px;
+            width: 220px;
             padding: 15px;
-            border-radius: 10px;
-            width: 200px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
         }
 
         .card img {
@@ -41,24 +53,35 @@
         }
 
         .btn {
-            background-color: gold;
+            background: gold;
             color: black;
             padding: 10px;
+            border-radius: 6px;
             text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
+            display: block;
             margin-top: 10px;
+            font-weight: bold;
         }
 
         .whatsapp {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: green;
+            background: #25D366;
             color: white;
             padding: 15px;
             border-radius: 50%;
+            font-size: 20px;
             text-decoration: none;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: black;
+            text-align: center;
+            font-size: 14px;
+            color: gray;
         }
     </style>
 </head>
@@ -67,30 +90,36 @@
 
 <header>
     <h1>🔥 Esencia Urbana</h1>
-    <p>Billeteras y fragancias con estilo urbano</p>
+    <p>Estilo, elegancia y actitud</p>
 </header>
 
-<h2>🛍️ Productos</h2>
+<div class="container">
+    <h2>🛍️ Nuestros Productos</h2>
 
-<div class="productos">
+    <div class="productos">
 
-    <div class="card">
-        <img src="https://via.placeholder.com/200" alt="Billetera">
-        <h3>Billetera Premium</h3>
-        <p>S/ 49.90</p>
-        <a class="btn" href="#">Comprar</a>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="">
+            <h3>Billetera Premium</h3>
+            <p>S/ 49.90</p>
+            <a class="btn" href="https://wa.me/519XXXXXXXX?text=Hola%20quiero%20la%20billetera">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="">
+            <h3>Colonia Fresh</h3>
+            <p>S/ 59.90</p>
+            <a class="btn" href="https://wa.me/519XXXXXXXX?text=Hola%20quiero%20la%20colonia">Comprar</a>
+        </div>
+
     </div>
-
-    <div class="card">
-        <img src="https://via.placeholder.com/200" alt="Perfume">
-        <h3>Colonia Fresh</h3>
-        <p>S/ 59.90</p>
-        <a class="btn" href="#">Comprar</a>
-    </div>
-
 </div>
 
 <a class="whatsapp" href="https://wa.me/986788414">💬</a>
+
+<footer>
+    © 2026 Esencia Urbana - Todos los derechos reservados
+</footer>
 
 </body>
 </html>
