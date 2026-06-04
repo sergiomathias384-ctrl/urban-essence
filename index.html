@@ -1,89 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Urban Essence</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urban Essence</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background-color: #111;
-            color: white;
-        }
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#111;
+    color:white;
+}
 
-        header {
-            background: black;
-            padding: 20px;
-            text-align: center;
-        }
+header{
+    background:black;
+    text-align:center;
+    padding:25px;
+}
 
-        h1 {
-            color: gold;
-            margin: 0;
-        }
+header h1{
+    color:gold;
+    margin:0;
+}
 
-        .container {
-            padding: 20px;
-            text-align: center;
-        }
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
 
-        .productos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+h2{
+    text-align:center;
+}
 
-        .card {
-            background: #1c1c1c;
-            border-radius: 12px;
-            width: 220px;
-            padding: 15px;
-            transition: transform 0.2s;
-        }
+.productos{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+.card{
+    background:#1c1c1c;
+    width:260px;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+}
 
-        .card img {
-            width: 100%;
-            border-radius: 10px;
-        }
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
 
-        .btn {
-            background: gold;
-            color: black;
-            padding: 10px;
-            border-radius: 6px;
-            text-decoration: none;
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-        }
+.precio{
+    font-size:22px;
+    font-weight:bold;
+    color:gold;
+}
 
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white;
-            padding: 15px;
-            border-radius: 50%;
-            font-size: 20px;
-            text-decoration: none;
-        }
+.btn{
+    display:block;
+    background:gold;
+    color:black;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:10px;
+}
 
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: black;
-            text-align: center;
-            font-size: 14px;
-            color: gray;
-        }
-    </style>
+.btn:hover{
+    background:#ffd700;
+}
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    font-size:28px;
+    padding:15px;
+    border-radius:50%;
+}
+
+footer{
+    background:black;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
 </head>
 
 <body>
@@ -94,31 +106,37 @@
 </header>
 
 <div class="container">
+
     <h2>🛍️ Nuestros Productos</h2>
 
     <div class="productos">
 
         <div class="card">
-            <img src="./imagen.png" alt="billetera">
-            <h3>Billetera valencia marron</h3>
-            <p>S/ 125.00</p>
-            <a class="btn" href="https://wa.me/519XXXXXXXX?text=Hola%20quiero%20la%20billetera">Comprar</a>
+            <img src="imagen.png" alt="Billetera Valencia">
+            <h3>Billetera Valencia Marrón</h3>
+            <p class="precio">S/ 125.00</p>
+            <a class="btn" href="https://wa.me/51986788414?text=Hola,%20quiero%20comprar%20la%20Billetera%20Valencia">
+                Comprar
+            </a>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/300" alt="">
+            <img src="https://via.placeholder.com/300x250?text=Colonia+Fresh" alt="Colonia Fresh">
             <h3>Colonia Fresh</h3>
-            <p>S/ 59.90</p>
-            <a class="btn" href="https://wa.me/519XXXXXXXX?text=Hola%20quiero%20la%20colonia">Comprar</a>
+            <p class="precio">S/ 59.90</p>
+            <a class="btn" href="https://wa.me/51986788414?text=Hola,%20quiero%20comprar%20la%20Colonia%20Fresh">
+                Comprar
+            </a>
         </div>
 
     </div>
+
 </div>
 
-<a class="whatsapp" href="https://wa.me/986788414">💬</a>
+<a class="whatsapp" href="https://wa.me/51986788414">💬</a>
 
 <footer>
-    © 2026 Esencia Urbana - Todos los derechos reservados
+    © 2026 Urban Essence - Todos los derechos reservados
 </footer>
 
 </body>
