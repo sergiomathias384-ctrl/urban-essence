@@ -1,143 +1,1080 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Urban Essence</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#111;
-    color:white;
-}
+    <title>Urban Essence | Carteras & Fragancias</title>
 
-header{
-    background:black;
-    text-align:center;
-    padding:25px;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header h1{
-    color:gold;
-    margin:0;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #111;
+            color: white;
+        }
 
-h2{
-    text-align:center;
-}
+        /* =========================
+           HEADER
+        ========================= */
 
-.productos{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:25px;
-}
+        header {
+            background: #050505;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
 
-.card{
-    background:#1c1c1c;
-    width:260px;
-    border-radius:12px;
-    padding:15px;
-    text-align:center;
-}
+        .logo {
+            color: #d4af37;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
 
-.card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:10px;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
 
-.precio{
-    font-size:22px;
-    font-weight:bold;
-    color:gold;
-}
+        nav a:hover {
+            color: #d4af37;
+        }
 
-.btn{
-    display:block;
-    background:gold;
-    color:black;
-    text-decoration:none;
-    padding:12px;
-    border-radius:8px;
-    font-weight:bold;
-    margin-top:10px;
-}
+        .cart-button {
+            background: #d4af37;
+            color: #111;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 20px;
+        }
 
-.btn:hover{
-    background:#ffd700;
-}
+        /* =========================
+           HERO
+        ========================= */
 
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    font-size:28px;
-    padding:15px;
-    border-radius:50%;
-}
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
 
-footer{
-    background:black;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
-</style>
+            background:
+                linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
+                url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            background: #d4af37;
+            color: #111;
+            padding: 14px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            transform: scale(1.05);
+            background: #f0cc52;
+        }
+
+        /* =========================
+           BUSCADOR
+        ========================= */
+
+        .search-container {
+            text-align: center;
+            padding: 35px 20px 10px;
+        }
+
+        #search {
+            width: min(600px, 90%);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #555;
+            background: #222;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #search:focus {
+            border-color: #d4af37;
+        }
+
+        /* =========================
+           PRODUCTOS
+        ========================= */
+
+        .section-title {
+            text-align: center;
+            margin: 55px 0 30px;
+        }
+
+        .section-title h2 {
+            color: #d4af37;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #aaa;
+        }
+
+        .products {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .product {
+            background: #1b1b1b;
+            border: 1px solid #333;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-7px);
+            border-color: #d4af37;
+            box-shadow: 0 10px 30px rgba(212,175,55,.15);
+        }
+
+        .product img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .product p {
+            color: #aaa;
+            font-size: 14px;
+            min-height: 40px;
+        }
+
+        .price {
+            color: #d4af37;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .buy-button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background: #d4af37;
+            color: #111;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .buy-button:hover {
+            background: #f0cc52;
+        }
+
+        /* =========================
+           SOBRE NOSOTROS
+        ========================= */
+
+        .about {
+            width: 90%;
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 40px;
+            background: #191919;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        .about h2 {
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: #ccc;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           CONTACTO
+        ========================= */
+
+        .contact {
+            text-align: center;
+            padding: 60px 20px;
+            background: #080808;
+        }
+
+        .contact h2 {
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            color: #bbb;
+            margin-bottom: 20px;
+        }
+
+        .whatsapp {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* =========================
+           CARRITO
+        ========================= */
+
+        .cart {
+            position: fixed;
+            right: -400px;
+            top: 0;
+            width: 360px;
+            max-width: 90%;
+            height: 100vh;
+            background: #181818;
+            z-index: 2000;
+            padding: 25px;
+            box-shadow: -5px 0 20px rgba(0,0,0,.5);
+            transition: 0.4s;
+            overflow-y: auto;
+        }
+
+        .cart.active {
+            right: 0;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .cart-header h2 {
+            color: #d4af37;
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .cart-item {
+            border-bottom: 1px solid #333;
+            padding: 15px 0;
+        }
+
+        .cart-item h4 {
+            margin-bottom: 7px;
+        }
+
+        .cart-item p {
+            color: #d4af37;
+        }
+
+        .remove-button {
+            margin-top: 8px;
+            background: #333;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-total {
+            margin-top: 25px;
+            font-size: 22px;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .checkout {
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #25D366;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #000;
+            color: #777;
+        }
+
+        footer span {
+            color: #d4af37;
+        }
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .cart-button {
+                margin-left: 0;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .product img {
+                height: 250px;
+            }
+
+            .about {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>🔥 Urban Essence</h1>
-    <p>Estilo, elegancia y actitud</p>
-</header>
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-<div class="container">
+    <header>
 
-    <h2>🛍️ Nuestros Productos</h2>
-
-    <div class="productos">
-
-        <div class="card">
-            <img src="imagen.png" alt="Billetera Valencia">
-            <h3>Billetera Valencia Marrón</h3>
-            <p class="precio">S/ 125.00</p>
-            <a class="btn" href="https://wa.me/51986788414?text=Hola,%20quiero%20comprar%20la%20Billetera%20Valencia">
-                Comprar
-            </a>
+        <div class="logo">
+            URBAN ESSENCE
         </div>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x250?text=Colonia+Fresh" alt="Colonia Fresh">
-            <h3>Colonia Fresh</h3>
-            <p class="precio">S/ 59.90</p>
-            <a class="btn" href="https://wa.me/51986788414?text=Hola,%20quiero%20comprar%20la%20Colonia%20Fresh">
-                Comprar
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#carteras">Carteras</a>
+            <a href="#fragancias">Fragancias</a>
+            <a href="#contacto">Contacto</a>
+
+            <button class="cart-button" onclick="openCart()">
+                🛒 Carrito (<span id="cart-count">0</span>)
+            </button>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <h1>Urban Essence</h1>
+
+            <p>
+                Estilo, elegancia y esencia en un solo lugar.
+            </p>
+
+            <a href="#carteras" class="hero-button">
+                Ver productos
             </a>
+
         </div>
+
+    </section>
+
+
+    <!-- =========================
+         BUSCADOR
+    ========================= -->
+
+    <div class="search-container">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="🔎 Buscar un producto..."
+            onkeyup="searchProducts()"
+        >
 
     </div>
 
-</div>
 
-<a class="whatsapp" href="https://wa.me/51986788414">💬</a>
+    <!-- =========================
+         CARTERAS
+    ========================= -->
 
-<footer>
-    © 2026 Urban Essence - Todos los derechos reservados
-</footer>
+    <section id="carteras">
+
+        <div class="section-title">
+
+            <h2>Carteras</h2>
+
+            <p>
+                Diseños modernos para complementar tu estilo.
+            </p>
+
+        </div>
+
+        <div class="products">
+
+
+            <!-- PRODUCTO 1 -->
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80"
+                    alt="Cartera elegante"
+                >
+
+                <div class="product-info">
+
+                    <h3>Cartera Elegance</h3>
+
+                    <p>
+                        Diseño elegante y moderno.
+                    </p>
+
+                    <div class="price">
+                        S/ 89.90
+                    </div>
+
+                    <button
+                        class="buy-button"
+                        onclick="addToCart('Cartera Elegance', 89.90)"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTO 2 -->
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=700&q=80"
+                    alt="Cartera negra"
+                >
+
+                <div class="product-info">
+
+                    <h3>Cartera Black</h3>
+
+                    <p>
+                        Estilo clásico para cualquier ocasión.
+                    </p>
+
+                    <div class="price">
+                        S/ 99.90
+                    </div>
+
+                    <button
+                        class="buy-button"
+                        onclick="addToCart('Cartera Black', 99.90)"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTO 3 -->
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=700&q=80"
+                    alt="Cartera de moda"
+                >
+
+                <div class="product-info">
+
+                    <h3>Cartera Urban</h3>
+
+                    <p>
+                        Diseño urbano y sofisticado.
+                    </p>
+
+                    <div class="price">
+                        S/ 109.90
+                    </div>
+
+                    <button
+                        class="buy-button"
+                        onclick="addToCart('Cartera Urban', 109.90)"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FRAGANCIAS
+    ========================= -->
+
+    <section id="fragancias">
+
+        <div class="section-title">
+
+            <h2>Fragancias</h2>
+
+            <p>
+                Aromas que dejan huella.
+            </p>
+
+        </div>
+
+        <div class="products">
+
+
+            <!-- FRAGANCIA 1 -->
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80"
+                    alt="Perfume"
+                >
+
+                <div class="product-info">
+
+                    <h3>Urban Night</h3>
+
+                    <p>
+                        Fragancia elegante para la noche.
+                    </p>
+
+                    <div class="price">
+                        S/ 129.90
+                    </div>
+
+                    <button
+                        class="buy-button"
+                        onclick="addToCart('Urban Night', 129.90)"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- FRAGANCIA 2 -->
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=80"
+                    alt="Fragancia elegante"
+                >
+
+                <div class="product-info">
+
+                    <h3>Golden Essence</h3>
+
+                    <p>
+                        Aroma sofisticado y moderno.
+                    </p>
+
+                    <div class="price">
+                        S/ 149.90
+                    </div>
+
+                    <button
+                        class="buy-button"
+                        onclick="addToCart('Golden Essence', 149.90)"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- FRAGANCIA 3 -->
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=700&q=80"
+                    alt="Perfume premium"
+                >
+
+                <div class="product-info">
+
+                    <h3>Essence Premium</h3>
+
+                    <p>
+                        Una fragancia para destacar.
+                    </p>
+
+                    <div class="price">
+                        S/ 169.90
+                    </div>
+
+                    <button
+                        class="buy-button"
+                        onclick="addToCart('Essence Premium', 169.90)"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOBRE NOSOTROS
+    ========================= -->
+
+    <section class="about">
+
+        <h2>Sobre Urban Essence</h2>
+
+        <p>
+            En Urban Essence buscamos ofrecer productos que combinen
+            elegancia, estilo y personalidad. Descubre nuestra selección
+            de carteras y fragancias pensadas para complementar tu estilo.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================= -->
+
+    <section class="contact" id="contacto">
+
+        <h2>¿Tienes alguna pregunta?</h2>
+
+        <p>
+            Escríbenos por WhatsApp y te ayudaremos con tu pedido.
+        </p>
+
+        <!-- CAMBIA EL NUMERO DE ABAJO POR TU NUMERO -->
+
+        <a
+            class="whatsapp"
+            href="https://wa.me/51999999999"
+            target="_blank"
+        >
+            💬 Contactar por WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         CARRITO
+    ========================= -->
+
+    <div class="cart" id="cart">
+
+        <div class="cart-header">
+
+            <h2>Tu carrito</h2>
+
+            <button
+                class="close-cart"
+                onclick="closeCart()"
+            >
+                ✕
+            </button>
+
+        </div>
+
+        <div id="cart-items">
+            <p style="color:#aaa;">
+                Tu carrito está vacío.
+            </p>
+        </div>
+
+        <div class="cart-total">
+
+            Total:
+            S/ <span id="cart-total">0.00</span>
+
+        </div>
+
+        <button
+            class="checkout"
+            onclick="checkoutWhatsApp()"
+        >
+            Comprar por WhatsApp
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026
+        <span>Urban Essence</span>.
+        Todos los derechos reservados.
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        let cart = [];
+
+
+        /* =========================
+           AGREGAR PRODUCTO
+        ========================= */
+
+        function addToCart(name, price) {
+
+            cart.push({
+                name: name,
+                price: price
+            });
+
+            updateCart();
+
+            openCart();
+        }
+
+
+        /* =========================
+           ACTUALIZAR CARRITO
+        ========================= */
+
+        function updateCart() {
+
+            const cartItems =
+                document.getElementById("cart-items");
+
+            const cartCount =
+                document.getElementById("cart-count");
+
+            const cartTotal =
+                document.getElementById("cart-total");
+
+
+            cartCount.textContent = cart.length;
+
+
+            if (cart.length === 0) {
+
+                cartItems.innerHTML =
+                    '<p style="color:#aaa;">Tu carrito está vacío.</p>';
+
+                cartTotal.textContent = "0.00";
+
+                return;
+            }
+
+
+            let total = 0;
+
+            cartItems.innerHTML = "";
+
+
+            cart.forEach((item, index) => {
+
+                total += item.price;
+
+
+                const div =
+                    document.createElement("div");
+
+                div.className = "cart-item";
+
+
+                div.innerHTML = `
+
+                    <h4>${item.name}</h4>
+
+                    <p>
+                        S/ ${item.price.toFixed(2)}
+                    </p>
+
+                    <button
+                        class="remove-button"
+                        onclick="removeFromCart(${index})"
+                    >
+                        Eliminar
+                    </button>
+
+                `;
+
+
+                cartItems.appendChild(div);
+
+            });
+
+
+            cartTotal.textContent =
+                total.toFixed(2);
+        }
+
+
+        /* =========================
+           ELIMINAR PRODUCTO
+        ========================= */
+
+        function removeFromCart(index) {
+
+            cart.splice(index, 1);
+
+            updateCart();
+        }
+
+
+        /* =========================
+           ABRIR CARRITO
+        ========================= */
+
+        function openCart() {
+
+            document
+                .getElementById("cart")
+                .classList.add("active");
+        }
+
+
+        /* =========================
+           CERRAR CARRITO
+        ========================= */
+
+        function closeCart() {
+
+            document
+                .getElementById("cart")
+                .classList.remove("active");
+        }
+
+
+        /* =========================
+           BUSCADOR
+        ========================= */
+
+        function searchProducts() {
+
+            const search =
+                document
+                .getElementById("search")
+                .value
+                .toLowerCase();
+
+
+            const products =
+                document.querySelectorAll(".product");
+
+
+            products.forEach(product => {
+
+                const text =
+                    product.innerText.toLowerCase();
+
+
+                if (text.includes(search)) {
+
+                    product.style.display = "";
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+        /* =========================
+           COMPRA POR WHATSAPP
+        ========================= */
+
+        function checkoutWhatsApp() {
+
+            if (cart.length === 0) {
+
+                alert("Tu carrito está vacío.");
+
+                return;
+            }
+
+
+            let message =
+                "Hola, quiero realizar este pedido en Urban Essence:%0A%0A";
+
+
+            let total = 0;
+
+
+            cart.forEach(item => {
+
+                message +=
+                    "• " +
+                    item.name +
+                    " - S/ " +
+                    item.price.toFixed(2) +
+                    "%0A";
+
+                total += item.price;
+
+            });
+
+
+            message +=
+                "%0ATotal: S/ " +
+                total.toFixed(2);
+
+
+            /*
+                IMPORTANTE:
+
+                Cambia 51999999999 por tu número
+                de WhatsApp.
+
+                Ejemplo:
+
+                51987654321
+            */
+
+
+            const phone =
+                986788414
+
+
+            const url =
+                "https://wa.me/" +
+                phone +
+                "?text=" +
+                message;
+
+
+            window.open(url, "_blank");
+
+        }
+
+    </script>
 
 </body>
 </html>
+```
+
