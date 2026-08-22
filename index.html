@@ -13,14 +13,16 @@ Urban Essence | Artículos que elevan tu personalidad
 </title>
 
 <meta name="description"
-content="Urban Essence - Accesorios y artículos que elevan tu personalidad. Envíos a todo el Perú.">
+content="Urban Essence - Artículos y accesorios que elevan tu personalidad. Envíos a todo el Perú.">
+
+<meta name="theme-color" content="#080808">
 
 <style>
 
-/* =====================================================
+/* =========================================================
    URBAN ESSENCE
-   VERSIÓN FINAL
-===================================================== */
+   VERSIÓN FINAL COMPLETA
+========================================================= */
 
 *{
     margin:0;
@@ -44,20 +46,30 @@ body{
     color:#fff;
 
     transition:
-    background .3s,
-    color .3s;
+    background .3s ease,
+    color .3s ease;
+
 }
 
 button,
 input,
 select{
+
     font-family:inherit;
+
+}
+
+button,
+a{
+
+    -webkit-tap-highlight-color:transparent;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    VARIABLES
-===================================================== */
+========================================================= */
 
 :root{
 
@@ -69,34 +81,38 @@ select{
 
     --card:#151515;
 
-    --card2:#1c1c1c;
+    --card2:#1d1d1d;
 
     --border:#2c2c2c;
 
-    --text:#ffffff;
+    --text:#fff;
 
     --muted:#999;
+
+    --success:#55dc78;
+
+    --danger:#ff5555;
 
 }
 
 
-/* =====================================================
+/* =========================================================
    MODO CLARO
-===================================================== */
+========================================================= */
 
 body.light{
 
     --dark:#f5f5f5;
 
-    --card:#ffffff;
+    --card:#fff;
 
-    --card2:#eeeeee;
+    --card2:#eee;
 
-    --border:#d7d7d7;
+    --border:#d8d8d8;
 
-    --text:#111111;
+    --text:#111;
 
-    --muted:#666666;
+    --muted:#666;
 
     background:#f5f5f5;
 
@@ -106,13 +122,15 @@ body.light{
 
 body.light header{
 
-    background:rgba(255,255,255,.96);
+    background:rgba(255,255,255,.97);
 
-    border-bottom:1px solid #ddd;
+    border-color:#ddd;
 
 }
 
-body.light nav a{
+body.light .icon-button{
+
+    background:#eee;
 
     color:#111;
 
@@ -125,7 +143,7 @@ body.light .hero{
         circle at center,
         #fff8dc 0%,
         #f4f4f4 50%,
-        #eaeaea 100%
+        #e8e8e8 100%
     );
 
 }
@@ -136,8 +154,10 @@ body.light .hero p{
 
 }
 
-body.light .info-card,
 body.light .product,
+body.light .info-card,
+body.light .about-box,
+body.light .shipping-card,
 body.light .contact-box,
 body.light .collection{
 
@@ -147,40 +167,14 @@ body.light .collection{
 
 }
 
-body.light #searchInput{
+body.light #searchInput,
+body.light #sortProducts{
 
     background:#fff;
 
     color:#111;
 
     border-color:#ccc;
-
-}
-
-body.light .filter-button{
-
-    background:#fff;
-
-    color:#111;
-
-    border-color:#ccc;
-
-}
-
-body.light .filter-button:hover,
-body.light .filter-button.active{
-
-    background:var(--gold);
-
-    color:#000;
-
-}
-
-body.light .icon-button{
-
-    background:#eee;
-
-    color:#111;
 
 }
 
@@ -198,11 +192,35 @@ body.light .side-link{
 
 }
 
+body.light .side-filter{
+
+    background:#f5f5f5;
+
+    color:#222;
+
+}
+
 body.light .cart{
 
     background:#fff;
 
     color:#111;
+
+}
+
+body.light .checkout input{
+
+    background:#f5f5f5;
+
+    color:#111;
+
+    border-color:#ccc;
+
+}
+
+body.light .shipping-only{
+
+    background:#f5f5f5;
 
 }
 
@@ -214,12 +232,9 @@ body.light .modal-content{
 
 }
 
-body.light .checkout input,
-body.light .checkout select{
+body.light .modal-info p{
 
-    background:#f4f4f4;
-
-    color:#111;
+    color:#666;
 
 }
 
@@ -227,14 +242,12 @@ body.light footer{
 
     background:#111;
 
-    color:#fff;
-
 }
 
 
-/* =====================================================
+/* =========================================================
    HEADER
-===================================================== */
+========================================================= */
 
 header{
 
@@ -250,8 +263,8 @@ header{
     border-bottom:
     1px solid #292929;
 
-    backdrop-filter:
-    blur(10px);
+    backdrop-filter:blur(12px);
+
 }
 
 .navbar{
@@ -262,8 +275,7 @@ header{
 
     margin:auto;
 
-    padding:
-    12px 22px;
+    padding:12px 22px;
 
     display:flex;
 
@@ -272,6 +284,7 @@ header{
     justify-content:space-between;
 
     gap:15px;
+
 }
 
 .logo{
@@ -283,6 +296,9 @@ header{
     font-weight:bold;
 
     letter-spacing:2px;
+
+    text-decoration:none;
+
 }
 
 .header-right{
@@ -292,6 +308,7 @@ header{
     align-items:center;
 
     gap:10px;
+
 }
 
 .icon-button{
@@ -315,6 +332,7 @@ header{
     cursor:pointer;
 
     transition:.3s;
+
 }
 
 .icon-button:hover{
@@ -324,6 +342,7 @@ header{
     color:#000;
 
     transform:translateY(-2px);
+
 }
 
 .cart-count{
@@ -353,17 +372,13 @@ header{
     font-size:11px;
 
     font-weight:bold;
+
 }
 
 
-/* =====================================================
-   MENU LATERAL
-===================================================== */
-
-.menu-button{
-
-    font-size:22px;
-}
+/* =========================================================
+   MENÚ LATERAL
+========================================================= */
 
 .side-overlay{
 
@@ -371,7 +386,7 @@ header{
 
     inset:0;
 
-    background:rgba(0,0,0,.65);
+    background:rgba(0,0,0,.7);
 
     z-index:2500;
 
@@ -380,6 +395,7 @@ header{
     visibility:hidden;
 
     transition:.3s;
+
 }
 
 .side-overlay.show{
@@ -387,6 +403,7 @@ header{
     opacity:1;
 
     visibility:visible;
+
 }
 
 .side-menu{
@@ -395,9 +412,9 @@ header{
 
     top:0;
 
-    left:-340px;
+    left:-350px;
 
-    width:min(330px,88%);
+    width:min(340px,90%);
 
     height:100vh;
 
@@ -410,14 +427,16 @@ header{
     padding:25px;
 
     box-shadow:
-    10px 0 35px rgba(0,0,0,.5);
+    10px 0 35px rgba(0,0,0,.6);
 
     transition:.35s;
+
 }
 
 .side-menu.show{
 
     left:0;
+
 }
 
 .side-header{
@@ -432,7 +451,9 @@ header{
 
     margin-bottom:15px;
 
-    border-bottom:1px solid var(--border);
+    border-bottom:
+    1px solid var(--border);
+
 }
 
 .side-header h2{
@@ -440,6 +461,7 @@ header{
     color:var(--gold);
 
     font-size:22px;
+
 }
 
 .side-close{
@@ -453,6 +475,7 @@ header{
     font-size:30px;
 
     cursor:pointer;
+
 }
 
 .side-links{
@@ -462,6 +485,7 @@ header{
     flex-direction:column;
 
     gap:5px;
+
 }
 
 .side-link{
@@ -477,6 +501,7 @@ header{
     text-decoration:none;
 
     transition:.2s;
+
 }
 
 .side-link:hover{
@@ -484,6 +509,7 @@ header{
     background:var(--gold);
 
     color:#000;
+
 }
 
 .side-section-title{
@@ -499,6 +525,7 @@ header{
     text-transform:uppercase;
 
     letter-spacing:1px;
+
 }
 
 .side-filter{
@@ -522,6 +549,7 @@ header{
     cursor:pointer;
 
     transition:.2s;
+
 }
 
 .side-filter:hover,
@@ -532,12 +560,13 @@ header{
     color:#000;
 
     border-color:var(--gold);
+
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
 .hero{
 
@@ -560,11 +589,13 @@ header{
         #090909 52%,
         #000 100%
     );
+
 }
 
 .hero-content{
 
     max-width:900px;
+
 }
 
 .hero h1{
@@ -578,6 +609,7 @@ header{
     clamp(3px,1vw,7px);
 
     margin-bottom:18px;
+
 }
 
 .hero h2{
@@ -586,6 +618,7 @@ header{
     clamp(22px,4vw,31px);
 
     margin-bottom:18px;
+
 }
 
 .hero p{
@@ -600,14 +633,14 @@ header{
     font-size:18px;
 
     line-height:1.7;
+
 }
 
 .gold-button{
 
     display:inline-block;
 
-    padding:
-    14px 26px;
+    padding:14px 26px;
 
     border:none;
 
@@ -624,20 +657,21 @@ header{
     cursor:pointer;
 
     transition:.3s;
+
 }
 
 .gold-button:hover{
 
     background:var(--gold-light);
 
-    transform:
-    translateY(-3px);
+    transform:translateY(-3px);
+
 }
 
 
-/* =====================================================
+/* =========================================================
    INFO
-===================================================== */
+========================================================= */
 
 .info-grid{
 
@@ -645,8 +679,7 @@ header{
 
     margin:45px auto;
 
-    padding:
-    0 20px;
+    padding:0 20px;
 
     display:grid;
 
@@ -654,14 +687,14 @@ header{
     repeat(3,1fr);
 
     gap:20px;
+
 }
 
 .info-card{
 
     background:var(--card);
 
-    border:
-    1px solid var(--border);
+    border:1px solid var(--border);
 
     border-radius:17px;
 
@@ -670,27 +703,29 @@ header{
     text-align:center;
 
     transition:.3s;
+
 }
 
 .info-card:hover{
 
-    transform:
-    translateY(-5px);
+    transform:translateY(-5px);
 
     border-color:var(--gold);
+
 }
 
 .info-icon{
 
     font-size:35px;
+
 }
 
 .info-card h3{
 
-    margin:
-    12px 0;
+    margin:12px 0;
 
     color:var(--gold);
+
 }
 
 .info-card p{
@@ -698,17 +733,18 @@ header{
     color:var(--muted);
 
     line-height:1.6;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    SECCIONES
-===================================================== */
+========================================================= */
 
 section{
 
-    padding:
-    75px 20px;
+    padding:75px 20px;
+
 }
 
 .section-title{
@@ -716,6 +752,7 @@ section{
     text-align:center;
 
     margin-bottom:40px;
+
 }
 
 .section-title h2{
@@ -726,35 +763,42 @@ section{
     clamp(30px,5vw,38px);
 
     margin-bottom:10px;
+
 }
 
 .section-title p{
 
     color:var(--muted);
+
 }
 
 
-/* =====================================================
-   BUSCADOR
-===================================================== */
+/* =========================================================
+   BUSCADOR + ORDEN
+========================================================= */
 
-.search-area{
+.search-tools{
 
-    max-width:800px;
+    max-width:1000px;
 
-    margin:
-    0 auto 35px;
+    margin:0 auto 35px;
+
+    display:grid;
+
+    grid-template-columns:1fr 220px;
+
+    gap:12px;
+
 }
 
-#searchInput{
+#searchInput,
+#sortProducts{
 
     width:100%;
 
-    padding:
-    16px 22px;
+    padding:16px 20px;
 
-    border:
-    1px solid #444;
+    border:1px solid #444;
 
     border-radius:30px;
 
@@ -762,25 +806,29 @@ section{
 
     background:#151515;
 
-    color:white;
+    color:#fff;
 
-    font-size:16px;
+    font-size:15px;
 
-    transition:.3s;
 }
 
-#searchInput:focus{
+#sortProducts{
+
+    cursor:pointer;
+
+}
+
+#searchInput:focus,
+#sortProducts:focus{
 
     border-color:var(--gold);
 
-    box-shadow:
-    0 0 0 3px rgba(212,175,55,.1);
 }
 
 
-/* =====================================================
+/* =========================================================
    PRODUCTOS
-===================================================== */
+========================================================= */
 
 .products{
 
@@ -794,6 +842,7 @@ section{
     repeat(4,1fr);
 
     gap:25px;
+
 }
 
 .product{
@@ -802,23 +851,23 @@ section{
 
     background:var(--card);
 
-    border:
-    1px solid var(--border);
+    border:1px solid var(--border);
 
     border-radius:18px;
 
     transition:.3s;
+
 }
 
 .product:hover{
 
-    transform:
-    translateY(-6px);
+    transform:translateY(-6px);
 
     border-color:var(--gold);
 
     box-shadow:
     0 12px 30px rgba(0,0,0,.25);
+
 }
 
 .product-image{
@@ -832,6 +881,7 @@ section{
     overflow:hidden;
 
     background:#222;
+
 }
 
 .product-image img{
@@ -843,13 +893,14 @@ section{
     object-fit:cover;
 
     transition:.4s;
+
 }
 
 .product:hover
 .product-image img{
 
-    transform:
-    scale(1.05);
+    transform:scale(1.05);
+
 }
 
 .badge{
@@ -860,8 +911,7 @@ section{
 
     left:12px;
 
-    padding:
-    6px 10px;
+    padding:6px 10px;
 
     border-radius:15px;
 
@@ -872,6 +922,7 @@ section{
     font-size:11px;
 
     font-weight:bold;
+
 }
 
 .favorite{
@@ -890,24 +941,26 @@ section{
 
     border-radius:50%;
 
-    background:
-    rgba(0,0,0,.75);
+    background:rgba(0,0,0,.75);
 
     color:#fff;
 
     font-size:20px;
 
     cursor:pointer;
+
 }
 
 .favorite.active{
 
     color:#ff4f70;
+
 }
 
 .product-info{
 
     padding:18px;
+
 }
 
 .product-category{
@@ -919,6 +972,7 @@ section{
     text-transform:uppercase;
 
     margin-bottom:7px;
+
 }
 
 .product-name{
@@ -930,6 +984,7 @@ section{
     font-weight:bold;
 
     margin-bottom:10px;
+
 }
 
 .price{
@@ -939,6 +994,7 @@ section{
     font-size:21px;
 
     font-weight:bold;
+
 }
 
 .old-price{
@@ -950,25 +1006,29 @@ section{
     font-size:14px;
 
     margin-right:7px;
+
 }
 
 .stock{
 
     margin-top:8px;
 
-    color:#55dc78;
+    color:var(--success);
 
     font-size:12px;
+
 }
 
 .stock.low{
 
     color:#ffd447;
+
 }
 
 .stock.out{
 
-    color:#ff5555;
+    color:var(--danger);
+
 }
 
 .product-buttons{
@@ -981,14 +1041,14 @@ section{
     gap:8px;
 
     margin-top:15px;
+
 }
 
 .product-buttons button{
 
     padding:10px 5px;
 
-    border:
-    1px solid var(--gold);
+    border:1px solid var(--gold);
 
     border-radius:8px;
 
@@ -999,6 +1059,7 @@ section{
     cursor:pointer;
 
     transition:.2s;
+
 }
 
 .product-buttons button:hover{
@@ -1006,6 +1067,7 @@ section{
     background:var(--gold);
 
     color:#000;
+
 }
 
 .product-buttons .buy{
@@ -1013,6 +1075,7 @@ section{
     background:var(--gold);
 
     color:#000;
+
 }
 
 .product-buttons button:disabled{
@@ -1020,12 +1083,25 @@ section{
     opacity:.4;
 
     cursor:not-allowed;
+
+}
+
+.empty-products{
+
+    grid-column:1/-1;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    color:#888;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    COLECCIONES
-===================================================== */
+========================================================= */
 
 .collections{
 
@@ -1039,6 +1115,7 @@ section{
     repeat(2,1fr);
 
     gap:25px;
+
 }
 
 .collection{
@@ -1060,8 +1137,8 @@ section{
         #090909
     );
 
-    border:
-    1px solid var(--border);
+    border:1px solid var(--border);
+
 }
 
 .collection h3{
@@ -1069,33 +1146,34 @@ section{
     font-size:30px;
 
     margin-bottom:15px;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    SOBRE NOSOTROS
-===================================================== */
+========================================================= */
 
 .about{
 
     max-width:950px;
 
     margin:auto;
+
 }
 
 .about-box{
 
     background:var(--card);
 
-    border:
-    1px solid var(--border);
+    border:1px solid var(--border);
 
     border-radius:20px;
 
-    padding:
-    40px 30px;
+    padding:40px 30px;
 
     text-align:center;
+
 }
 
 .about-box h3{
@@ -1105,6 +1183,7 @@ section{
     font-size:25px;
 
     margin-bottom:18px;
+
 }
 
 .about-box p{
@@ -1114,12 +1193,13 @@ section{
     line-height:1.8;
 
     margin-bottom:15px;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    ENVÍOS
-===================================================== */
+========================================================= */
 
 .shipping{
 
@@ -1133,28 +1213,29 @@ section{
     repeat(3,1fr);
 
     gap:20px;
+
 }
 
 .shipping-card{
 
     background:var(--card);
 
-    border:
-    1px solid var(--border);
+    border:1px solid var(--border);
 
     border-radius:16px;
 
     padding:25px;
 
     text-align:center;
+
 }
 
 .shipping-card h3{
 
     color:var(--gold);
 
-    margin:
-    12px 0;
+    margin:12px 0;
+
 }
 
 .shipping-card p{
@@ -1162,32 +1243,34 @@ section{
     color:var(--muted);
 
     line-height:1.6;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    CONTACTO
-===================================================== */
+========================================================= */
 
 .contact{
 
     max-width:900px;
 
     margin:auto;
+
 }
 
 .contact-box{
 
     background:var(--card);
 
-    border:
-    1px solid var(--border);
+    border:1px solid var(--border);
 
     border-radius:20px;
 
     padding:40px 20px;
 
     text-align:center;
+
 }
 
 .email{
@@ -1196,8 +1279,8 @@ section{
 
     font-size:19px;
 
-    margin:
-    20px 0;
+    margin:20px 0;
+
 }
 
 .contact-buttons{
@@ -1209,12 +1292,13 @@ section{
     gap:12px;
 
     flex-wrap:wrap;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    CARRITO
-===================================================== */
+========================================================= */
 
 .cart-overlay{
 
@@ -1222,17 +1306,18 @@ section{
 
     inset:0;
 
-    background:
-    rgba(0,0,0,.75);
+    background:rgba(0,0,0,.75);
 
     display:none;
 
     z-index:4000;
+
 }
 
 .cart-overlay.show{
 
     display:block;
+
 }
 
 .cart{
@@ -1255,8 +1340,8 @@ section{
 
     color:#fff;
 
-    border-left:
-    1px solid #333;
+    border-left:1px solid #333;
+
 }
 
 .cart-header{
@@ -1268,11 +1353,13 @@ section{
     align-items:center;
 
     margin-bottom:20px;
+
 }
 
 .cart-header h2{
 
     color:var(--gold);
+
 }
 
 .close{
@@ -1286,6 +1373,7 @@ section{
     font-size:28px;
 
     cursor:pointer;
+
 }
 
 .cart-item{
@@ -1301,8 +1389,8 @@ section{
 
     padding:15px 0;
 
-    border-bottom:
-    1px solid #292929;
+    border-bottom:1px solid #292929;
+
 }
 
 .cart-item img{
@@ -1314,11 +1402,13 @@ section{
     object-fit:cover;
 
     border-radius:8px;
+
 }
 
 .cart-item h4{
 
     font-size:14px;
+
 }
 
 .cart-price{
@@ -1326,6 +1416,7 @@ section{
     color:var(--gold);
 
     margin-top:5px;
+
 }
 
 .quantity{
@@ -1337,6 +1428,7 @@ section{
     gap:7px;
 
     margin-top:8px;
+
 }
 
 .quantity button{
@@ -1354,6 +1446,7 @@ section{
     color:#fff;
 
     cursor:pointer;
+
 }
 
 .remove{
@@ -1365,6 +1458,7 @@ section{
     color:#ff5555;
 
     cursor:pointer;
+
 }
 
 .cart-total{
@@ -1373,8 +1467,8 @@ section{
 
     padding-top:20px;
 
-    border-top:
-    1px solid #333;
+    border-top:1px solid #333;
+
 }
 
 .total-row{
@@ -1386,21 +1480,60 @@ section{
     font-size:21px;
 
     font-weight:bold;
+
 }
 
 .total-row span:last-child{
 
     color:var(--gold);
+
+}
+
+.cart-actions{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:15px;
+
+}
+
+.clear-cart{
+
+    flex:1;
+
+    padding:12px;
+
+    border:1px solid #555;
+
+    border-radius:8px;
+
+    background:transparent;
+
+    color:#aaa;
+
+    cursor:pointer;
+
+}
+
+.clear-cart:hover{
+
+    border-color:#ff5555;
+
+    color:#ff5555;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    CHECKOUT
-===================================================== */
+========================================================= */
 
 .checkout{
 
     margin-top:25px;
+
 }
 
 .checkout h3{
@@ -1408,18 +1541,19 @@ section{
     color:var(--gold);
 
     margin-bottom:15px;
+
 }
 
 .checkout label{
 
     display:block;
 
-    margin:
-    8px 0 5px;
+    margin:8px 0 5px;
 
     color:#aaa;
 
     font-size:13px;
+
 }
 
 .checkout input{
@@ -1428,8 +1562,7 @@ section{
 
     padding:12px;
 
-    border:
-    1px solid #444;
+    border:1px solid #444;
 
     border-radius:7px;
 
@@ -1438,11 +1571,13 @@ section{
     color:#fff;
 
     outline:none;
+
 }
 
 .checkout input:focus{
 
     border-color:var(--gold);
+
 }
 
 .shipping-only{
@@ -1451,8 +1586,7 @@ section{
 
     padding:12px;
 
-    border:
-    1px solid var(--gold);
+    border:1px solid var(--gold);
 
     border-radius:7px;
 
@@ -1461,12 +1595,13 @@ section{
     color:var(--gold);
 
     font-weight:bold;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    MODAL
-===================================================== */
+========================================================= */
 
 .modal{
 
@@ -1482,15 +1617,16 @@ section{
 
     padding:20px;
 
-    background:
-    rgba(0,0,0,.85);
+    background:rgba(0,0,0,.85);
 
     z-index:5000;
+
 }
 
 .modal.show{
 
     display:flex;
+
 }
 
 .modal-content{
@@ -1509,8 +1645,8 @@ section{
 
     border-radius:20px;
 
-    border:
-    1px solid #333;
+    border:1px solid #333;
+
 }
 
 .modal-close{
@@ -1530,6 +1666,7 @@ section{
     font-size:28px;
 
     cursor:pointer;
+
 }
 
 .modal-image{
@@ -1543,11 +1680,13 @@ section{
     border-radius:12px;
 
     background:#222;
+
 }
 
 .modal-info{
 
     margin-top:20px;
+
 }
 
 .modal-info h2{
@@ -1555,6 +1694,7 @@ section{
     color:var(--gold);
 
     margin-bottom:10px;
+
 }
 
 .modal-info p{
@@ -1562,24 +1702,70 @@ section{
     color:#aaa;
 
     line-height:1.6;
+
 }
 
 
-/* =====================================================
+/* =========================================================
+   NOTIFICACIÓN
+========================================================= */
+
+.toast{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:
+    translate(-50%,120px);
+
+    background:#181818;
+
+    color:#fff;
+
+    border:1px solid var(--gold);
+
+    padding:13px 20px;
+
+    border-radius:30px;
+
+    z-index:7000;
+
+    opacity:0;
+
+    transition:.3s;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.4);
+
+}
+
+.toast.show{
+
+    opacity:1;
+
+    transform:
+    translate(-50%,0);
+
+}
+
+
+/* =========================================================
    FOOTER
-===================================================== */
+========================================================= */
 
 footer{
 
     background:#050505;
 
-    border-top:
-    1px solid #222;
+    border-top:1px solid #222;
 
-    padding:
-    45px 20px;
+    padding:45px 20px;
 
     text-align:center;
+
 }
 
 footer h2{
@@ -1587,6 +1773,7 @@ footer h2{
     color:var(--gold);
 
     margin-bottom:10px;
+
 }
 
 footer p{
@@ -1594,12 +1781,13 @@ footer p{
     color:#777;
 
     margin:7px;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    WHATSAPP
-===================================================== */
+========================================================= */
 
 .whatsapp{
 
@@ -1635,35 +1823,19 @@ footer p{
     0 5px 20px rgba(0,0,0,.4);
 
     transition:.3s;
+
 }
 
 .whatsapp:hover{
 
-    transform:
-    scale(1.08);
+    transform:scale(1.08);
+
 }
 
 
-/* =====================================================
-   MENSAJE VACÍO
-===================================================== */
-
-.empty-products{
-
-    grid-column:
-    1 / -1;
-
-    text-align:center;
-
-    padding:60px 20px;
-
-    color:#888;
-}
-
-
-/* =====================================================
+/* =========================================================
    RESPONSIVE
-===================================================== */
+========================================================= */
 
 @media(max-width:1050px){
 
@@ -1671,6 +1843,7 @@ footer p{
 
         grid-template-columns:
         repeat(3,1fr);
+
     }
 
 }
@@ -1680,11 +1853,13 @@ footer p{
     .info-grid{
 
         grid-template-columns:1fr;
+
     }
 
     .shipping{
 
         grid-template-columns:1fr;
+
     }
 
     .products{
@@ -1693,11 +1868,19 @@ footer p{
         repeat(2,1fr);
 
         gap:15px;
+
     }
 
     .collections{
 
         grid-template-columns:1fr;
+
+    }
+
+    .search-tools{
+
+        grid-template-columns:1fr;
+
     }
 
 }
@@ -1706,8 +1889,8 @@ footer p{
 
     .navbar{
 
-        padding:
-        12px 14px;
+        padding:12px 14px;
+
     }
 
     .logo{
@@ -1715,36 +1898,51 @@ footer p{
         font-size:18px;
 
         letter-spacing:1px;
+
     }
 
     .hero{
 
         min-height:550px;
+
     }
 
     .products{
 
         grid-template-columns:1fr;
+
     }
 
     .product-image{
 
         height:310px;
+
     }
 
     .cart{
 
         width:100%;
+
     }
 
     .contact-buttons{
 
         flex-direction:column;
+
     }
 
     .contact-buttons .gold-button{
 
         width:100%;
+
+    }
+
+    .toast{
+
+        width:90%;
+
+        text-align:center;
+
     }
 
 }
@@ -1757,13 +1955,14 @@ footer p{
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================================
      HEADER
-===================================================== -->
+========================================================= -->
 
 <header>
 
 <div class="navbar">
+
 
 <button
 class="icon-button menu-button"
@@ -1775,14 +1974,17 @@ aria-label="Abrir menú">
 </button>
 
 
-<div class="logo">
+<a
+href="#inicio"
+class="logo">
 
 URBAN ESSENCE
 
-</div>
+</a>
 
 
 <div class="header-right">
+
 
 <button
 class="icon-button"
@@ -1812,6 +2014,7 @@ id="cartCount">
 
 </button>
 
+
 </div>
 
 </div>
@@ -1819,9 +2022,9 @@ id="cartCount">
 </header>
 
 
-<!-- =====================================================
-     MENÚ LATERAL
-===================================================== -->
+<!-- =========================================================
+     MENÚ
+========================================================= -->
 
 <div
 class="side-overlay"
@@ -1846,12 +2049,14 @@ class="side-close"
 onclick="closeMenu()">
 
 ×
+
 </button>
 
 </div>
 
 
 <div class="side-links">
+
 
 <a
 href="#inicio"
@@ -1894,7 +2099,7 @@ onclick="closeMenu()">
 
 
 <a
-href="#envios"
+href="#envios-info"
 class="side-link"
 onclick="closeMenu()">
 
@@ -1993,12 +2198,38 @@ onclick="setFilter('Más vendido',this)">
 
 </button>
 
+
+<div class="side-section-title">
+
+Acciones
+
+</div>
+
+
+<button
+class="side-filter"
+onclick="showFavorites()">
+
+❤️ Mis favoritos
+
+</button>
+
+
+<button
+class="side-filter"
+onclick="resetFilters()">
+
+🔄 Restablecer filtros
+
+</button>
+
+
 </aside>
 
 
-<!-- =====================================================
-     INICIO
-===================================================== -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section
 class="hero"
@@ -2036,13 +2267,12 @@ DESCUBRIR COLECCIÓN
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      INFORMACIÓN
-===================================================== -->
+========================================================= -->
 
 <div
-class="info-grid"
-id="envios">
+class="info-grid">
 
 
 <div class="info-card">
@@ -2056,10 +2286,8 @@ Envíos a todo el Perú
 </h3>
 
 <p>
-
 Realizamos envíos a diferentes
 ciudades del país.
-
 </p>
 
 </div>
@@ -2076,10 +2304,8 @@ Estilo y personalidad
 </h3>
 
 <p>
-
 Artículos seleccionados
 para complementar tu estilo.
-
 </p>
 
 </div>
@@ -2096,20 +2322,19 @@ Atención personalizada
 </h3>
 
 <p>
-
 Comunícate directamente
 con Urban Essence.
-
 </p>
 
 </div>
 
+
 </div>
 
 
-<!-- =====================================================
+<!-- =========================================================
      PRODUCTOS
-===================================================== -->
+========================================================= -->
 
 <section
 id="productos">
@@ -2128,13 +2353,42 @@ Encuentra el artículo perfecto para ti.
 </div>
 
 
-<div class="search-area">
+<div class="search-tools">
+
 
 <input
 type="text"
 id="searchInput"
 placeholder="🔎 Buscar productos..."
 oninput="renderProducts()">
+
+
+<select
+id="sortProducts"
+onchange="renderProducts()">
+
+<option value="default">
+Ordenar productos
+</option>
+
+<option value="price-low">
+Precio: menor a mayor
+</option>
+
+<option value="price-high">
+Precio: mayor a menor
+</option>
+
+<option value="name">
+Nombre: A-Z
+</option>
+
+<option value="stock">
+Mayor stock
+</option>
+
+</select>
+
 
 </div>
 
@@ -2148,9 +2402,9 @@ id="products">
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      COLECCIONES
-===================================================== -->
+========================================================= -->
 
 <section
 id="colecciones">
@@ -2219,9 +2473,9 @@ VER PRODUCTOS
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      SOBRE NOSOTROS
-===================================================== -->
+========================================================= -->
 
 <section
 id="sobre-nosotros">
@@ -2234,7 +2488,7 @@ Sobre nosotros
 </h2>
 
 <p>
-Conoce Urban Essence.
+Conoce la esencia de Urban Essence.
 </p>
 
 </div>
@@ -2273,7 +2527,7 @@ sencilla para nuestros clientes.
 Queremos crecer junto a nuestros
 clientes y convertir Urban Essence
 en una marca reconocida
-por su estilo y atención.
+por su estilo, calidad y atención.
 
 </p>
 
@@ -2284,9 +2538,9 @@ por su estilo y atención.
 </section>
 
 
-<!-- =====================================================
-     INFORMACIÓN DE ENVÍOS
-===================================================== -->
+<!-- =========================================================
+     ENVÍOS
+========================================================= -->
 
 <section
 id="envios-info">
@@ -2319,10 +2573,8 @@ Todo el Perú
 </h3>
 
 <p>
-
 Realizamos envíos a diferentes
 ciudades y destinos del país.
-
 </p>
 
 </div>
@@ -2339,10 +2591,8 @@ Pedido seguro
 </h3>
 
 <p>
-
 Coordinamos los detalles del
 envío directamente contigo.
-
 </p>
 
 </div>
@@ -2359,10 +2609,8 @@ Confirmación
 </h3>
 
 <p>
-
 Recibirás atención para coordinar
 tu pedido y entrega.
-
 </p>
 
 </div>
@@ -2373,15 +2621,16 @@ tu pedido y entrega.
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      CONTACTO
-===================================================== -->
+========================================================= -->
 
 <section
 id="contactanos">
 
 
 <div class="contact">
+
 
 <div class="section-title">
 
@@ -2425,7 +2674,8 @@ href="mailto:urban.essence.corporativo@gmail.com">
 <a
 class="gold-button"
 href="https://wa.me/51986788414"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 💬 WHATSAPP
 
@@ -2441,9 +2691,9 @@ target="_blank">
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
 <footer>
 
@@ -2474,14 +2724,15 @@ Artículos que elevan tu personalidad.
 </footer>
 
 
-<!-- =====================================================
+<!-- =========================================================
      WHATSAPP
-===================================================== -->
+========================================================= -->
 
 <a
 class="whatsapp"
 href="https://wa.me/51986788414"
 target="_blank"
+rel="noopener"
 title="Escribir por WhatsApp">
 
 💬
@@ -2489,9 +2740,9 @@ title="Escribir por WhatsApp">
 </a>
 
 
-<!-- =====================================================
+<!-- =========================================================
      CARRITO
-===================================================== -->
+========================================================= -->
 
 <div
 class="cart-overlay"
@@ -2538,6 +2789,19 @@ S/ 0.00
 </div>
 
 
+<div class="cart-actions">
+
+<button
+class="clear-cart"
+onclick="clearCart()">
+
+🗑️ Vaciar carrito
+
+</button>
+
+</div>
+
+
 <div class="checkout">
 
 <h3>
@@ -2562,7 +2826,7 @@ Ciudad
 <input
 type="text"
 id="clientCity"
-placeholder="Ej. Lima">
+placeholder="Ej. Cajamarca">
 
 
 <label>
@@ -2614,9 +2878,9 @@ onclick="sendWhatsAppOrder()">
 </div>
 
 
-<!-- =====================================================
+<!-- =========================================================
      MODAL PRODUCTO
-===================================================== -->
+========================================================= -->
 
 <div
 class="modal"
@@ -2644,1496 +2908,1904 @@ onclick="closeProductModal()">
 </div>
 
 
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+class="toast"
+id="toast">
+
+Producto agregado al carrito.
+
+</div>
+
+
 <script>
 
-/* =====================================================
+/* =========================================================
    CONFIGURACIÓN
-===================================================== */
+========================================================= */
 
 const WHATSAPP_NUMBER =
 "51986788414";
 
 
-/* =====================================================
+/* =========================================================
    PRODUCTOS
-   CADA IMAGEN = UN PRODUCTO
-===================================================== */
+   CADA IMAGEN ES UN PRODUCTO INDIVIDUAL
+========================================================= */
 
 const products = [
 
 {
-    id:1,
-    name:"Billetera Mujer 1",
-    category:"Billeteras",
-    gender:"Mujer",
-    price:140.00,
-    oldPrice:null,
-    stock:5,
-    limit:2,
-    badge:"Nuevo",
-    tags:["Mujer","Billeteras","Nuevo"],
-    image:"billetera mujer 1.jpeg",
-    description:
-    "Billetera para mujer con diseño elegante y moderno."
+id:1,
+name:"Billetera Mujer 1",
+category:"Billeteras",
+gender:"Mujer",
+price:140.00,
+oldPrice:null,
+stock:5,
+limit:2,
+badge:"Nuevo",
+tags:["Mujer","Billeteras","Nuevo"],
+image:"billetera mujer 1.jpeg",
+description:"Billetera para mujer con diseño elegante y moderno."
 },
 
 {
-    id:2,
-    name:"Billetera Mujer 2",
-    category:"Billeteras",
-    gender:"Mujer",
-    price:99.90,
-    oldPrice:null,
-    stock:5,
-    limit:2,
-    badge:"Nuevo",
-    tags:["Mujer","Billeteras","Nuevo"],
-    image:"billetera mujer 2.jpeg",
-    description:
-    "Billetera para mujer ideal para complementar tu estilo."
+id:2,
+name:"Billetera Mujer 2",
+category:"Billeteras",
+gender:"Mujer",
+price:99.90,
+oldPrice:null,
+stock:5,
+limit:2,
+badge:"Nuevo",
+tags:["Mujer","Billeteras","Nuevo"],
+image:"billetera mujer 2.jpeg",
+description:"Billetera para mujer ideal para complementar tu estilo."
 },
 
 {
-    id:3,
-    name:"Billetera Mujer 3",
-    category:"Billeteras",
-    gender:"Mujer",
-    price:109.90,
-    oldPrice:null,
-    stock:5,
-    limit:2,
-    badge:"Recomendado",
-    tags:["Mujer","Billeteras"],
-    image:"billetera mujer 3.jpeg",
-    description:
-    "Billetera elegante para el uso diario."
+id:3,
+name:"Billetera Mujer 3",
+category:"Billeteras",
+gender:"Mujer",
+price:109.90,
+oldPrice:null,
+stock:5,
+limit:2,
+badge:"Recomendado",
+tags:["Mujer","Billeteras"],
+image:"billetera mujer 3.jpeg",
+description:"Billetera elegante para el uso diario."
 },
 
 {
-    id:4,
-    name:"Billetera Varón 1",
-    category:"Billeteras",
-    gender:"Varón",
-    price:99.90,
-    oldPrice:null,
-    stock:5,
-    limit:2,
-    badge:"Nuevo",
-    tags:["Varón","Billeteras","Nuevo"],
-    image:"billetera varon 1.jpeg",
-    description:
-    "Billetera para varón con diseño moderno."
+id:4,
+name:"Billetera Varón 1",
+category:"Billeteras",
+gender:"Varón",
+price:99.90,
+oldPrice:null,
+stock:5,
+limit:2,
+badge:"Nuevo",
+tags:["Varón","Billeteras","Nuevo"],
+image:"billetera varon 1.jpeg",
+description:"Billetera para varón con diseño moderno."
 },
 
 {
-    id:5,
-    name:"Billetera Varón 2",
-    category:"Billeteras",
-    gender:"Varón",
-    price:109.90,
-    oldPrice:null,
-    stock:5,
-    limit:2,
-    badge:"Recomendado",
-    tags:["Varón","Billeteras"],
-    image:"billetera varon 2.jpeg",
-    description:
-    "Billetera práctica y elegante para el día a día."
+id:5,
+name:"Billetera Varón 2",
+category:"Billeteras",
+gender:"Varón",
+price:109.90,
+oldPrice:null,
+stock:5,
+limit:2,
+badge:"Recomendado",
+tags:["Varón","Billeteras"],
+image:"billetera varon 2.jpeg",
+description:"Billetera práctica y elegante para el día a día."
 },
 
 {
-    id:6,
-    name:"Correa Classic",
-    category:"Correas",
-    gender:"Varón",
-    price:79.90,
-    oldPrice:null,
-    stock:8,
-    limit:3,
-    badge:"Nuevo",
-    tags:["Varón","Correas","Nuevo"],
-    image:"correa 1.jpeg",
-    description:
-    "Correa de estilo clásico para complementar tu outfit."
+id:6,
+name:"Correa Classic",
+category:"Correas",
+gender:"Varón",
+price:79.90,
+oldPrice:null,
+stock:8,
+limit:3,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 1.jpeg",
+description:"Correa de estilo clásico para complementar tu outfit."
 },
 
 {
-    id:7,
-    name:"Monedero Varón 1",
-    category:"Monederos",
-    gender:"Varón",
-    price:59.90,
-    oldPrice:null,
-    stock:6,
-    limit:2,
-    badge:"Nuevo",
-    tags:["Varón","Monederos","Nuevo"],
-    image:"monedero varon 1.jpeg",
-    description:
-    "Monedero compacto y práctico."
+id:7,
+name:"Monedero Varón 1",
+category:"Monederos",
+gender:"Varón",
+price:59.90,
+oldPrice:null,
+stock:6,
+limit:2,
+badge:"Nuevo",
+tags:["Varón","Monederos","Nuevo"],
+image:"monedero varon 1.jpeg",
+description:"Monedero compacto y práctico."
 },
 
 {
-    id:8,
-    name:"Monedero Varón 2",
-    category:"Monederos",
-    gender:"Varón",
-    price:59.90,
-    oldPrice:null,
-    stock:6,
-    limit:2,
-    badge:"Nuevo",
-    tags:["Varón","Monederos","Nuevo"],
-    image:"monedero varon 2.jpeg",
-    description:
-    "Monedero diseñado para llevar tus objetos esenciales."
+id:8,
+name:"Monedero Varón 2",
+category:"Monederos",
+gender:"Varón",
+price:59.90,
+oldPrice:null,
+stock:6,
+limit:2,
+badge:"Nuevo",
+tags:["Varón","Monederos","Nuevo"],
+image:"monedero varon 2.jpeg",
+description:"Monedero diseñado para llevar tus objetos esenciales."
 },
 
 {
-    id:9,
-    name:"Monedero Varón 3",
-    category:"Monederos",
-    gender:"Varón",
-    price:59.90,
-    oldPrice:null,
-    stock:6,
-    limit:2,
-    badge:"Recomendado",
-    tags:["Varón","Monederos"],
-    image:"monedero varon 3.jpeg",
-    description:
-    "Diseño compacto y funcional."
+id:9,
+name:"Monedero Varón 3",
+category:"Monederos",
+gender:"Varón",
+price:59.90,
+oldPrice:null,
+stock:6,
+limit:2,
+badge:"Recomendado",
+tags:["Varón","Monederos"],
+image:"monedero varon 3.jpeg",
+description:"Diseño compacto y funcional."
 },
 
 {
-    id:10,
-    name:"Monedero Varón 4",
-    category:"Monederos",
-    gender:"Varón",
-    price:59.90,
-    oldPrice:null,
-    stock:6,
-    limit:2,
-    badge:"Nuevo",
-    tags:["Varón","Monederos","Nuevo"],
-    image:"monedero varon 4.jpeg",
-    description:
-    "Monedero práctico para acompañarte todos los días."
+id:10,
+name:"Monedero Varón 4",
+category:"Monederos",
+gender:"Varón",
+price:59.90,
+oldPrice:null,
+stock:6,
+limit:2,
+badge:"Nuevo",
+tags:["Varón","Monederos","Nuevo"],
+image:"monedero varon 4.jpeg",
+description:"Monedero práctico para acompañarte todos los días."
 },
 
 {
-    id:11,
-    name:"Producto Urban Essence",
-    category:"Accesorios",
-    gender:"Varón",
-    price:89.90,
-    oldPrice:null,
-    stock:5,
-    limit:2,
-    badge:"Nuevo",
-    tags:["Varón","Nuevo"],
-    image:"imagen.png",
-    description:
-    "Producto seleccionado por Urban Essence."
+id:11,
+name:"Producto Urban Essence",
+category:"Accesorios",
+gender:"Varón",
+price:89.90,
+oldPrice:null,
+stock:5,
+limit:2,
+badge:"Nuevo",
+tags:["Varón","Nuevo"],
+image:"imagen.png",
+description:"Producto seleccionado por Urban Essence."
 }
 
 ];
 
 
-/* =====================================================
-   CARRITO
-===================================================== */
+/* =========================================================
+   ESTADO
+========================================================= */
 
 let cart =
 JSON.parse(
 localStorage.getItem("urbanEssenceCart")
 ) || [];
 
-
 let currentFilter = "Todos";
 
 
-/* =====================================================
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer;
+
+function showToast(message){
+
+const toast =
+document.getElementById("toast");
+
+toast.textContent = message;
+
+toast.classList.add("show");
+
+clearTimeout(toastTimer);
+
+toastTimer =
+setTimeout(() => {
+
+toast.classList.remove("show");
+
+},2500);
+
+}
+
+
+/* =========================================================
    MENÚ
-===================================================== */
+========================================================= */
 
 function openMenu(){
 
-    document
-    .getElementById("sideMenu")
-    .classList.add("show");
+document
+.getElementById("sideMenu")
+.classList.add("show");
 
-    document
-    .getElementById("sideOverlay")
-    .classList.add("show");
+document
+.getElementById("sideOverlay")
+.classList.add("show");
+
+document.body.style.overflow =
+"hidden";
 
 }
+
 
 function closeMenu(){
 
-    document
-    .getElementById("sideMenu")
-    .classList.remove("show");
+document
+.getElementById("sideMenu")
+.classList.remove("show");
 
-    document
-    .getElementById("sideOverlay")
-    .classList.remove("show");
+document
+.getElementById("sideOverlay")
+.classList.remove("show");
+
+document.body.style.overflow =
+"";
 
 }
 
 
-/* =====================================================
+/* =========================================================
    TEMA
-===================================================== */
+========================================================= */
 
 function applyTheme(){
 
-    const theme =
-    localStorage.getItem("urbanEssenceTheme")
-    || "dark";
+const theme =
+localStorage.getItem(
+"urbanEssenceTheme"
+) || "dark";
 
-    if(theme === "light"){
+const button =
+document.getElementById(
+"themeButton"
+);
 
-        document.body.classList.add("light");
+if(theme === "light"){
 
-        document
-        .getElementById("themeButton")
-        .textContent = "☀️";
+document.body.classList.add(
+"light"
+);
 
-    }
+button.textContent =
+"☀️";
 
-    else{
+}
 
-        document.body.classList.remove("light");
+else{
 
-        document
-        .getElementById("themeButton")
-        .textContent = "🌙";
+document.body.classList.remove(
+"light"
+);
 
-    }
+button.textContent =
+"🌙";
+
+}
 
 }
 
 
 function toggleTheme(){
 
-    const isLight =
-    document.body.classList.toggle("light");
+const isLight =
+document.body.classList.toggle(
+"light"
+);
 
-    localStorage.setItem(
-        "urbanEssenceTheme",
-        isLight ? "light" : "dark"
-    );
+localStorage.setItem(
+"urbanEssenceTheme",
+isLight
+? "light"
+: "dark"
+);
 
-    document
-    .getElementById("themeButton")
-    .textContent =
-    isLight ? "☀️" : "🌙";
+document
+.getElementById("themeButton")
+.textContent =
+isLight
+? "☀️"
+: "🌙";
+
+showToast(
+isLight
+? "☀️ Modo claro activado"
+: "🌙 Modo oscuro activado"
+);
 
 }
 
 
-/* =====================================================
-   MOSTRAR PRODUCTOS
-===================================================== */
+/* =========================================================
+   RENDER PRODUCTOS
+========================================================= */
 
 function renderProducts(){
 
-    const container =
-    document.getElementById("products");
+const container =
+document.getElementById(
+"products"
+);
 
-    const search =
-    document
-    .getElementById("searchInput")
-    .value
-    .toLowerCase()
-    .trim();
+const search =
+document
+.getElementById("searchInput")
+.value
+.toLowerCase()
+.trim();
 
+const sort =
+document
+.getElementById("sortProducts")
+.value;
 
-    const filtered =
-    products.filter(product => {
 
-        const filterMatch =
+let filtered =
+products.filter(product => {
 
-        currentFilter === "Todos" ||
+const filterMatch =
 
-        product.gender === currentFilter ||
+currentFilter === "Todos" ||
 
-        product.category === currentFilter ||
+product.gender === currentFilter ||
 
-        product.tags.includes(currentFilter);
+product.category === currentFilter ||
 
+product.tags.includes(
+currentFilter
+);
 
-        const searchMatch =
+const searchMatch =
 
-        product.name
-        .toLowerCase()
-        .includes(search)
+product.name
+.toLowerCase()
+.includes(search)
 
-        ||
+||
 
-        product.category
-        .toLowerCase()
-        .includes(search)
+product.category
+.toLowerCase()
+.includes(search)
 
-        ||
+||
 
-        product.gender
-        .toLowerCase()
-        .includes(search);
+product.gender
+.toLowerCase()
+.includes(search);
 
+return filterMatch &&
+searchMatch;
 
-        return filterMatch && searchMatch;
+});
 
-    });
 
+if(sort === "price-low"){
 
-    container.innerHTML = "";
+filtered.sort(
+(a,b) =>
+a.price - b.price
+);
 
+}
 
-    if(filtered.length === 0){
+else if(sort === "price-high"){
 
-        container.innerHTML = `
+filtered.sort(
+(a,b) =>
+b.price - a.price
+);
 
-        <div class="empty-products">
+}
 
-            <h2>
-            No encontramos productos
-            </h2>
+else if(sort === "name"){
 
-            <p>
-            Prueba con otra búsqueda.
-            </p>
+filtered.sort(
+(a,b) =>
+a.name.localeCompare(
+b.name
+)
+);
 
-        </div>
+}
 
-        `;
+else if(sort === "stock"){
 
-        return;
-
-    }
-
-
-    filtered.forEach(product => {
-
-        let stockText;
-
-        let stockClass;
-
-
-        if(product.stock <= 0){
-
-            stockText =
-            "🔴 Agotado";
-
-            stockClass =
-            "out";
-
-        }
-
-        else if(product.stock <= 3){
-
-            stockText =
-            `🟡 Últimas ${product.stock} unidades`;
-
-            stockClass =
-            "low";
-
-        }
-
-        else{
-
-            stockText =
-            `🟢 ${product.stock} disponibles`;
-
-            stockClass = "";
-
-        }
-
-
-        let priceHTML;
-
-
-        if(product.oldPrice){
-
-            priceHTML = `
-
-            <span class="old-price">
-            S/ ${product.oldPrice.toFixed(2)}
-            </span>
-
-            <span class="price">
-            S/ ${product.price.toFixed(2)}
-            </span>
-
-            `;
-
-        }
-
-        else{
-
-            priceHTML = `
-
-            <span class="price">
-            S/ ${product.price.toFixed(2)}
-            </span>
-
-            `;
-
-        }
-
-
-        const favorites =
-        JSON.parse(
-            localStorage.getItem(
-                "urbanEssenceFavorites"
-            )
-        ) || [];
-
-
-        const favoriteActive =
-        favorites.includes(product.id);
-
-
-        container.innerHTML += `
-
-        <div class="product">
-
-
-            <div class="product-image">
-
-
-                <img
-                src="${product.image}"
-                alt="${product.name}"
-                onerror="imageError(this)">
-
-
-                <div class="badge">
-
-                ${product.badge}
-
-                </div>
-
-
-                <button
-                class="favorite ${favoriteActive ? "active" : ""}"
-                onclick="toggleFavorite(${product.id},this)">
-
-                ${favoriteActive ? "♥" : "♡"}
-
-                </button>
-
-
-            </div>
-
-
-            <div class="product-info">
-
-
-                <div class="product-category">
-
-                ${product.category}
-
-                </div>
-
-
-                <div class="product-name">
-
-                ${product.name}
-
-                </div>
-
-
-                <div>
-
-                ${priceHTML}
-
-                </div>
-
-
-                <div class="stock ${stockClass}">
-
-                ${stockText}
-
-                </div>
-
-
-                <div class="product-buttons">
-
-
-                    <button
-                    onclick="openProductModal(${product.id})">
-
-                    👁️ Ver
-
-                    </button>
-
-
-                    <button
-                    class="buy"
-                    onclick="addToCart(${product.id})"
-                    ${product.stock <= 0 ? "disabled" : ""}>
-
-                    🛒 Comprar
-
-                    </button>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-        `;
-
-    });
+filtered.sort(
+(a,b) =>
+b.stock - a.stock
+);
 
 }
 
 
-/* =====================================================
-   ERROR DE IMAGEN
-===================================================== */
+container.innerHTML = "";
+
+
+if(filtered.length === 0){
+
+container.innerHTML = `
+
+<div class="empty-products">
+
+<h2>
+No encontramos productos
+</h2>
+
+<p>
+Prueba con otra búsqueda o filtro.
+</p>
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+const favorites =
+JSON.parse(
+localStorage.getItem(
+"urbanEssenceFavorites"
+)
+) || [];
+
+
+filtered.forEach(product => {
+
+
+let stockText;
+
+let stockClass;
+
+
+if(product.stock <= 0){
+
+stockText =
+"🔴 Agotado";
+
+stockClass =
+"out";
+
+}
+
+else if(product.stock <= 3){
+
+stockText =
+`🟡 Últimas ${product.stock} unidades`;
+
+stockClass =
+"low";
+
+}
+
+else{
+
+stockText =
+`🟢 ${product.stock} disponibles`;
+
+stockClass =
+"";
+
+}
+
+
+let priceHTML;
+
+
+if(product.oldPrice){
+
+priceHTML = `
+
+<span class="old-price">
+S/ ${product.oldPrice.toFixed(2)}
+</span>
+
+<span class="price">
+S/ ${product.price.toFixed(2)}
+</span>
+
+`;
+
+}
+
+else{
+
+priceHTML = `
+
+<span class="price">
+S/ ${product.price.toFixed(2)}
+</span>
+
+`;
+
+}
+
+
+const favoriteActive =
+favorites.includes(product.id);
+
+
+container.innerHTML += `
+
+<div class="product">
+
+
+<div class="product-image">
+
+
+<img
+src="${product.image}"
+alt="${product.name}"
+loading="lazy"
+onerror="imageError(this)">
+
+
+<div class="badge">
+${product.badge}
+</div>
+
+
+<button
+class="favorite ${favoriteActive ? "active" : ""}"
+onclick="toggleFavorite(${product.id},this)"
+aria-label="Favorito">
+
+${favoriteActive
+? "♥"
+: "♡"}
+
+</button>
+
+
+</div>
+
+
+<div class="product-info">
+
+
+<div class="product-category">
+${product.category}
+</div>
+
+
+<div class="product-name">
+${product.name}
+</div>
+
+
+<div>
+${priceHTML}
+</div>
+
+
+<div class="stock ${stockClass}">
+${stockText}
+</div>
+
+
+<div class="product-buttons">
+
+
+<button
+onclick="openProductModal(${product.id})">
+
+👁️ Ver
+
+</button>
+
+
+<button
+class="buy"
+onclick="addToCart(${product.id})"
+${product.stock <= 0
+? "disabled"
+: ""}>
+
+🛒 Comprar
+
+</button>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+
+/* =========================================================
+   ERROR IMAGEN
+========================================================= */
 
 function imageError(image){
 
-    if(image.dataset.error){
+if(image.dataset.error){
 
-        return;
+return;
 
-    }
+}
 
-    image.dataset.error = "true";
+image.dataset.error =
+"true";
 
-    image.style.objectFit = "contain";
+image.style.objectFit =
+"contain";
 
-    image.src =
-    "data:image/svg+xml;charset=UTF-8," +
+image.src =
+"data:image/svg+xml;charset=UTF-8," +
 
-    encodeURIComponent(`
+encodeURIComponent(`
 
-    <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="500"
-    height="500">
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="500"
+height="500">
 
-        <rect
-        width="100%"
-        height="100%"
-        fill="#222"/>
+<rect
+width="100%"
+height="100%"
+fill="#222"/>
 
-        <text
-        x="50%"
-        y="50%"
-        dominant-baseline="middle"
-        text-anchor="middle"
-        fill="#d4af37"
-        font-size="24">
+<text
+x="50%"
+y="50%"
+dominant-baseline="middle"
+text-anchor="middle"
+fill="#d4af37"
+font-size="24">
 
-        Urban Essence
+Urban Essence
 
-        </text>
+</text>
 
-    </svg>
+</svg>
 
-    `);
+`);
 
 }
 
 
-/* =====================================================
+/* =========================================================
    FILTROS
-===================================================== */
+========================================================= */
 
-function setFilter(filter,button){
+function setFilter(
+filter,
+button
+){
 
-    currentFilter = filter;
-
-
-    document
-    .querySelectorAll(".side-filter")
-    .forEach(btn =>
-        btn.classList.remove("active")
-    );
+currentFilter =
+filter;
 
 
-    if(button){
+document
+.querySelectorAll(
+".side-filter"
+)
+.forEach(btn =>
+btn.classList.remove(
+"active"
+)
+);
 
-        button.classList.add("active");
 
-    }
+if(button){
 
-
-    renderProducts();
-
-    closeMenu();
-
-    document
-    .getElementById("productos")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
+button.classList.add(
+"active"
+);
 
 }
 
 
-function activateCollection(filter){
+renderProducts();
 
-    currentFilter = filter;
+closeMenu();
 
-
-    document
-    .querySelectorAll(".side-filter")
-    .forEach(btn => {
-
-        btn.classList.remove("active");
-
-        if(
-            btn.textContent
-            .trim()
-            .includes(filter)
-        ){
-
-            btn.classList.add("active");
-
-        }
-
-    });
-
-
-    renderProducts();
-
-
-    document
-    .getElementById("productos")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
+document
+.getElementById("productos")
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
 
-/* =====================================================
-   AGREGAR AL CARRITO
-===================================================== */
+function activateCollection(
+filter
+){
+
+currentFilter =
+filter;
+
+
+document
+.querySelectorAll(
+".side-filter"
+)
+.forEach(btn => {
+
+btn.classList.remove(
+"active"
+);
+
+if(
+btn.textContent
+.trim()
+.includes(filter)
+){
+
+btn.classList.add(
+"active"
+);
+
+}
+
+});
+
+
+renderProducts();
+
+
+document
+.getElementById("productos")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function resetFilters(){
+
+currentFilter =
+"Todos";
+
+document
+.getElementById(
+"searchInput"
+)
+.value = "";
+
+document
+.getElementById(
+"sortProducts"
+)
+.value = "default";
+
+document
+.querySelectorAll(
+".side-filter"
+)
+.forEach(btn =>
+btn.classList.remove(
+"active"
+)
+);
+
+const allButton =
+document.querySelector(
+'.side-filter[onclick*="Todos"]'
+);
+
+if(allButton){
+
+allButton.classList.add(
+"active"
+);
+
+}
+
+renderProducts();
+
+closeMenu();
+
+showToast(
+"Filtros restablecidos"
+);
+
+}
+
+
+/* =========================================================
+   FAVORITOS
+========================================================= */
+
+function toggleFavorite(
+id,
+button
+){
+
+let favorites =
+JSON.parse(
+localStorage.getItem(
+"urbanEssenceFavorites"
+)
+) || [];
+
+
+if(favorites.includes(id)){
+
+favorites =
+favorites.filter(
+item => item !== id
+);
+
+button.classList.remove(
+"active"
+);
+
+button.textContent =
+"♡";
+
+showToast(
+"Eliminado de favoritos"
+);
+
+}
+
+else{
+
+favorites.push(id);
+
+button.classList.add(
+"active"
+);
+
+button.textContent =
+"♥";
+
+showToast(
+"❤️ Agregado a favoritos"
+);
+
+}
+
+
+localStorage.setItem(
+
+"urbanEssenceFavorites",
+
+JSON.stringify(favorites)
+
+);
+
+}
+
+
+function showFavorites(){
+
+const favorites =
+JSON.parse(
+localStorage.getItem(
+"urbanEssenceFavorites"
+)
+) || [];
+
+
+if(favorites.length === 0){
+
+closeMenu();
+
+showToast(
+"No tienes favoritos todavía"
+);
+
+return;
+
+}
+
+
+currentFilter =
+"Favoritos";
+
+
+const container =
+document.getElementById(
+"products"
+);
+
+
+const favoriteProducts =
+products.filter(
+product =>
+favorites.includes(
+product.id
+)
+);
+
+
+container.innerHTML =
+"";
+
+
+favoriteProducts.forEach(
+product => {
+
+let stockText =
+product.stock > 0
+? `🟢 ${product.stock} disponibles`
+: "🔴 Agotado";
+
+
+container.innerHTML += `
+
+<div class="product">
+
+<div class="product-image">
+
+<img
+src="${product.image}"
+alt="${product.name}"
+onerror="imageError(this)">
+
+<div class="badge">
+❤️ Favorito
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+${product.category}
+</div>
+
+<div class="product-name">
+${product.name}
+</div>
+
+<div class="price">
+S/ ${product.price.toFixed(2)}
+</div>
+
+<div class="stock">
+${stockText}
+</div>
+
+<div class="product-buttons">
+
+<button
+onclick="openProductModal(${product.id})">
+
+👁️ Ver
+
+</button>
+
+<button
+class="buy"
+onclick="addToCart(${product.id})">
+
+🛒 Comprar
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+
+closeMenu();
+
+document
+.getElementById("productos")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* =========================================================
+   CARRITO
+========================================================= */
 
 function addToCart(id){
 
-    const product =
-    products.find(p => p.id === id);
+const product =
+products.find(
+p => p.id === id
+);
 
 
-    if(!product){
+if(!product){
 
-        return;
-
-    }
-
-
-    if(product.stock <= 0){
-
-        alert(
-        "Este producto está agotado."
-        );
-
-        return;
-
-    }
-
-
-    const existing =
-    cart.find(item => item.id === id);
-
-
-    if(existing){
-
-        if(
-            existing.quantity >=
-            product.limit
-        ){
-
-            alert(
-            `El límite de compra es ${product.limit} unidades.`
-            );
-
-            return;
-
-        }
-
-
-        if(
-            existing.quantity >=
-            product.stock
-        ){
-
-            alert(
-            "No hay más unidades disponibles."
-            );
-
-            return;
-
-        }
-
-
-        existing.quantity++;
-
-    }
-
-    else{
-
-        cart.push({
-
-            id:id,
-
-            quantity:1
-
-        });
-
-    }
-
-
-    saveCart();
-
-    openCart();
+return;
 
 }
 
 
-/* =====================================================
+if(product.stock <= 0){
+
+showToast(
+"❌ Producto agotado"
+);
+
+return;
+
+}
+
+
+const existing =
+cart.find(
+item => item.id === id
+);
+
+
+if(existing){
+
+if(
+existing.quantity >=
+product.limit
+){
+
+alert(
+`El límite de compra es ${product.limit} unidades.`
+);
+
+return;
+
+}
+
+
+if(
+existing.quantity >=
+product.stock
+){
+
+alert(
+"No hay más unidades disponibles."
+);
+
+return;
+
+}
+
+
+existing.quantity++;
+
+}
+
+else{
+
+cart.push({
+
+id:id,
+
+quantity:1
+
+});
+
+}
+
+
+saveCart();
+
+showToast(
+`🛒 ${product.name} agregado al carrito`
+);
+
+openCart();
+
+}
+
+
+/* =========================================================
    GUARDAR CARRITO
-===================================================== */
+========================================================= */
 
 function saveCart(){
 
-    localStorage.setItem(
+localStorage.setItem(
 
-        "urbanEssenceCart",
+"urbanEssenceCart",
 
-        JSON.stringify(cart)
+JSON.stringify(cart)
 
-    );
+);
 
-    updateCart();
+updateCart();
 
 }
 
 
-/* =====================================================
+/* =========================================================
    ACTUALIZAR CARRITO
-===================================================== */
+========================================================= */
 
 function updateCart(){
 
-    const container =
-    document.getElementById("cartItems");
+const container =
+document.getElementById(
+"cartItems"
+);
 
-    const count =
-    document.getElementById("cartCount");
+const count =
+document.getElementById(
+"cartCount"
+);
 
-    const totalElement =
-    document.getElementById("cartTotal");
+const totalElement =
+document.getElementById(
+"cartTotal"
+);
 
 
-    let total = 0;
+let total = 0;
 
-    let totalQuantity = 0;
+let totalQuantity = 0;
 
 
-    container.innerHTML = "";
+container.innerHTML =
+"";
 
 
-    if(cart.length === 0){
+if(cart.length === 0){
 
-        container.innerHTML = `
+container.innerHTML = `
 
-        <p style="
-        text-align:center;
-        color:#777;
-        padding:35px 0;
-        ">
+<p style="
+text-align:center;
+color:#777;
+padding:35px 0;
+">
 
-        Tu carrito está vacío.
+Tu carrito está vacío.
 
-        </p>
+</p>
 
-        `;
-
-    }
-
-
-    cart.forEach(item => {
-
-        const product =
-        products.find(
-            p => p.id === item.id
-        );
-
-
-        if(!product){
-
-            return;
-
-        }
-
-
-        const subtotal =
-        product.price *
-        item.quantity;
-
-
-        total += subtotal;
-
-        totalQuantity +=
-        item.quantity;
-
-
-        container.innerHTML += `
-
-        <div class="cart-item">
-
-
-            <img
-            src="${product.image}"
-            alt="${product.name}"
-            onerror="imageError(this)">
-
-
-            <div>
-
-
-                <h4>
-
-                ${product.name}
-
-                </h4>
-
-
-                <div class="cart-price">
-
-                S/ ${product.price.toFixed(2)}
-
-                </div>
-
-
-                <div class="quantity">
-
-
-                    <button
-                    onclick="changeQuantity(${product.id},-1)">
-
-                    −
-
-                    </button>
-
-
-                    <span>
-
-                    ${item.quantity}
-
-                    </span>
-
-
-                    <button
-                    onclick="changeQuantity(${product.id},1)">
-
-                    +
-
-                    </button>
-
-
-                </div>
-
-
-            </div>
-
-
-            <button
-            class="remove"
-            onclick="removeFromCart(${product.id})">
-
-            🗑️
-
-            </button>
-
-
-        </div>
-
-        `;
-
-    });
-
-
-    count.textContent =
-    totalQuantity;
-
-
-    totalElement.textContent =
-    `S/ ${total.toFixed(2)}`;
+`;
 
 }
 
 
-/* =====================================================
-   CAMBIAR CANTIDAD
-===================================================== */
-
-function changeQuantity(id,change){
-
-    const item =
-    cart.find(i => i.id === id);
+cart.forEach(item => {
 
 
-    const product =
-    products.find(p => p.id === id);
+const product =
+products.find(
+p => p.id === item.id
+);
 
 
-    if(!item || !product){
+if(!product){
 
-        return;
-
-    }
-
-
-    const newQuantity =
-    item.quantity + change;
-
-
-    if(newQuantity <= 0){
-
-        removeFromCart(id);
-
-        return;
-
-    }
-
-
-    if(newQuantity > product.limit){
-
-        alert(
-        `El límite es ${product.limit} unidades.`
-        );
-
-        return;
-
-    }
-
-
-    if(newQuantity > product.stock){
-
-        alert(
-        "No hay suficientes unidades disponibles."
-        );
-
-        return;
-
-    }
-
-
-    item.quantity =
-    newQuantity;
-
-
-    saveCart();
+return;
 
 }
 
 
-/* =====================================================
-   ELIMINAR PRODUCTO
-===================================================== */
+const subtotal =
+product.price *
+item.quantity;
+
+
+total += subtotal;
+
+totalQuantity +=
+item.quantity;
+
+
+container.innerHTML += `
+
+<div class="cart-item">
+
+
+<img
+src="${product.image}"
+alt="${product.name}"
+onerror="imageError(this)">
+
+
+<div>
+
+<h4>
+${product.name}
+</h4>
+
+<div class="cart-price">
+S/ ${product.price.toFixed(2)}
+</div>
+
+
+<div class="quantity">
+
+
+<button
+onclick="changeQuantity(${product.id},-1)">
+
+−
+
+</button>
+
+
+<span>
+${item.quantity}
+</span>
+
+
+<button
+onclick="changeQuantity(${product.id},1)">
+
++
+
+</button>
+
+
+</div>
+
+</div>
+
+
+<button
+class="remove"
+onclick="removeFromCart(${product.id})">
+
+🗑️
+
+</button>
+
+
+</div>
+
+`;
+
+});
+
+
+count.textContent =
+totalQuantity;
+
+
+totalElement.textContent =
+`S/ ${total.toFixed(2)}`;
+
+}
+
+
+/* =========================================================
+   CANTIDADES
+========================================================= */
+
+function changeQuantity(
+id,
+change
+){
+
+const item =
+cart.find(
+i => i.id === id
+);
+
+const product =
+products.find(
+p => p.id === id
+);
+
+
+if(!item || !product){
+
+return;
+
+}
+
+
+const newQuantity =
+item.quantity + change;
+
+
+if(newQuantity <= 0){
+
+removeFromCart(id);
+
+return;
+
+}
+
+
+if(
+newQuantity >
+product.limit
+){
+
+alert(
+`El límite es ${product.limit} unidades.`
+);
+
+return;
+
+}
+
+
+if(
+newQuantity >
+product.stock
+){
+
+alert(
+"No hay suficientes unidades disponibles."
+);
+
+return;
+
+}
+
+
+item.quantity =
+newQuantity;
+
+
+saveCart();
+
+}
+
+
+/* =========================================================
+   ELIMINAR
+========================================================= */
 
 function removeFromCart(id){
 
-    cart =
-    cart.filter(
-        item => item.id !== id
-    );
+cart =
+cart.filter(
+item =>
+item.id !== id
+);
 
-    saveCart();
+saveCart();
+
+showToast(
+"Producto eliminado"
+);
 
 }
 
 
-/* =====================================================
-   ABRIR / CERRAR CARRITO
-===================================================== */
+/* =========================================================
+   VACIAR CARRITO
+========================================================= */
+
+function clearCart(){
+
+if(cart.length === 0){
+
+return;
+
+}
+
+
+if(
+confirm(
+"¿Seguro que quieres vaciar el carrito?"
+)
+){
+
+cart = [];
+
+saveCart();
+
+showToast(
+"🗑️ Carrito vaciado"
+);
+
+}
+
+}
+
+
+/* =========================================================
+   ABRIR CARRITO
+========================================================= */
 
 function openCart(){
 
-    document
-    .getElementById("cartOverlay")
-    .classList.add("show");
+document
+.getElementById(
+"cartOverlay"
+)
+.classList.add("show");
 
-    updateCart();
+updateCart();
+
+document.body.style.overflow =
+"hidden";
 
 }
 
 
 function closeCart(){
 
-    document
-    .getElementById("cartOverlay")
-    .classList.remove("show");
+document
+.getElementById(
+"cartOverlay"
+)
+.classList.remove("show");
+
+document.body.style.overflow =
+"";
 
 }
 
 
-/* =====================================================
-   MODAL PRODUCTO
-===================================================== */
+/* =========================================================
+   MODAL
+========================================================= */
 
 function openProductModal(id){
 
-    const product =
-    products.find(p => p.id === id);
+const product =
+products.find(
+p => p.id === id
+);
 
 
-    if(!product){
+if(!product){
 
-        return;
+return;
 
-    }
-
-
-    const modal =
-    document.getElementById("productModal");
+}
 
 
-    const content =
-    document.getElementById("modalProduct");
+const modal =
+document.getElementById(
+"productModal"
+);
 
 
-    content.innerHTML = `
-
-    <img
-    class="modal-image"
-    src="${product.image}"
-    alt="${product.name}"
-    onerror="imageError(this)">
+const content =
+document.getElementById(
+"modalProduct"
+);
 
 
-    <div class="modal-info">
+content.innerHTML = `
+
+<img
+class="modal-image"
+src="${product.image}"
+alt="${product.name}"
+onerror="imageError(this)">
 
 
-        <div class="product-category">
-
-        ${product.category}
-
-        </div>
+<div class="modal-info">
 
 
-        <h2>
+<div class="product-category">
 
-        ${product.name}
+${product.category}
 
-        </h2>
-
-
-        <h3 style="
-        color:#d4af37;
-        margin:10px 0;
-        ">
-
-        S/ ${product.price.toFixed(2)}
-
-        </h3>
+</div>
 
 
-        <p>
+<h2>
 
-        ${product.description}
+${product.name}
 
-        </p>
-
-
-        <p style="margin-top:15px;">
-
-        📦 Stock:
-        ${product.stock}
-
-        </p>
+</h2>
 
 
-        <p>
+<h3 style="
+color:#d4af37;
+margin:10px 0;
+">
 
-        🔢 Límite por compra:
-        ${product.limit}
+S/ ${product.price.toFixed(2)}
 
-        </p>
-
-
-        <div style="
-        display:flex;
-        gap:10px;
-        flex-wrap:wrap;
-        margin-top:20px;
-        ">
+</h3>
 
 
-            <button
-            class="gold-button"
-            onclick="
-            addToCart(${product.id});
-            closeProductModal();
-            ">
+<p>
 
-            🛒 Agregar al carrito
+${product.description}
 
-            </button>
+</p>
 
 
-            <button
-            class="gold-button"
-            onclick="shareProduct(${product.id})">
+<p style="margin-top:15px;">
 
-            ↗️ Compartir
+📦 Stock:
+${product.stock}
 
-            </button>
-
-
-        </div>
+</p>
 
 
-    </div>
+<p>
 
-    `;
+🔢 Límite por compra:
+${product.limit}
+
+</p>
 
 
-    modal.classList.add("show");
+<div style="
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:20px;
+">
+
+
+<button
+class="gold-button"
+onclick="
+addToCart(${product.id});
+closeProductModal();
+">
+
+🛒 Agregar al carrito
+
+</button>
+
+
+<button
+class="gold-button"
+onclick="shareProduct(${product.id})">
+
+↗️ Compartir
+
+</button>
+
+
+</div>
+
+
+</div>
+
+`;
+
+
+modal.classList.add(
+"show"
+);
+
+document.body.style.overflow =
+"hidden";
 
 }
 
 
 function closeProductModal(){
 
-    document
-    .getElementById("productModal")
-    .classList.remove("show");
+document
+.getElementById(
+"productModal"
+)
+.classList.remove(
+"show"
+);
+
+document.body.style.overflow =
+"";
 
 }
 
 
-/* =====================================================
-   FAVORITOS
-===================================================== */
-
-function toggleFavorite(id,button){
-
-    let favorites =
-    JSON.parse(
-        localStorage.getItem(
-            "urbanEssenceFavorites"
-        )
-    ) || [];
-
-
-    if(favorites.includes(id)){
-
-        favorites =
-        favorites.filter(
-            item => item !== id
-        );
-
-        button.classList.remove(
-            "active"
-        );
-
-        button.textContent =
-        "♡";
-
-    }
-
-    else{
-
-        favorites.push(id);
-
-        button.classList.add(
-            "active"
-        );
-
-        button.textContent =
-        "♥";
-
-    }
-
-
-    localStorage.setItem(
-
-        "urbanEssenceFavorites",
-
-        JSON.stringify(favorites)
-
-    );
-
-}
-
-
-/* =====================================================
+/* =========================================================
    COMPARTIR
-===================================================== */
+========================================================= */
 
 function shareProduct(id){
 
-    const product =
-    products.find(p => p.id === id);
+const product =
+products.find(
+p => p.id === id
+);
 
 
-    if(!product){
+if(!product){
 
-        return;
-
-    }
-
-
-    const text =
-    `Mira este producto de Urban Essence: ${product.name} - S/ ${product.price.toFixed(2)}`;
-
-
-    if(navigator.share){
-
-        navigator.share({
-
-            title:
-            product.name,
-
-            text:
-            text,
-
-            url:
-            window.location.href
-
-        });
-
-    }
-
-    else if(navigator.clipboard){
-
-        navigator.clipboard.writeText(
-            window.location.href
-        );
-
-        alert(
-        "Enlace copiado."
-        );
-
-    }
-
-    else{
-
-        alert(
-        "Comparte el enlace de esta página."
-        );
-
-    }
+return;
 
 }
 
 
-/* =====================================================
+const text =
+`Mira este producto de Urban Essence: ${product.name} - S/ ${product.price.toFixed(2)}`;
+
+
+if(navigator.share){
+
+navigator.share({
+
+title:
+product.name,
+
+text:
+text,
+
+url:
+window.location.href
+
+});
+
+}
+
+else if(
+navigator.clipboard
+){
+
+navigator.clipboard.writeText(
+window.location.href
+);
+
+showToast(
+"🔗 Enlace copiado"
+);
+
+}
+
+else{
+
+alert(
+"Comparte el enlace de esta página."
+);
+
+}
+
+}
+
+
+/* =========================================================
    WHATSAPP
-===================================================== */
+========================================================= */
 
 function sendWhatsAppOrder(){
 
-    if(cart.length === 0){
+if(cart.length === 0){
 
-        alert(
-        "Tu carrito está vacío."
-        );
+alert(
+"Tu carrito está vacío."
+);
 
-        return;
-
-    }
-
-
-    const name =
-    document
-    .getElementById("clientName")
-    .value.trim();
-
-
-    const city =
-    document
-    .getElementById("clientCity")
-    .value.trim();
-
-
-    const district =
-    document
-    .getElementById("clientDistrict")
-    .value.trim();
-
-
-    const phone =
-    document
-    .getElementById("clientPhone")
-    .value.trim();
-
-
-    if(
-        !name ||
-        !city ||
-        !district ||
-        !phone
-    ){
-
-        alert(
-        "Completa todos tus datos antes de continuar."
-        );
-
-        return;
-
-    }
-
-
-    let message =
-    "Hola, Urban Essence. 👋\n\n";
-
-
-    message +=
-    "Quiero realizar el siguiente pedido:\n\n";
-
-
-    let total = 0;
-
-
-    cart.forEach(item => {
-
-        const product =
-        products.find(
-            p => p.id === item.id
-        );
-
-
-        if(!product){
-
-            return;
-
-        }
-
-
-        const subtotal =
-        product.price *
-        item.quantity;
-
-
-        total += subtotal;
-
-
-        message +=
-
-        `• ${product.name} x${item.quantity} = S/ ${subtotal.toFixed(2)}\n`;
-
-    });
-
-
-    message +=
-    `\n💰 Total: S/ ${total.toFixed(2)}`;
-
-
-    message +=
-    `\n\n👤 Nombre: ${name}`;
-
-
-    message +=
-    `\n📍 Ciudad: ${city}`;
-
-
-    message +=
-    `\n📍 Distrito: ${district}`;
-
-
-    message +=
-    `\n📱 Teléfono: ${phone}`;
-
-
-    message +=
-    `\n🚚 Método de entrega: Envío`;
-
-
-    message +=
-    "\n\nQuedo atento/a a la confirmación. Gracias.";
-
-
-    const url =
-
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-
-
-    window.open(
-        url,
-        "_blank"
-    );
+return;
 
 }
 
 
-/* =====================================================
-   CERRAR AL HACER CLICK FUERA
-===================================================== */
+const name =
+document
+.getElementById(
+"clientName"
+)
+.value.trim();
+
+
+const city =
+document
+.getElementById(
+"clientCity"
+)
+.value.trim();
+
+
+const district =
+document
+.getElementById(
+"clientDistrict"
+)
+.value.trim();
+
+
+const phone =
+document
+.getElementById(
+"clientPhone"
+)
+.value.trim();
+
+
+if(
+!name ||
+!city ||
+!district ||
+!phone
+){
+
+alert(
+"Completa todos tus datos antes de continuar."
+);
+
+return;
+
+}
+
+
+let message =
+"Hola, Urban Essence. 👋\n\n";
+
+
+message +=
+"Quiero realizar el siguiente pedido:\n\n";
+
+
+let total = 0;
+
+
+cart.forEach(item => {
+
+
+const product =
+products.find(
+p => p.id === item.id
+);
+
+
+if(!product){
+
+return;
+
+}
+
+
+const subtotal =
+product.price *
+item.quantity;
+
+
+total += subtotal;
+
+
+message +=
+
+`• ${product.name} x${item.quantity} = S/ ${subtotal.toFixed(2)}\n`;
+
+});
+
+
+message +=
+`\n💰 Total: S/ ${total.toFixed(2)}`;
+
+
+message +=
+`\n\n👤 Nombre: ${name}`;
+
+
+message +=
+`\n📍 Ciudad: ${city}`;
+
+
+message +=
+`\n📍 Distrito: ${district}`;
+
+
+message +=
+`\n📱 Teléfono: ${phone}`;
+
+
+message +=
+`\n🚚 Método de entrega: Envío`;
+
+
+message +=
+"\n\nQuedo atento/a a la confirmación. Gracias.";
+
+
+const url =
+
+`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+
+window.open(
+url,
+"_blank"
+);
+
+}
+
+
+/* =========================================================
+   EVENTOS
+========================================================= */
 
 document
-.getElementById("cartOverlay")
+.getElementById(
+"cartOverlay"
+)
 .addEventListener(
 "click",
 function(event){
 
-    if(
-        event.target === this
-    ){
+if(
+event.target === this
+){
 
-        closeCart();
+closeCart();
 
-    }
+}
 
 });
 
 
 document
-.getElementById("productModal")
+.getElementById(
+"productModal"
+)
 .addEventListener(
 "click",
 function(event){
 
-    if(
-        event.target === this
-    ){
+if(
+event.target === this
+){
 
-        closeProductModal();
+closeProductModal();
 
-    }
+}
 
 });
 
-
-/* =====================================================
-   TECLADO
-===================================================== */
 
 document.addEventListener(
 "keydown",
 function(event){
 
-    if(event.key === "Escape"){
+if(event.key === "Escape"){
 
-        closeMenu();
+closeMenu();
 
-        closeCart();
+closeCart();
 
-        closeProductModal();
+closeProductModal();
 
-    }
+}
 
 });
 
 
-/* =====================================================
+/* =========================================================
    INICIAR
-===================================================== */
+========================================================= */
 
 applyTheme();
 
