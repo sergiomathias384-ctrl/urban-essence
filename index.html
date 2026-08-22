@@ -4,9 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description"
+content="Urban Essence - Artículos que elevan tu personalidad. Accesorios, relojes y fragancias con envíos a todo el Perú.">
+
 <title>Urban Essence | Artículos que elevan tu personalidad</title>
 
 <style>
+
+/* =========================
+   GENERAL
+========================= */
 
 *{
     margin:0;
@@ -20,48 +27,89 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#111;
+    background:#0d0d0d;
     color:white;
+    line-height:1.5;
 }
+
+button,
+input{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
 
 /* =========================
    HEADER
 ========================= */
 
 header{
-    height:75px;
+    height:72px;
     background:#050505;
-    padding:0 6%;
+    padding:0 5%;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
     position:sticky;
     top:0;
     z-index:1000;
-    border-bottom:1px solid #333;
+    border-bottom:1px solid #292929;
 }
 
 .logo{
     color:#d4af37;
-    font-size:25px;
+    font-size:24px;
     font-weight:bold;
     letter-spacing:2px;
 }
 
-/* BOTON MENU */
+.header-actions{
+    display:flex;
+    align-items:center;
+}
 
-.menu-button{
-    background:none;
-    border:none;
+.icon-button{
+    background:#151515;
+    border:1px solid #333;
     color:white;
-    font-size:30px;
-    cursor:pointer;
-    transition:.3s;
+    border-radius:8px;
+    padding:9px 13px;
+    font-size:20px;
 }
 
-.menu-button:hover{
+.icon-button:hover{
     color:#d4af37;
+    border-color:#d4af37;
 }
+
+.cart-top{
+    position:relative;
+}
+
+.cart-count{
+    position:absolute;
+    top:-7px;
+    right:-7px;
+
+    min-width:20px;
+    height:20px;
+
+    background:#d4af37;
+    color:#111;
+
+    border-radius:50%;
+
+    font-size:12px;
+    font-weight:bold;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
 
 /* =========================
    MENU LATERAL
@@ -70,14 +118,22 @@ header{
 .side-menu{
     position:fixed;
     top:0;
-    left:-320px;
-    width:300px;
+    left:-330px;
+
+    width:310px;
     height:100vh;
-    background:#101010;
+
+    background:#111;
+
     z-index:3000;
-    padding:25px;
-    box-shadow:5px 0 25px rgba(0,0,0,.6);
-    transition:.4s;
+
+    padding:24px;
+
+    box-shadow:5px 0 25px #000;
+
+    transition:.35s;
+
+    overflow-y:auto;
 }
 
 .side-menu.active{
@@ -88,7 +144,8 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:35px;
+
+    margin-bottom:28px;
 }
 
 .menu-header h2{
@@ -98,41 +155,58 @@ header{
 .close-menu{
     background:none;
     border:none;
+
     color:white;
+
     font-size:28px;
-    cursor:pointer;
 }
 
 .side-menu a{
     display:block;
+
     color:white;
+
     text-decoration:none;
-    padding:17px 10px;
+
+    padding:15px 8px;
+
     border-bottom:1px solid #292929;
+
     transition:.3s;
 }
 
 .side-menu a:hover{
     color:#d4af37;
-    padding-left:18px;
+    padding-left:15px;
 }
 
 .menu-cart{
-    margin-top:20px;
     width:100%;
+
+    margin-top:20px;
+
     padding:13px;
+
     background:#d4af37;
+
+    color:#111;
+
     border:none;
-    border-radius:7px;
+
+    border-radius:8px;
+
     font-weight:bold;
-    cursor:pointer;
 }
 
 .menu-overlay{
     position:fixed;
+
     inset:0;
-    background:rgba(0,0,0,.65);
+
+    background:rgba(0,0,0,.7);
+
     z-index:2500;
+
     display:none;
 }
 
@@ -140,26 +214,38 @@ header{
     display:block;
 }
 
+
 /* =========================
-   HERO / CARRUSEL
+   HERO
 ========================= */
 
 .hero{
     height:600px;
+
     position:relative;
+
     overflow:hidden;
 }
 
 .slide{
     position:absolute;
+
     inset:0;
+
     opacity:0;
-    transition:opacity 1s;
+
+    transition:opacity .8s;
+
     background-size:cover;
+
     background-position:center;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     text-align:center;
 }
 
@@ -169,102 +255,146 @@ header{
 
 .slide::before{
     content:"";
+
     position:absolute;
+
     inset:0;
-    background:linear-gradient(
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.82)
-    );
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.85)
+        );
 }
 
 .slide-content{
     position:relative;
+
     z-index:2;
+
     width:90%;
+
     max-width:850px;
 }
 
 .slide-content h1{
     color:#d4af37;
+
     font-size:60px;
-    margin-bottom:20px;
+
+    margin-bottom:15px;
 }
 
 .slide-content h2{
     font-size:40px;
+
     margin-bottom:15px;
 }
 
 .slide-content p{
     font-size:20px;
+
     color:#ddd;
-    margin-bottom:30px;
+
+    margin-bottom:28px;
 }
 
 .hero-button{
     display:inline-block;
-    padding:14px 28px;
+
+    padding:14px 27px;
+
     background:#d4af37;
+
     color:#111;
+
     border-radius:8px;
+
     text-decoration:none;
+
     font-weight:bold;
+
     transition:.3s;
 }
 
 .hero-button:hover{
-    transform:scale(1.06);
     background:#f0cc52;
+
+    transform:scale(1.04);
 }
 
-/* FLECHAS */
+
+/* =========================
+   FLECHAS
+========================= */
 
 .slider-arrow{
     position:absolute;
+
     top:50%;
+
     transform:translateY(-50%);
+
     z-index:10;
-    background:rgba(0,0,0,.45);
-    border:1px solid #777;
-    color:white;
+
     width:45px;
     height:45px;
+
     border-radius:50%;
-    cursor:pointer;
-    font-size:25px;
+
+    background:rgba(0,0,0,.5);
+
+    border:1px solid #777;
+
+    color:white;
+
+    font-size:28px;
 }
 
 .slider-arrow:hover{
     background:#d4af37;
+
     color:#111;
 }
 
 .prev{
-    left:20px;
+    left:18px;
 }
 
 .next{
-    right:20px;
+    right:18px;
 }
 
-/* PUNTOS */
+
+/* =========================
+   PUNTOS
+========================= */
 
 .slider-dots{
     position:absolute;
+
     bottom:20px;
+
     left:0;
     right:0;
-    z-index:10;
+
     text-align:center;
+
+    z-index:10;
 }
 
 .dot{
     display:inline-block;
+
     width:10px;
     height:10px;
+
     border-radius:50%;
+
     background:#777;
+
     margin:5px;
+
     cursor:pointer;
 }
 
@@ -272,23 +402,30 @@ header{
     background:#d4af37;
 }
 
+
 /* =========================
    BUSCADOR
 ========================= */
 
 .search-container{
     text-align:center;
-    padding:35px 20px 10px;
+
+    padding:30px 20px 5px;
 }
 
 #search{
-    width:min(600px,90%);
-    padding:15px;
-    border-radius:8px;
-    border:1px solid #555;
-    background:#222;
+    width:min(650px,92%);
+
+    padding:14px 17px;
+
+    background:#1b1b1b;
+
+    border:1px solid #444;
+
     color:white;
-    font-size:16px;
+
+    border-radius:9px;
+
     outline:none;
 }
 
@@ -296,24 +433,31 @@ header{
     border-color:#d4af37;
 }
 
+
 /* =========================
    TITULOS
 ========================= */
 
 .section-title{
     text-align:center;
-    margin:60px 0 30px;
+
+    margin:58px 0 28px;
+
+    padding:0 15px;
 }
 
 .section-title h2{
     color:#d4af37;
-    font-size:36px;
-    margin-bottom:10px;
+
+    font-size:35px;
+
+    margin-bottom:8px;
 }
 
 .section-title p{
-    color:#aaa;
+    color:#999;
 }
+
 
 /* =========================
    PRODUCTOS
@@ -321,93 +465,134 @@ header{
 
 .products{
     width:90%;
-    max-width:1200px;
+
+    max-width:1250px;
+
     margin:auto;
 
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(230px,1fr));
 
-    gap:25px;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(225px,1fr)
+        );
+
+    gap:22px;
 }
 
 .product{
-    background:#1b1b1b;
-    border:1px solid #333;
+    background:#181818;
+
+    border:1px solid #303030;
+
     border-radius:12px;
+
     overflow:hidden;
-    transition:.3s;
-    cursor:pointer;
+
+    transition:.25s;
+
     position:relative;
+
+    cursor:pointer;
 }
 
 .product:hover{
-    transform:translateY(-7px);
+    transform:translateY(-5px);
+
     border-color:#d4af37;
-    box-shadow:0 10px 30px rgba(212,175,55,.15);
+
+    box-shadow:
+        0 10px 30px
+        rgba(212,175,55,.12);
 }
 
 .product img{
     width:100%;
-    height:280px;
+
+    height:275px;
+
     object-fit:cover;
+
     display:block;
 }
 
 .badge{
     position:absolute;
+
     top:12px;
     left:12px;
+
     background:#d4af37;
+
     color:#111;
-    padding:7px 11px;
+
+    padding:6px 9px;
+
     border-radius:5px;
-    font-size:12px;
+
+    font-size:11px;
+
     font-weight:bold;
 }
 
 .product-info{
-    padding:20px;
+    padding:17px;
 }
 
 .product h3{
-    font-size:20px;
-    margin-bottom:8px;
+    font-size:19px;
+
+    margin-bottom:7px;
 }
 
 .product p{
-    color:#aaa;
+    color:#999;
+
     font-size:14px;
-    min-height:40px;
+
+    min-height:42px;
 }
 
 .stars{
     color:#d4af37;
-    margin-top:10px;
+
+    margin-top:9px;
 }
 
 .price{
     color:#d4af37;
+
     font-size:22px;
+
     font-weight:bold;
-    margin:15px 0;
+
+    margin:13px 0 7px;
 }
 
 .limit{
-    color:#888;
+    color:#777;
+
     font-size:12px;
+
     margin-bottom:10px;
 }
 
 .buy-button{
     width:100%;
-    padding:12px;
+
+    padding:11px;
+
     border:none;
+
     border-radius:7px;
+
     background:#d4af37;
+
     color:#111;
+
     font-weight:bold;
-    cursor:pointer;
+
     transition:.3s;
 }
 
@@ -415,124 +600,6 @@ header{
     background:#f0cc52;
 }
 
-/* =========================
-   DETALLE PRODUCTO
-========================= */
-
-.product-modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.85);
-    z-index:5000;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-}
-
-.product-modal.active{
-    display:flex;
-}
-
-.product-detail{
-    width:min(900px,95%);
-    max-height:90vh;
-    overflow-y:auto;
-    background:#1b1b1b;
-    border:1px solid #444;
-    border-radius:15px;
-    padding:25px;
-    position:relative;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-}
-
-.detail-image{
-    width:100%;
-    height:430px;
-    object-fit:cover;
-    border-radius:10px;
-}
-
-.close-detail{
-    position:absolute;
-    right:15px;
-    top:10px;
-    background:none;
-    border:none;
-    color:white;
-    font-size:30px;
-    cursor:pointer;
-    z-index:5;
-}
-
-.close-detail:hover{
-    color:#d4af37;
-}
-
-.detail-info{
-    padding:25px 10px;
-}
-
-.detail-info h2{
-    font-size:32px;
-    margin-bottom:15px;
-}
-
-.detail-description{
-    color:#aaa;
-    line-height:1.7;
-    margin:20px 0;
-}
-
-.detail-price{
-    color:#d4af37;
-    font-size:30px;
-    font-weight:bold;
-    margin:20px 0;
-}
-
-.quantity-box{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    margin:20px 0;
-}
-
-.quantity-box button{
-    width:35px;
-    height:35px;
-    background:#333;
-    color:white;
-    border:none;
-    border-radius:6px;
-    font-size:20px;
-    cursor:pointer;
-}
-
-.quantity-box button:hover{
-    background:#d4af37;
-    color:#111;
-}
-
-.quantity-number{
-    font-size:20px;
-    min-width:25px;
-    text-align:center;
-}
-
-.detail-add{
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:8px;
-    background:#d4af37;
-    color:#111;
-    font-weight:bold;
-    cursor:pointer;
-    font-size:16px;
-}
 
 /* =========================
    SOBRE NOSOTROS
@@ -540,24 +607,34 @@ header{
 
 .about{
     width:90%;
+
     max-width:1000px;
-    margin:80px auto;
-    padding:45px;
-    background:#191919;
+
+    margin:75px auto;
+
+    padding:42px;
+
+    background:#181818;
+
+    border:1px solid #303030;
+
     border-radius:12px;
+
     text-align:center;
-    border:1px solid #333;
 }
 
 .about h2{
     color:#d4af37;
-    margin-bottom:20px;
+
+    margin-bottom:16px;
 }
 
 .about p{
     color:#ccc;
-    line-height:1.7;
+
+    line-height:1.8;
 }
+
 
 /* =========================
    CONTACTO
@@ -565,47 +642,56 @@ header{
 
 .contact{
     text-align:center;
+
     padding:60px 20px;
-    background:#080808;
+
+    background:#070707;
 }
 
 .contact h2{
     color:#d4af37;
-    margin-bottom:15px;
+
+    margin-bottom:16px;
 }
 
 .contact p{
-    color:#bbb;
-    margin-bottom:20px;
+    color:#aaa;
+
+    margin-bottom:18px;
 }
 
 .whatsapp{
     display:inline-block;
+
     background:#25D366;
+
     color:white;
-    padding:13px 25px;
+
+    padding:13px 24px;
+
     border-radius:8px;
+
     text-decoration:none;
+
     font-weight:bold;
-    transition:.3s;
 }
-
-.whatsapp:hover{
-    transform:scale(1.05);
-}
-
-/* =========================
-   EMAIL
-========================= */
 
 .email{
     margin-top:18px;
+
     color:#aaa;
 }
 
-.email span{
+.email a{
     color:#d4af37;
+
+    text-decoration:none;
 }
+
+.email a:hover{
+    text-decoration:underline;
+}
+
 
 /* =========================
    CARRITO
@@ -613,16 +699,27 @@ header{
 
 .cart{
     position:fixed;
-    right:-400px;
+
+    right:-410px;
+
     top:0;
-    width:360px;
-    max-width:90%;
+
+    width:370px;
+
+    max-width:94%;
+
     height:100vh;
-    background:#181818;
+
+    background:#171717;
+
     z-index:4000;
-    padding:25px;
-    box-shadow:-5px 0 20px rgba(0,0,0,.5);
-    transition:.4s;
+
+    padding:24px;
+
+    box-shadow:-6px 0 25px #000;
+
+    transition:.35s;
+
     overflow-y:auto;
 }
 
@@ -632,9 +729,12 @@ header{
 
 .cart-header{
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    margin-bottom:25px;
+
+    margin-bottom:18px;
 }
 
 .cart-header h2{
@@ -643,79 +743,305 @@ header{
 
 .close-cart{
     background:none;
+
     border:none;
+
     color:white;
-    font-size:25px;
-    cursor:pointer;
+
+    font-size:26px;
 }
 
 .cart-item{
-    border-bottom:1px solid #333;
+    border-bottom:1px solid #303030;
+
     padding:15px 0;
 }
 
 .cart-item h4{
-    margin-bottom:7px;
+    margin-bottom:4px;
 }
 
-.cart-item p{
+.unit-price{
+    color:#999;
+
+    font-size:13px;
+}
+
+.subtotal{
     color:#d4af37;
+
+    font-weight:bold;
+
+    margin-top:4px;
 }
 
 .cart-controls{
     display:flex;
+
     align-items:center;
-    gap:8px;
+
+    gap:9px;
+
     margin-top:10px;
 }
 
 .cart-controls button{
-    width:28px;
-    height:28px;
+    width:29px;
+    height:29px;
+
     border:none;
+
     border-radius:5px;
+
     background:#333;
+
     color:white;
-    cursor:pointer;
 }
 
 .cart-controls button:hover{
     background:#d4af37;
+
     color:#111;
 }
 
 .remove-button{
     margin-top:8px;
+
     background:#333;
+
     color:white;
+
     border:none;
+
     padding:6px 10px;
+
     border-radius:5px;
-    cursor:pointer;
+}
+
+.remove-button:hover{
+    background:#a33;
 }
 
 .cart-total{
-    margin-top:25px;
-    font-size:22px;
+    margin-top:22px;
+
+    font-size:23px;
+
     color:#d4af37;
+
     font-weight:bold;
 }
 
 .checkout{
     width:100%;
-    margin-top:20px;
+
+    margin-top:17px;
+
     padding:14px;
+
     border:none;
+
     border-radius:8px;
+
     background:#25D366;
+
     color:white;
+
     font-weight:bold;
-    cursor:pointer;
 }
 
-.checkout:hover{
-    background:#1ebe5d;
+.clear-cart{
+    width:100%;
+
+    padding:11px;
+
+    margin-top:10px;
+
+    border:1px solid #444;
+
+    border-radius:8px;
+
+    background:#222;
+
+    color:white;
 }
+
+.cart-empty{
+    color:#999;
+
+    padding:20px 0;
+
+    text-align:center;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.product-modal{
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    z-index:5000;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px;
+}
+
+.product-modal.active{
+    display:flex;
+}
+
+.product-detail{
+    width:min(900px,96%);
+
+    max-height:92vh;
+
+    overflow-y:auto;
+
+    background:#1a1a1a;
+
+    border:1px solid #444;
+
+    border-radius:14px;
+
+    padding:24px;
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:28px;
+}
+
+.detail-image{
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:9px;
+}
+
+.close-detail{
+    position:absolute;
+
+    right:13px;
+
+    top:8px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:30px;
+
+    z-index:5;
+}
+
+.detail-info{
+    padding:25px 8px;
+}
+
+.detail-info h2{
+    font-size:31px;
+
+    margin-bottom:10px;
+}
+
+.detail-description{
+    color:#aaa;
+
+    line-height:1.7;
+
+    margin:18px 0;
+}
+
+.detail-price{
+    color:#d4af37;
+
+    font-size:29px;
+
+    font-weight:bold;
+
+    margin:17px 0;
+}
+
+.detail-limit{
+    color:#888;
+
+    font-size:13px;
+}
+
+.quantity-box{
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:20px 0;
+}
+
+.quantity-box button{
+    width:36px;
+    height:36px;
+
+    background:#333;
+
+    color:white;
+
+    border:none;
+
+    border-radius:6px;
+
+    font-size:20px;
+}
+
+.quantity-box button:hover{
+    background:#d4af37;
+
+    color:#111;
+}
+
+.quantity-number{
+    font-size:20px;
+
+    min-width:25px;
+
+    text-align:center;
+}
+
+.detail-add{
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#d4af37;
+
+    color:#111;
+
+    font-weight:bold;
+}
+
 
 /* =========================
    NOTIFICACION
@@ -723,45 +1049,73 @@ header{
 
 .notification{
     position:fixed;
-    right:25px;
-    bottom:25px;
+
+    right:22px;
+
+    bottom:22px;
+
     background:#d4af37;
+
     color:#111;
-    padding:14px 20px;
+
+    padding:13px 18px;
+
     border-radius:8px;
+
     font-weight:bold;
+
     z-index:6000;
+
     transform:translateY(100px);
+
     opacity:0;
-    transition:.4s;
+
+    transition:.35s;
 }
 
 .notification.show{
     transform:translateY(0);
+
     opacity:1;
 }
 
+
 /* =========================
-   WHATSAPP FLOTANTE
+   WHATSAPP
 ========================= */
 
 .whatsapp-float{
     position:fixed;
+
     right:20px;
+
     bottom:20px;
+
     width:55px;
+
     height:55px;
+
     border-radius:50%;
+
     background:#25D366;
+
     color:white;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     text-decoration:none;
-    font-size:27px;
-    z-index:1500;
-    box-shadow:0 5px 15px rgba(0,0,0,.4);
+
+    font-size:26px;
+
+    z-index:1400;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.5);
 }
+
 
 /* =========================
    FOOTER
@@ -769,14 +1123,18 @@ header{
 
 footer{
     text-align:center;
-    padding:25px;
+
+    padding:24px;
+
     background:#000;
+
     color:#777;
 }
 
 footer span{
     color:#d4af37;
 }
+
 
 /* =========================
    CELULAR
@@ -786,11 +1144,12 @@ footer span{
 
     header{
         height:65px;
-        padding:0 20px;
+
+        padding:0 15px;
     }
 
     .logo{
-        font-size:18px;
+        font-size:17px;
     }
 
     .hero{
@@ -802,15 +1161,17 @@ footer span{
     }
 
     .slide-content h2{
-        font-size:30px;
+        font-size:29px;
     }
 
     .slide-content p{
-        font-size:17px;
+        font-size:16px;
     }
 
     .product-detail{
         grid-template-columns:1fr;
+
+        padding:18px;
     }
 
     .detail-image{
@@ -822,7 +1183,46 @@ footer span{
     }
 
     .cart{
-        width:330px;
+        width:345px;
+    }
+
+    .products{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:12px;
+    }
+
+    .product img{
+        height:210px;
+    }
+
+    .product-info{
+        padding:12px;
+    }
+
+    .product h3{
+        font-size:16px;
+    }
+
+    .price{
+        font-size:18px;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+}
+
+@media(max-width:430px){
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .product img{
+        height:260px;
     }
 
 }
@@ -830,54 +1230,81 @@ footer span{
 </style>
 </head>
 
+
 <body>
 
+
 <!-- =========================
-     MENU LATERAL
+     MENU
 ========================= -->
 
-<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<div
+    class="menu-overlay"
+    id="menuOverlay"
+    onclick="closeMenu()">
+</div>
 
-<div class="side-menu" id="sideMenu">
+
+<nav
+    class="side-menu"
+    id="sideMenu">
 
     <div class="menu-header">
 
-        <h2>Urban Essence</h2>
+        <h2>
+            Urban Essence
+        </h2>
 
-        <button class="close-menu" onclick="closeMenu()">
+        <button
+            class="close-menu"
+            onclick="closeMenu()">
+
             ✕
+
         </button>
 
     </div>
 
-    <a href="#inicio" onclick="closeMenu()">🏠 Inicio</a>
 
-    <a href="#mujer" onclick="filterCategory('Mujer'); closeMenu()">
+    <a href="#inicio" onclick="closeMenu()">
+        🏠 Inicio
+    </a>
+
+    <a href="#mujer" onclick="filterCategory('Mujer')">
         👩 Mujer
     </a>
 
-    <a href="#varon" onclick="filterCategory('Varón'); closeMenu()">
+    <a href="#varon" onclick="filterCategory('Varón')">
         👨 Varón
     </a>
 
     <a href="#accesorios" onclick="closeMenu()">
-        👜 Accesorios & Complementos
+        👝 Accesorios & Complementos
+    </a>
+
+    <a href="#relojes" onclick="closeMenu()">
+        ⌚ Relojes
     </a>
 
     <a href="#fragancias" onclick="closeMenu()">
-        🌸 Fragancias
+        🧴 Fragancias
     </a>
 
     <a href="#contacto" onclick="closeMenu()">
         📞 Contáctanos
     </a>
 
-    <button class="menu-cart" onclick="openCart(); closeMenu()">
+
+    <button
+        class="menu-cart"
+        onclick="openCart();closeMenu()">
+
         🛒 Carrito
         (<span id="menu-cart-count">0</span>)
+
     </button>
 
-</div>
+</nav>
 
 
 <!-- =========================
@@ -886,12 +1313,40 @@ footer span{
 
 <header>
 
-    <button class="menu-button" onclick="openMenu()">
+    <button
+        class="icon-button"
+        onclick="openMenu()">
+
         ☰
+
     </button>
 
+
     <div class="logo">
+
         URBAN ESSENCE
+
+    </div>
+
+
+    <div class="header-actions">
+
+        <button
+            class="icon-button cart-top"
+            onclick="openCart()">
+
+            🛒
+
+            <span
+                class="cart-count"
+                id="header-cart-count">
+
+                0
+
+            </span>
+
+        </button>
+
     </div>
 
 </header>
@@ -901,21 +1356,32 @@ footer span{
      HERO
 ========================= -->
 
-<section class="hero" id="inicio">
+<section
+    class="hero"
+    id="inicio">
 
-    <div class="slide active"
-         style="background-image:url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1600&q=80');">
+
+    <div
+        class="slide active"
+        style="background-image:url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1600&q=80')">
+
 
         <div class="slide-content">
 
-            <h1>Urban Essence</h1>
+            <h1>
+                Urban Essence
+            </h1>
 
             <p>
                 Artículos que elevan tu personalidad.
             </p>
 
-            <a href="#accesorios" class="hero-button">
+            <a
+                href="#accesorios"
+                class="hero-button">
+
                 Descubrir colección
+
             </a>
 
         </div>
@@ -923,19 +1389,27 @@ footer span{
     </div>
 
 
-    <div class="slide"
-         style="background-image:url('https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=1600&q=80');">
+    <div
+        class="slide"
+        style="background-image:url('https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=1600&q=80')">
+
 
         <div class="slide-content">
 
-            <h2>Estilo para cada ocasión</h2>
+            <h2>
+                Estilo para cada ocasión
+            </h2>
 
             <p>
-                Descubre accesorios diseñados para complementar tu personalidad.
+                Accesorios diseñados para complementar tu personalidad.
             </p>
 
-            <a href="#accesorios" class="hero-button">
+            <a
+                href="#accesorios"
+                class="hero-button">
+
                 Ver accesorios
+
             </a>
 
         </div>
@@ -943,19 +1417,27 @@ footer span{
     </div>
 
 
-    <div class="slide"
-         style="background-image:url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1600&q=80');">
+    <div
+        class="slide"
+        style="background-image:url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1600&q=80')">
+
 
         <div class="slide-content">
 
-            <h2>Tu esencia, tu estilo</h2>
+            <h2>
+                Tu esencia, tu estilo
+            </h2>
 
             <p>
                 Encuentra aromas que dejan huella.
             </p>
 
-            <a href="#fragancias" class="hero-button">
+            <a
+                href="#fragancias"
+                class="hero-button">
+
                 Ver fragancias
+
             </a>
 
         </div>
@@ -963,19 +1445,27 @@ footer span{
     </div>
 
 
-    <div class="slide"
-         style="background-image:url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1600&q=80');">
+    <div
+        class="slide"
+        style="background-image:url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1600&q=80')">
+
 
         <div class="slide-content">
 
-            <h2>🇵🇪 Envíos a todo el Perú</h2>
+            <h2>
+                🇵🇪 Envíos a todo el Perú
+            </h2>
 
             <p>
                 Lleva Urban Essence contigo estés donde estés.
             </p>
 
-            <a href="#contacto" class="hero-button">
+            <a
+                href="#contacto"
+                class="hero-button">
+
                 Contáctanos
+
             </a>
 
         </div>
@@ -983,21 +1473,45 @@ footer span{
     </div>
 
 
-    <button class="slider-arrow prev" onclick="changeSlide(-1)">
+    <button
+        class="slider-arrow prev"
+        onclick="changeSlide(-1)">
+
         ‹
+
     </button>
 
-    <button class="slider-arrow next" onclick="changeSlide(1)">
+
+    <button
+        class="slider-arrow next"
+        onclick="changeSlide(1)">
+
         ›
+
     </button>
 
 
     <div class="slider-dots">
 
-        <span class="dot active" onclick="goToSlide(0)"></span>
-        <span class="dot" onclick="goToSlide(1)"></span>
-        <span class="dot" onclick="goToSlide(2)"></span>
-        <span class="dot" onclick="goToSlide(3)"></span>
+        <span
+            class="dot active"
+            onclick="goToSlide(0)">
+        </span>
+
+        <span
+            class="dot"
+            onclick="goToSlide(1)">
+        </span>
+
+        <span
+            class="dot"
+            onclick="goToSlide(2)">
+        </span>
+
+        <span
+            class="dot"
+            onclick="goToSlide(3)">
+        </span>
 
     </div>
 
@@ -1011,11 +1525,10 @@ footer span{
 <div class="search-container">
 
     <input
-        type="text"
+        type="search"
         id="search"
         placeholder="🔎 Buscar un producto..."
-        onkeyup="searchProducts()"
-    >
+        oninput="searchProducts()">
 
 </div>
 
@@ -1025,6 +1538,7 @@ footer span{
 ========================= -->
 
 <section id="accesorios">
+
 
     <div class="section-title">
 
@@ -1042,11 +1556,10 @@ footer span{
     <div class="products">
 
 
-        <!-- PRODUCTO 1 -->
-
-        <div class="product"
-             data-category="Varón"
-             onclick="openProduct(0)">
+        <article
+            class="product"
+            data-index="0"
+            onclick="openProduct(0)">
 
             <span class="badge">
                 MÁS VENDIDO
@@ -1054,8 +1567,8 @@ footer span{
 
             <img
                 src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80"
-                alt="Billetera de cuero"
-            >
+                alt="Billetera Valencia">
+
 
             <div class="product-info">
 
@@ -1064,7 +1577,7 @@ footer span{
                 </h3>
 
                 <p>
-                    Elegante billetera de cuero para uso diario.
+                    Elegante billetera para uso diario.
                 </p>
 
                 <div class="stars">
@@ -1081,21 +1594,21 @@ footer span{
 
                 <button
                     class="buy-button"
-                    onclick="event.stopPropagation(); addToCart('Billetera Valencia',140,2)"
-                >
+                    onclick="event.stopPropagation();addToCart(0)">
+
                     Agregar al carrito
+
                 </button>
 
             </div>
 
-        </div>
+        </article>
 
 
-        <!-- PRODUCTO 2 -->
-
-        <div class="product"
-             data-category="Mujer"
-             onclick="openProduct(1)">
+        <article
+            class="product"
+            data-index="1"
+            onclick="openProduct(1)">
 
             <span class="badge">
                 NUEVO
@@ -1103,8 +1616,8 @@ footer span{
 
             <img
                 src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
-                alt="Bolso elegante"
-            >
+                alt="Bolso Elegance">
+
 
             <div class="product-info">
 
@@ -1113,7 +1626,7 @@ footer span{
                 </h3>
 
                 <p>
-                    Diseño moderno y elegante para cualquier ocasión.
+                    Diseño moderno y elegante.
                 </p>
 
                 <div class="stars">
@@ -1130,26 +1643,26 @@ footer span{
 
                 <button
                     class="buy-button"
-                    onclick="event.stopPropagation(); addToCart('Bolso Elegance',159.90,2)"
-                >
+                    onclick="event.stopPropagation();addToCart(1)">
+
                     Agregar al carrito
+
                 </button>
 
             </div>
 
-        </div>
+        </article>
 
 
-        <!-- PRODUCTO 3 -->
-
-        <div class="product"
-             data-category="Varón"
-             onclick="openProduct(2)">
+        <article
+            class="product"
+            data-index="2"
+            onclick="openProduct(2)">
 
             <img
                 src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
-                alt="Mochila urbana"
-            >
+                alt="Morral Urban">
+
 
             <div class="product-info">
 
@@ -1175,21 +1688,21 @@ footer span{
 
                 <button
                     class="buy-button"
-                    onclick="event.stopPropagation(); addToCart('Morral Urban',129.90,3)"
-                >
+                    onclick="event.stopPropagation();addToCart(2)">
+
                     Agregar al carrito
+
                 </button>
 
             </div>
 
-        </div>
+        </article>
 
 
-        <!-- PRODUCTO 4 -->
-
-        <div class="product"
-             data-category="Mujer"
-             onclick="openProduct(3)">
+        <article
+            class="product"
+            data-index="3"
+            onclick="openProduct(3)">
 
             <span class="badge">
                 PREMIUM
@@ -1197,8 +1710,8 @@ footer span{
 
             <img
                 src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80"
-                alt="Cartera premium"
-            >
+                alt="Cartera Premium">
+
 
             <div class="product-info">
 
@@ -1224,26 +1737,26 @@ footer span{
 
                 <button
                     class="buy-button"
-                    onclick="event.stopPropagation(); addToCart('Cartera Premium',189.90,1)"
-                >
+                    onclick="event.stopPropagation();addToCart(3)">
+
                     Agregar al carrito
+
                 </button>
 
             </div>
 
-        </div>
+        </article>
 
 
-        <!-- PRODUCTO 5 -->
-
-        <div class="product"
-             data-category="Mujer"
-             onclick="openProduct(4)">
+        <article
+            class="product"
+            data-index="4"
+            onclick="openProduct(4)">
 
             <img
                 src="https://images.unsplash.com/photo-1601924928376-2a9d5b1c1d7c?auto=format&fit=crop&w=800&q=80"
-                alt="Monedero"
-            >
+                alt="Monedero Urban">
+
 
             <div class="product-info">
 
@@ -1269,21 +1782,21 @@ footer span{
 
                 <button
                     class="buy-button"
-                    onclick="event.stopPropagation(); addToCart('Monedero Urban',69.90,3)"
-                >
+                    onclick="event.stopPropagation();addToCart(4)">
+
                     Agregar al carrito
+
                 </button>
 
             </div>
 
-        </div>
+        </article>
 
 
-        <!-- PRODUCTO 6 -->
-
-        <div class="product"
-             data-category="Varón"
-             onclick="openProduct(5)">
+        <article
+            class="product"
+            data-index="5"
+            onclick="openProduct(5)">
 
             <span class="badge">
                 NUEVO
@@ -1291,8 +1804,8 @@ footer span{
 
             <img
                 src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?auto=format&fit=crop&w=800&q=80"
-                alt="Correa de cuero"
-            >
+                alt="Correa Classic">
+
 
             <div class="product-info">
 
@@ -1301,7 +1814,7 @@ footer span{
                 </h3>
 
                 <p>
-                    Un complemento elegante para cualquier estilo.
+                    Complemento elegante para cualquier estilo.
                 </p>
 
                 <div class="stars">
@@ -1318,14 +1831,236 @@ footer span{
 
                 <button
                     class="buy-button"
-                    onclick="event.stopPropagation(); addToCart('Correa Classic',79.90,3)"
-                >
+                    onclick="event.stopPropagation();addToCart(5)">
+
                     Agregar al carrito
+
                 </button>
 
             </div>
 
-        </div>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MUJER
+========================= -->
+
+<section id="mujer">
+
+    <div class="section-title">
+
+        <h2>
+            👩 Colección Mujer
+        </h2>
+
+        <p>
+            Estilo, elegancia y personalidad.
+        </p>
+
+    </div>
+
+    <div
+        class="products"
+        id="mujer-products">
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VARON
+========================= -->
+
+<section id="varon">
+
+    <div class="section-title">
+
+        <h2>
+            👨 Colección Varón
+        </h2>
+
+        <p>
+            Accesorios pensados para destacar.
+        </p>
+
+    </div>
+
+    <div
+        class="products"
+        id="varon-products">
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RELOJES
+========================= -->
+
+<section id="relojes">
+
+    <div class="section-title">
+
+        <h2>
+            ⌚ Relojes
+        </h2>
+
+        <p>
+            El detalle que completa tu estilo.
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <article
+            class="product"
+            data-index="9"
+            onclick="openProduct(9)">
+
+            <span class="badge">
+                NUEVO
+            </span>
+
+            <img
+                src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80"
+                alt="Urban Classic">
+
+
+            <div class="product-info">
+
+                <h3>
+                    Urban Classic
+                </h3>
+
+                <p>
+                    Diseño clásico y versátil.
+                </p>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    S/ 199.90
+                </div>
+
+                <div class="limit">
+                    Máximo: 2 unidades
+                </div>
+
+                <button
+                    class="buy-button"
+                    onclick="event.stopPropagation();addToCart(9)">
+
+                    Agregar al carrito
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="product"
+            data-index="10"
+            onclick="openProduct(10)">
+
+            <span class="badge">
+                PREMIUM
+            </span>
+
+            <img
+                src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80"
+                alt="Essence Gold">
+
+
+            <div class="product-info">
+
+                <h3>
+                    Essence Gold
+                </h3>
+
+                <p>
+                    Acabado elegante para ocasiones especiales.
+                </p>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    S/ 229.90
+                </div>
+
+                <div class="limit">
+                    Máximo: 1 unidad
+                </div>
+
+                <button
+                    class="buy-button"
+                    onclick="event.stopPropagation();addToCart(10)">
+
+                    Agregar al carrito
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="product"
+            data-index="11"
+            onclick="openProduct(11)">
+
+            <img
+                src="https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&w=800&q=80"
+                alt="Urban Steel">
+
+
+            <div class="product-info">
+
+                <h3>
+                    Urban Steel
+                </h3>
+
+                <p>
+                    Estilo urbano con presencia.
+                </p>
+
+                <div class="stars">
+                    ★★★★☆
+                </div>
+
+                <div class="price">
+                    S/ 179.90
+                </div>
+
+                <div class="limit">
+                    Máximo: 2 unidades
+                </div>
+
+                <button
+                    class="buy-button"
+                    onclick="event.stopPropagation();addToCart(11)">
+
+                    Agregar al carrito
+
+                </button>
+
+            </div>
+
+        </article>
 
     </div>
 
@@ -1341,7 +2076,7 @@ footer span{
     <div class="section-title">
 
         <h2>
-            Fragancias
+            🧴 Fragancias
         </h2>
 
         <p>
@@ -1354,9 +2089,10 @@ footer span{
     <div class="products">
 
 
-        <div class="product"
-             data-category="Varón"
-             onclick="openProduct(6)">
+        <article
+            class="product"
+            data-index="6"
+            onclick="openProduct(6)">
 
             <span class="badge">
                 PREMIUM
@@ -1364,8 +2100,8 @@ footer span{
 
             <img
                 src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80"
-                alt="Fragancia Urban Night"
-            >
+                alt="Urban Night">
+
 
             <div class="product-info">
 
@@ -1391,19 +2127,21 @@ footer span{
 
                 <button
                     class="buy-button"
-                    onclick="event.stopPropagation(); addToCart('Urban Night',129.90,2)"
-                >
+                    onclick="event.stopPropagation();addToCart(6)">
+
                     Agregar al carrito
+
                 </button>
 
             </div>
 
-        </div>
+        </article>
 
 
-        <div class="product"
-             data-category="Mujer"
-             onclick="openProduct(7)">
+        <article
+            class="product"
+            data-index="7"
+            onclick="openProduct(7)">
 
             <span class="badge">
                 PREMIUM
@@ -1411,8 +2149,8 @@ footer span{
 
             <img
                 src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80"
-                alt="Golden Essence"
-            >
+                alt="Golden Essence">
+
 
             <div class="product-info">
 
@@ -1438,24 +2176,26 @@ footer span{
 
                 <button
                     class="buy-button"
-                    onclick="event.stopPropagation(); addToCart('Golden Essence',149.90,2)"
-                >
+                    onclick="event.stopPropagation();addToCart(7)">
+
                     Agregar al carrito
+
                 </button>
 
             </div>
 
-        </div>
+        </article>
 
 
-        <div class="product"
-             data-category="Varón"
-             onclick="openProduct(8)">
+        <article
+            class="product"
+            data-index="8"
+            onclick="openProduct(8)">
 
             <img
                 src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=800&q=80"
-                alt="Essence Premium"
-            >
+                alt="Essence Premium">
+
 
             <div class="product-info">
 
@@ -1481,14 +2221,15 @@ footer span{
 
                 <button
                     class="buy-button"
-                    onclick="event.stopPropagation(); addToCart('Essence Premium',169.90,1)"
-                >
+                    onclick="event.stopPropagation();addToCart(8)">
+
                     Agregar al carrito
+
                 </button>
 
             </div>
 
-        </div>
+        </article>
 
     </div>
 
@@ -1507,9 +2248,9 @@ footer span{
 
     <p>
         En Urban Essence buscamos ofrecer artículos que combinen
-        elegancia, estilo y personalidad. Descubre nuestra selección
-        de productos pensados para complementar tu estilo y expresar
-        tu esencia.
+        elegancia, estilo y personalidad. Descubre accesorios,
+        relojes y fragancias pensados para complementar tu estilo
+        y expresar tu esencia.
     </p>
 
 </section>
@@ -1519,30 +2260,42 @@ footer span{
      CONTACTANOS
 ========================= -->
 
-<section class="contact" id="contacto">
+<section
+    class="contact"
+    id="contacto">
 
     <h2>
         Contáctanos
     </h2>
 
     <p>
-        ¿Tienes alguna pregunta? Escríbenos y te ayudaremos con tu pedido.
+        ¿Tienes alguna pregunta?
+        Escríbenos y te ayudaremos con tu pedido.
     </p>
+
 
     <a
         class="whatsapp"
         href="https://wa.me/51986788414"
         target="_blank"
-        rel="noopener noreferrer"
-    >
+        rel="noopener noreferrer">
+
         💬 Contactar por WhatsApp
+
     </a>
 
+
     <div class="email">
+
         📧 Correo:
-        <span>
-            Próximamente
-        </span>
+
+        <a
+            href="mailto:urban.essence.corporativo@gmail.com">
+
+            urban.essence.corporativo@gmail.com
+
+        </a>
+
     </div>
 
 </section>
@@ -1552,7 +2305,10 @@ footer span{
      CARRITO
 ========================= -->
 
-<div class="cart" id="cart">
+<aside
+    class="cart"
+    id="cart">
+
 
     <div class="cart-header">
 
@@ -1562,39 +2318,51 @@ footer span{
 
         <button
             class="close-cart"
-            onclick="closeCart()"
-        >
+            onclick="closeCart()">
+
             ✕
+
         </button>
 
     </div>
 
+
     <div id="cart-items">
 
-        <p style="color:#aaa;">
-            Tu carrito está vacío.
-        </p>
-
     </div>
+
 
     <div class="cart-total">
 
         Total:
+
         S/
+
         <span id="cart-total">
             0.00
         </span>
 
     </div>
 
+
     <button
         class="checkout"
-        onclick="checkoutWhatsApp()"
-    >
-        Comprar por WhatsApp
+        onclick="checkoutWhatsApp()">
+
+        💬 Comprar por WhatsApp
+
     </button>
 
-</div>
+
+    <button
+        class="clear-cart"
+        onclick="clearCart()">
+
+        Vaciar carrito
+
+    </button>
+
+</aside>
 
 
 <!-- =========================
@@ -1604,27 +2372,29 @@ footer span{
 <div
     class="product-modal"
     id="productModal"
-    onclick="closeProduct(event)"
->
+    onclick="closeProduct()">
+
 
     <div
         class="product-detail"
-        onclick="event.stopPropagation()"
-    >
+        onclick="event.stopPropagation()">
+
 
         <button
             class="close-detail"
-            onclick="closeProduct()"
-        >
+            onclick="closeProduct()">
+
             ✕
+
         </button>
+
 
         <img
             id="detailImage"
             class="detail-image"
             src=""
-            alt=""
-        >
+            alt="">
+
 
         <div class="detail-info">
 
@@ -1632,46 +2402,65 @@ footer span{
                 Producto
             </h2>
 
+
             <div class="stars">
                 ★★★★★
             </div>
 
+
             <p
                 id="detailDescription"
-                class="detail-description"
-            ></p>
+                class="detail-description">
+            </p>
+
 
             <div
                 id="detailPrice"
-                class="detail-price"
-            ></div>
+                class="detail-price">
+            </div>
 
-            <p id="detailLimit"></p>
+
+            <p
+                id="detailLimit"
+                class="detail-limit">
+            </p>
+
 
             <div class="quantity-box">
 
-                <button onclick="changeDetailQuantity(-1)">
+                <button
+                    onclick="changeDetailQuantity(-1)">
+
                     −
+
                 </button>
 
+
                 <span
-                    class="quantity-number"
                     id="detailQuantity"
-                >
+                    class="quantity-number">
+
                     1
+
                 </span>
 
-                <button onclick="changeDetailQuantity(1)">
+
+                <button
+                    onclick="changeDetailQuantity(1)">
+
                     +
+
                 </button>
 
             </div>
 
+
             <button
                 class="detail-add"
-                onclick="addDetailToCart()"
-            >
+                onclick="addDetailToCart()">
+
                 🛒 Agregar al carrito
+
             </button>
 
         </div>
@@ -1687,23 +2476,25 @@ footer span{
 
 <div
     class="notification"
-    id="notification"
->
+    id="notification">
+
     🛒 Producto agregado al carrito
+
 </div>
 
 
 <!-- =========================
-     WHATSAPP FLOTANTE
+     WHATSAPP
 ========================= -->
 
 <a
     class="whatsapp-float"
     href="https://wa.me/51986788414"
     target="_blank"
-    rel="noopener noreferrer"
->
+    rel="noopener noreferrer">
+
     💬
+
 </a>
 
 
@@ -1738,7 +2529,7 @@ const productsData = [
         limit:2,
         category:"Varón",
         image:"https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80",
-        description:"Elegante billetera de cuero para uso diario."
+        description:"Elegante billetera para uso diario."
     },
 
     {
@@ -1747,7 +2538,7 @@ const productsData = [
         limit:2,
         category:"Mujer",
         image:"https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
-        description:"Diseño moderno y elegante para cualquier ocasión."
+        description:"Diseño moderno y elegante."
     },
 
     {
@@ -1783,7 +2574,7 @@ const productsData = [
         limit:3,
         category:"Varón",
         image:"https://images.unsplash.com/photo-1624222247344-550fb60583dc?auto=format&fit=crop&w=800&q=80",
-        description:"Un complemento elegante para cualquier estilo."
+        description:"Complemento elegante para cualquier estilo."
     },
 
     {
@@ -1811,16 +2602,101 @@ const productsData = [
         category:"Varón",
         image:"https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=800&q=80",
         description:"Una fragancia para destacar."
+    },
+
+    {
+        name:"Urban Classic",
+        price:199.90,
+        limit:2,
+        category:"Varón",
+        image:"https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80",
+        description:"Reloj de diseño clásico y versátil."
+    },
+
+    {
+        name:"Essence Gold",
+        price:229.90,
+        limit:1,
+        category:"Mujer",
+        image:"https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80",
+        description:"Reloj elegante para ocasiones especiales."
+    },
+
+    {
+        name:"Urban Steel",
+        price:179.90,
+        limit:2,
+        category:"Varón",
+        image:"https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&w=800&q=80",
+        description:"Estilo urbano con presencia."
     }
 
 ];
 
 
 /* =========================
-   CARRITO
+   VARIABLES
 ========================= */
 
 let cart = [];
+
+let currentProduct = null;
+
+let detailQuantity = 1;
+
+let currentSlide = 0;
+
+const slides =
+    document.querySelectorAll(".slide");
+
+const dots =
+    document.querySelectorAll(".dot");
+
+
+/* =========================
+   GUARDAR CARRITO
+========================= */
+
+function saveCart(){
+
+    localStorage.setItem(
+        "urbanEssenceCart",
+        JSON.stringify(cart)
+    );
+
+}
+
+
+/* =========================
+   CARGAR CARRITO
+========================= */
+
+function loadCart(){
+
+    try{
+
+        const saved =
+            JSON.parse(
+                localStorage.getItem(
+                    "urbanEssenceCart"
+                )
+            );
+
+        if(Array.isArray(saved)){
+
+            cart = saved;
+
+        }
+
+    }catch(error){
+
+        cart = [];
+
+    }
+
+    updateCart();
+
+}
 
 
 /* =========================
@@ -1839,6 +2715,7 @@ function openMenu(){
 
 }
 
+
 function closeMenu(){
 
     document
@@ -1853,25 +2730,37 @@ function closeMenu(){
 
 
 /* =========================
-   CARRITO
+   AGREGAR AL CARRITO
 ========================= */
 
-function addToCart(name,price,limit){
+function addToCart(index){
+
+    const product =
+        productsData[index];
+
 
     const existing =
-        cart.find(item => item.name === name);
+        cart.find(
+            item =>
+            item.name === product.name
+        );
+
 
     if(existing){
 
-        if(existing.quantity >= limit){
+        if(
+            existing.quantity >=
+            product.limit
+        ){
 
             alert(
-                "⚠️ Has alcanzado el límite de " +
-                limit +
-                " unidad(es) para este producto."
+                "⚠️ Máximo permitido: " +
+                product.limit +
+                " unidad(es)."
             );
 
             return;
+
         }
 
         existing.quantity++;
@@ -1879,39 +2768,60 @@ function addToCart(name,price,limit){
     }else{
 
         cart.push({
-            name:name,
-            price:price,
+
+            name:product.name,
+
+            price:product.price,
+
             quantity:1,
-            limit:limit
+
+            limit:product.limit
+
         });
 
     }
 
+
     updateCart();
 
-    openCart();
+    saveCart();
 
     showNotification();
+
+    openCart();
 
 }
 
 
+/* =========================
+   ACTUALIZAR CARRITO
+========================= */
+
 function updateCart(){
 
-    const cartItems =
-        document.getElementById("cart-items");
+    const items =
+        document.getElementById(
+            "cart-items"
+        );
 
-    const cartCount =
-        document.getElementById("cart-count");
+    const totalElement =
+        document.getElementById(
+            "cart-total"
+        );
+
+    const headerCount =
+        document.getElementById(
+            "header-cart-count"
+        );
 
     const menuCount =
-        document.getElementById("menu-cart-count");
-
-    const cartTotal =
-        document.getElementById("cart-total");
+        document.getElementById(
+            "menu-cart-count"
+        );
 
 
     let totalItems = 0;
+
     let total = 0;
 
 
@@ -1926,105 +2836,167 @@ function updateCart(){
     });
 
 
-    cartCount.textContent =
+    headerCount.textContent =
         totalItems;
 
     menuCount.textContent =
         totalItems;
 
 
+    totalElement.textContent =
+        total.toFixed(2);
+
+
     if(cart.length === 0){
 
-        cartItems.innerHTML =
-        '<p style="color:#aaa;">Tu carrito está vacío.</p>';
+        items.innerHTML = `
 
-        cartTotal.textContent =
-            "0.00";
+            <div class="cart-empty">
+
+                🛒 Tu carrito está vacío.
+
+                <br>
+
+                <small>
+                    Agrega productos para comenzar.
+                </small>
+
+            </div>
+
+        `;
 
         return;
 
     }
 
 
-    cartItems.innerHTML = "";
+    items.innerHTML = "";
 
 
-    cart.forEach((item,index)=>{
+    cart.forEach(
+        (item,index) => {
 
-        const div =
-            document.createElement("div");
+            const div =
+                document.createElement(
+                    "div"
+                );
 
-        div.className =
-            "cart-item";
+
+            div.className =
+                "cart-item";
 
 
-        div.innerHTML = `
+            div.innerHTML = `
 
-            <h4>
-                ${item.name}
-            </h4>
+                <h4>
+                    ${item.name}
+                </h4>
 
-            <p>
-                S/ ${item.price.toFixed(2)}
-            </p>
+                <div class="unit-price">
 
-            <div class="cart-controls">
+                    S/
+                    ${item.price.toFixed(2)}
+                    c/u
 
-                <button onclick="changeCartQuantity(${index},-1)">
-                    −
+                </div>
+
+                <div class="subtotal">
+
+                    Subtotal:
+                    S/
+                    ${(item.price * item.quantity).toFixed(2)}
+
+                </div>
+
+
+                <div class="cart-controls">
+
+                    <button
+                        onclick="changeCartQuantity(${index},-1)">
+
+                        −
+
+                    </button>
+
+
+                    <span>
+                        ${item.quantity}
+                    </span>
+
+
+                    <button
+                        onclick="changeCartQuantity(${index},1)">
+
+                        +
+
+                    </button>
+
+
+                    <span
+                        style="
+                        color:#777;
+                        font-size:12px;
+                        ">
+
+                        máx.
+                        ${item.limit}
+
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="remove-button"
+                    onclick="removeFromCart(${index})">
+
+                    Eliminar
+
                 </button>
 
-                <span>
-                    ${item.quantity}
-                </span>
-
-                <button onclick="changeCartQuantity(${index},1)">
-                    +
-                </button>
-
-            </div>
-
-            <button
-                class="remove-button"
-                onclick="removeFromCart(${index})"
-            >
-                Eliminar
-            </button>
-
-        `;
-
-        cartItems.appendChild(div);
-
-    });
+            `;
 
 
-    cartTotal.textContent =
-        total.toFixed(2);
+            items.appendChild(div);
+
+        }
+    );
 
 }
 
 
-function changeCartQuantity(index,change){
+/* =========================
+   CAMBIAR CANTIDAD
+========================= */
+
+function changeCartQuantity(
+    index,
+    change
+){
 
     const item =
         cart[index];
 
+
+    if(!item)
+        return;
+
+
     const newQuantity =
-        item.quantity + change;
+        item.quantity +
+        change;
 
 
     if(newQuantity <= 0){
 
         cart.splice(index,1);
 
-        updateCart();
-
-        return;
-
     }
 
-
-    if(newQuantity > item.limit){
+    else if(
+        newQuantity >
+        item.limit
+    ){
 
         alert(
             "⚠️ Máximo permitido: " +
@@ -2036,14 +3008,24 @@ function changeCartQuantity(index,change){
 
     }
 
+    else{
 
-    item.quantity =
-        newQuantity;
+        item.quantity =
+            newQuantity;
+
+    }
+
 
     updateCart();
 
+    saveCart();
+
 }
 
+
+/* =========================
+   ELIMINAR
+========================= */
 
 function removeFromCart(index){
 
@@ -2051,8 +3033,41 @@ function removeFromCart(index){
 
     updateCart();
 
+    saveCart();
+
 }
 
+
+/* =========================
+   VACIAR
+========================= */
+
+function clearCart(){
+
+    if(cart.length === 0)
+        return;
+
+
+    if(
+        confirm(
+            "¿Seguro que quieres vaciar el carrito?"
+        )
+    ){
+
+        cart = [];
+
+        updateCart();
+
+        saveCart();
+
+    }
+
+}
+
+
+/* =========================
+   ABRIR CARRITO
+========================= */
 
 function openCart(){
 
@@ -2062,6 +3077,10 @@ function openCart(){
 
 }
 
+
+/* =========================
+   CERRAR CARRITO
+========================= */
 
 function closeCart(){
 
@@ -2073,12 +3092,8 @@ function closeCart(){
 
 
 /* =========================
-   MODAL PRODUCTO
+   PRODUCTO MODAL
 ========================= */
-
-let currentProduct = null;
-let detailQuantity = 1;
-
 
 function openProduct(index){
 
@@ -2092,6 +3107,12 @@ function openProduct(index){
         .getElementById("detailImage")
         .src =
         currentProduct.image;
+
+
+    document
+        .getElementById("detailImage")
+        .alt =
+        currentProduct.name;
 
 
     document
@@ -2116,7 +3137,7 @@ function openProduct(index){
     document
         .getElementById("detailLimit")
         .textContent =
-        "Máximo: " +
+        "Máximo por producto: " +
         currentProduct.limit +
         " unidad(es)";
 
@@ -2134,6 +3155,10 @@ function openProduct(index){
 }
 
 
+/* =========================
+   CERRAR PRODUCTO
+========================= */
+
 function closeProduct(){
 
     document
@@ -2143,6 +3168,10 @@ function closeProduct(){
 }
 
 
+/* =========================
+   CANTIDAD MODAL
+========================= */
+
 function changeDetailQuantity(change){
 
     if(!currentProduct)
@@ -2150,14 +3179,18 @@ function changeDetailQuantity(change){
 
 
     const newQuantity =
-        detailQuantity + change;
+        detailQuantity +
+        change;
 
 
     if(newQuantity < 1)
         return;
 
 
-    if(newQuantity > currentProduct.limit){
+    if(
+        newQuantity >
+        currentProduct.limit
+    ){
 
         alert(
             "⚠️ Máximo permitido: " +
@@ -2182,67 +3215,82 @@ function changeDetailQuantity(change){
 }
 
 
+/* =========================
+   AGREGAR DESDE MODAL
+========================= */
+
 function addDetailToCart(){
 
     if(!currentProduct)
         return;
 
 
-    for(let i=0;i<detailQuantity;i++){
+    const existing =
+        cart.find(
+            item =>
+            item.name ===
+            currentProduct.name
+        );
 
-        const existing =
-            cart.find(
-                item =>
-                item.name === currentProduct.name
-            );
+
+    const currentInCart =
+        existing
+        ? existing.quantity
+        : 0;
 
 
-        if(existing){
+    if(
+        currentInCart +
+        detailQuantity >
+        currentProduct.limit
+    ){
 
-            if(
-                existing.quantity >=
+        alert(
+            "⚠️ Solo puedes tener hasta " +
+            currentProduct.limit +
+            " unidad(es) de este producto."
+        );
+
+        return;
+
+    }
+
+
+    if(existing){
+
+        existing.quantity +=
+            detailQuantity;
+
+    }else{
+
+        cart.push({
+
+            name:
+                currentProduct.name,
+
+            price:
+                currentProduct.price,
+
+            quantity:
+                detailQuantity,
+
+            limit:
                 currentProduct.limit
-            ){
 
-                alert(
-                    "⚠️ Has alcanzado el límite de este producto."
-                );
-
-                break;
-
-            }
-
-            existing.quantity++;
-
-        }else{
-
-            cart.push({
-
-                name:
-                    currentProduct.name,
-
-                price:
-                    currentProduct.price,
-
-                quantity:1,
-
-                limit:
-                    currentProduct.limit
-
-            });
-
-        }
+        });
 
     }
 
 
     updateCart();
 
+    saveCart();
+
     closeProduct();
 
-    openCart();
-
     showNotification();
+
+    openCart();
 
 }
 
@@ -2253,7 +3301,7 @@ function addDetailToCart(){
 
 function searchProducts(){
 
-    const search =
+    const term =
         document
         .getElementById("search")
         .value
@@ -2261,67 +3309,205 @@ function searchProducts(){
         .trim();
 
 
-    const products =
-        document.querySelectorAll(".product");
+    document
+        .querySelectorAll(".product")
+        .forEach(card => {
+
+            const index =
+                Number(
+                    card.dataset.index
+                );
 
 
-    products.forEach(product=>{
-
-        const text =
-            product.innerText.toLowerCase();
+            const product =
+                productsData[index];
 
 
-        if(text.includes(search)){
+            const match =
+                !term ||
+                product.name
+                    .toLowerCase()
+                    .includes(term) ||
 
-            product.style.display =
-                "";
+                product.description
+                    .toLowerCase()
+                    .includes(term) ||
 
-        }else{
+                product.category
+                    .toLowerCase()
+                    .includes(term);
 
-            product.style.display =
-                "none";
 
-        }
+            card.style.display =
+                match
+                ? ""
+                : "none";
 
-    });
+        });
 
 }
 
 
 /* =========================
-   FILTRO MUJER / VARON
+   FILTRO CATEGORIA
 ========================= */
 
 function filterCategory(category){
 
-    const products =
-        document.querySelectorAll(".product");
+    document
+        .getElementById("search")
+        .value = "";
 
 
-    products.forEach(product=>{
+    document
+        .querySelectorAll(".product")
+        .forEach(card => {
 
-        if(
-            product.dataset.category ===
-            category
-        ){
+            const index =
+                Number(
+                    card.dataset.index
+                );
 
-            product.style.display =
-                "";
 
-        }else{
+            const product =
+                productsData[index];
 
-            product.style.display =
-                "none";
+
+            card.style.display =
+                product.category ===
+                category
+                ? ""
+                : "none";
+
+        });
+
+
+    const target =
+        category === "Mujer"
+        ? "mujer"
+        : "varon";
+
+
+    document
+        .getElementById(target)
+        .scrollIntoView({
+
+            behavior:"smooth",
+
+            block:"start"
+
+        });
+
+
+    closeMenu();
+
+}
+
+
+/* =========================
+   COLECCIONES
+========================= */
+
+function renderCollections(){
+
+    const mujer =
+        document.getElementById(
+            "mujer-products"
+        );
+
+
+    const varon =
+        document.getElementById(
+            "varon-products"
+        );
+
+
+    mujer.innerHTML = "";
+
+    varon.innerHTML = "";
+
+
+    productsData.forEach(
+        (product,index) => {
+
+            const card = `
+
+                <article
+                    class="product"
+                    data-index="${index}"
+                    onclick="openProduct(${index})">
+
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}">
+
+
+                    <div class="product-info">
+
+                        <h3>
+                            ${product.name}
+                        </h3>
+
+                        <p>
+                            ${product.description}
+                        </p>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <div class="price">
+
+                            S/
+                            ${product.price.toFixed(2)}
+
+                        </div>
+
+                        <div class="limit">
+
+                            Máximo:
+                            ${product.limit}
+                            unidad(es)
+
+                        </div>
+
+
+                        <button
+                            class="buy-button"
+                            onclick="
+                            event.stopPropagation();
+                            addToCart(${index});
+                            ">
+
+                            Agregar al carrito
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            `;
+
+
+            if(product.category === "Mujer"){
+
+                mujer.innerHTML +=
+                    card;
+
+            }
+
+
+            if(product.category === "Varón"){
+
+                varon.innerHTML +=
+                    card;
+
+            }
 
         }
-
-    });
-
-
-    window.scrollTo({
-        top:document.getElementById("accesorios").offsetTop - 80,
-        behavior:"smooth"
-    });
+    );
 
 }
 
@@ -2333,17 +3519,32 @@ function filterCategory(category){
 function showNotification(){
 
     const notification =
-        document.getElementById("notification");
+        document.getElementById(
+            "notification"
+        );
 
 
-    notification.classList.add("show");
+    notification
+        .classList
+        .add("show");
 
 
-    setTimeout(()=>{
+    clearTimeout(
+        window.notificationTimer
+    );
 
-        notification.classList.remove("show");
 
-    },2000);
+    window.notificationTimer =
+        setTimeout(
+            () => {
+
+                notification
+                    .classList
+                    .remove("show");
+
+            },
+            2200
+        );
 
 }
 
@@ -2372,11 +3573,14 @@ function checkoutWhatsApp(){
     let total = 0;
 
 
-    cart.forEach(item=>{
+    cart.forEach(item => {
 
         const subtotal =
             item.price *
             item.quantity;
+
+
+        total += subtotal;
 
 
         message +=
@@ -2388,15 +3592,14 @@ function checkoutWhatsApp(){
             subtotal.toFixed(2) +
             "\n";
 
-
-        total += subtotal;
-
     });
 
 
     message +=
         "\nTotal: S/ " +
-        total.toFixed(2);
+        total.toFixed(2) +
+        "\n\n" +
+        "Quedo atento(a) para coordinar el pedido y envío.";
 
 
     const phone =
@@ -2422,71 +3625,99 @@ function checkoutWhatsApp(){
    CARRUSEL
 ========================= */
 
-let currentSlide = 0;
-
-const slides =
-    document.querySelectorAll(".slide");
-
-const dots =
-    document.querySelectorAll(".dot");
-
-
 function showSlide(index){
 
-    if(index >= slides.length)
-        currentSlide = 0;
-
-    if(index < 0)
-        currentSlide = slides.length - 1;
+    currentSlide =
+        (index + slides.length)
+        % slides.length;
 
 
-    slides.forEach(slide =>
-        slide.classList.remove("active")
+    slides.forEach(
+        slide =>
+        slide.classList.remove(
+            "active"
+        )
     );
 
 
-    dots.forEach(dot =>
-        dot.classList.remove("active")
+    dots.forEach(
+        dot =>
+        dot.classList.remove(
+            "active"
+        )
     );
 
 
     slides[currentSlide]
-        .classList.add("active");
+        .classList
+        .add("active");
 
 
     dots[currentSlide]
-        .classList.add("active");
+        .classList
+        .add("active");
 
 }
 
 
 function changeSlide(direction){
 
-    currentSlide += direction;
-
-    showSlide(currentSlide);
+    showSlide(
+        currentSlide +
+        direction
+    );
 
 }
 
 
 function goToSlide(index){
 
-    currentSlide = index;
-
-    showSlide(currentSlide);
+    showSlide(index);
 
 }
 
 
-/* CAMBIO AUTOMATICO */
+setInterval(
+    () => {
 
-setInterval(()=>{
+        showSlide(
+            currentSlide + 1
+        );
 
-    currentSlide++;
+    },
+    5000
+);
 
-    showSlide(currentSlide);
 
-},5000);
+/* =========================
+   TECLA ESC
+========================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if(event.key === "Escape"){
+
+            closeMenu();
+
+            closeCart();
+
+            closeProduct();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   INICIAR
+========================= */
+
+renderCollections();
+
+loadCart();
 
 </script>
 
