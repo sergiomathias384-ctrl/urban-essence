@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sergiomathias384-ctrl.github.io/urban-essence/sitemap.xml
