@@ -8,9 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>
-Urban Essence | Artículos que elevan tu personalidad
-</title>
+<title>Urban Essence | Artículos que elevan tu personalidad</title>
 
 <meta name="description"
 content="Urban Essence - Artículos y accesorios que elevan tu personalidad. Envíos a todo el Perú.">
@@ -18,11 +16,6 @@ content="Urban Essence - Artículos y accesorios que elevan tu personalidad. Env
 <meta name="theme-color" content="#080808">
 
 <style>
-
-/* =========================================================
-   URBAN ESSENCE
-   VERSIÓN FINAL COMPLETA
-========================================================= */
 
 *{
     margin:0;
@@ -35,213 +28,86 @@ html{
 }
 
 body{
-
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+    font-family:Arial,Helvetica,sans-serif;
     background:#080808;
-
     color:#fff;
-
-    transition:
-    background .3s ease,
-    color .3s ease;
-
+    transition:.3s;
 }
 
-button,
-input,
-select{
-
+button,input,select{
     font-family:inherit;
-
 }
 
-button,
-a{
-
+button,a{
     -webkit-tap-highlight-color:transparent;
-
 }
-
-
-/* =========================================================
-   VARIABLES
-========================================================= */
 
 :root{
-
     --gold:#d4af37;
-
     --gold-light:#f1d35c;
-
     --dark:#080808;
-
     --card:#151515;
-
     --card2:#1d1d1d;
-
     --border:#2c2c2c;
-
     --text:#fff;
-
     --muted:#999;
-
     --success:#55dc78;
-
     --danger:#ff5555;
-
 }
 
-
-/* =========================================================
-   MODO CLARO
-========================================================= */
-
 body.light{
-
     --dark:#f5f5f5;
-
     --card:#fff;
-
     --card2:#eee;
-
     --border:#d8d8d8;
-
     --text:#111;
-
     --muted:#666;
 
     background:#f5f5f5;
-
     color:#111;
-
 }
 
 body.light header{
-
     background:rgba(255,255,255,.97);
-
     border-color:#ddd;
-
 }
 
 body.light .icon-button{
-
     background:#eee;
-
     color:#111;
-
-}
-
-body.light .hero{
-
-    background:
-    radial-gradient(
-        circle at center,
-        #fff8dc 0%,
-        #f4f4f4 50%,
-        #e8e8e8 100%
-    );
-
-}
-
-body.light .hero p{
-
-    color:#555;
-
-}
-
-body.light .product,
-body.light .info-card,
-body.light .about-box,
-body.light .shipping-card,
-body.light .contact-box,
-body.light .collection{
-
-    background:#fff;
-
-    border-color:#ddd;
-
-}
-
-body.light #searchInput,
-body.light #sortProducts{
-
-    background:#fff;
-
-    color:#111;
-
-    border-color:#ccc;
-
 }
 
 body.light .side-menu{
-
     background:#fff;
-
-    color:#111;
-
 }
 
 body.light .side-link{
-
     color:#222;
-
 }
 
 body.light .side-filter{
-
     background:#f5f5f5;
-
     color:#222;
-
 }
 
 body.light .cart{
-
     background:#fff;
-
     color:#111;
-
 }
 
 body.light .checkout input{
-
     background:#f5f5f5;
-
     color:#111;
-
     border-color:#ccc;
-
-}
-
-body.light .shipping-only{
-
-    background:#f5f5f5;
-
 }
 
 body.light .modal-content{
-
     background:#fff;
-
     color:#111;
-
-}
-
-body.light .modal-info p{
-
-    color:#666;
-
 }
 
 body.light footer{
-
     background:#111;
-
 }
 
 
@@ -250,129 +116,76 @@ body.light footer{
 ========================================================= */
 
 header{
-
     position:sticky;
-
     top:0;
-
     z-index:1000;
-
-    background:
-    rgba(5,5,5,.97);
-
-    border-bottom:
-    1px solid #292929;
-
+    background:rgba(5,5,5,.97);
+    border-bottom:1px solid #292929;
     backdrop-filter:blur(12px);
-
 }
 
 .navbar{
-
     max-width:1250px;
-
     min-height:74px;
-
     margin:auto;
-
     padding:12px 22px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     gap:15px;
-
 }
 
 .logo{
-
     color:var(--gold);
-
     font-size:25px;
-
     font-weight:bold;
-
     letter-spacing:2px;
-
     text-decoration:none;
-
 }
 
 .header-right{
-
     display:flex;
-
     align-items:center;
-
     gap:10px;
-
 }
 
 .icon-button{
-
     position:relative;
-
     width:43px;
-
     height:43px;
-
     border:none;
-
     border-radius:50%;
-
     background:#191919;
-
     color:#fff;
-
     font-size:18px;
-
     cursor:pointer;
-
     transition:.3s;
-
 }
 
 .icon-button:hover{
-
     background:var(--gold);
-
     color:#000;
-
     transform:translateY(-2px);
-
 }
 
 .cart-count{
-
     position:absolute;
-
     top:-5px;
-
     right:-5px;
-
     width:20px;
-
     height:20px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     border-radius:50%;
-
     background:var(--gold);
-
     color:#000;
 
     font-size:11px;
-
     font-weight:bold;
-
 }
 
 
@@ -381,41 +194,27 @@ header{
 ========================================================= */
 
 .side-overlay{
-
     position:fixed;
-
     inset:0;
-
     background:rgba(0,0,0,.7);
-
     z-index:2500;
 
     opacity:0;
-
     visibility:hidden;
-
     transition:.3s;
-
 }
 
 .side-overlay.show{
-
     opacity:1;
-
     visibility:visible;
-
 }
 
 .side-menu{
-
     position:fixed;
-
     top:0;
-
     left:-350px;
 
     width:min(340px,90%);
-
     height:100vh;
 
     overflow-y:auto;
@@ -426,255 +225,264 @@ header{
 
     padding:25px;
 
-    box-shadow:
-    10px 0 35px rgba(0,0,0,.6);
+    box-shadow:10px 0 35px rgba(0,0,0,.6);
 
     transition:.35s;
-
 }
 
 .side-menu.show{
-
     left:0;
-
 }
 
 .side-header{
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
 
     padding-bottom:20px;
-
     margin-bottom:15px;
 
-    border-bottom:
-    1px solid var(--border);
-
+    border-bottom:1px solid var(--border);
 }
 
 .side-header h2{
-
     color:var(--gold);
-
     font-size:22px;
-
 }
 
 .side-close{
-
     border:none;
-
     background:none;
-
     color:var(--text);
-
     font-size:30px;
-
     cursor:pointer;
-
 }
 
 .side-links{
-
     display:flex;
-
     flex-direction:column;
-
     gap:5px;
-
 }
 
 .side-link{
-
     display:block;
-
     padding:14px;
 
     border-radius:10px;
 
     color:#fff;
-
     text-decoration:none;
 
     transition:.2s;
-
 }
 
 .side-link:hover{
-
     background:var(--gold);
-
     color:#000;
-
 }
 
 .side-section-title{
-
     margin-top:22px;
-
     margin-bottom:10px;
 
     color:var(--gold);
 
     font-size:13px;
-
     text-transform:uppercase;
-
     letter-spacing:1px;
-
 }
 
 .side-filter{
-
     width:100%;
 
     padding:11px;
-
     margin-bottom:7px;
 
     border:1px solid var(--border);
-
     border-radius:9px;
 
     background:transparent;
-
     color:var(--text);
 
     text-align:left;
-
     cursor:pointer;
 
     transition:.2s;
-
 }
 
 .side-filter:hover,
 .side-filter.active{
-
     background:var(--gold);
-
     color:#000;
-
     border-color:var(--gold);
-
 }
 
 
 /* =========================================================
-   HERO
+   HERO + CARRUSEL
 ========================================================= */
 
 .hero{
+    position:relative;
 
     min-height:620px;
 
+    overflow:hidden;
+
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
 
-    padding:80px 20px;
+    background:#050505;
+}
+
+.hero-slides{
+    position:absolute;
+    inset:0;
+    z-index:0;
+}
+
+.hero-slide{
+    position:absolute;
+    inset:0;
+
+    opacity:0;
+
+    transition:opacity 1.2s ease;
+}
+
+.hero-slide.active{
+    opacity:1;
+}
+
+.hero-slide img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    filter:brightness(.42);
+
+    transform:scale(1.03);
+}
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
 
     background:
-    radial-gradient(
-        circle at center,
-        #28200b 0%,
-        #090909 52%,
-        #000 100%
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.8)
     );
 
+    z-index:1;
 }
 
 .hero-content{
+    position:relative;
+    z-index:2;
 
     max-width:900px;
 
+    padding:40px 20px;
 }
 
 .hero h1{
-
     color:var(--gold);
 
-    font-size:
-    clamp(42px,8vw,72px);
+    font-size:clamp(42px,8vw,72px);
 
-    letter-spacing:
-    clamp(3px,1vw,7px);
+    letter-spacing:clamp(3px,1vw,7px);
 
     margin-bottom:18px;
-
 }
 
 .hero h2{
-
-    font-size:
-    clamp(22px,4vw,31px);
+    font-size:clamp(22px,4vw,31px);
 
     margin-bottom:18px;
-
 }
 
 .hero p{
-
     max-width:700px;
 
-    margin:
-    0 auto 32px;
+    margin:0 auto 32px;
 
-    color:#aaa;
+    color:#ddd;
 
     font-size:18px;
 
     line-height:1.7;
+}
 
+.hero-dots{
+    position:absolute;
+
+    bottom:25px;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    z-index:3;
+
+    display:flex;
+    gap:8px;
+}
+
+.hero-dot{
+    width:9px;
+    height:9px;
+
+    border-radius:50%;
+
+    border:1px solid #fff;
+
+    background:transparent;
+
+    cursor:pointer;
+}
+
+.hero-dot.active{
+    background:var(--gold);
+    border-color:var(--gold);
 }
 
 .gold-button{
-
     display:inline-block;
 
     padding:14px 26px;
 
     border:none;
-
     border-radius:30px;
 
     background:var(--gold);
-
     color:#000;
 
     font-weight:bold;
-
     text-decoration:none;
 
     cursor:pointer;
 
     transition:.3s;
-
 }
 
 .gold-button:hover{
-
     background:var(--gold-light);
-
     transform:translateY(-3px);
-
 }
 
 
 /* =========================================================
-   INFO
+   INFORMACIÓN
 ========================================================= */
 
 .info-grid{
-
     max-width:1200px;
 
     margin:45px auto;
@@ -683,15 +491,12 @@ header{
 
     display:grid;
 
-    grid-template-columns:
-    repeat(3,1fr);
+    grid-template-columns:repeat(3,1fr);
 
     gap:20px;
-
 }
 
 .info-card{
-
     background:var(--card);
 
     border:1px solid var(--border);
@@ -703,37 +508,26 @@ header{
     text-align:center;
 
     transition:.3s;
-
 }
 
 .info-card:hover{
-
     transform:translateY(-5px);
-
     border-color:var(--gold);
-
 }
 
 .info-icon{
-
     font-size:35px;
-
 }
 
 .info-card h3{
-
     margin:12px 0;
 
     color:var(--gold);
-
 }
 
 .info-card p{
-
     color:var(--muted);
-
     line-height:1.6;
-
 }
 
 
@@ -742,43 +536,32 @@ header{
 ========================================================= */
 
 section{
-
     padding:75px 20px;
-
 }
 
 .section-title{
-
     text-align:center;
-
     margin-bottom:40px;
-
 }
 
 .section-title h2{
-
     color:var(--gold);
 
-    font-size:
-    clamp(30px,5vw,38px);
+    font-size:clamp(30px,5vw,38px);
 
     margin-bottom:10px;
-
 }
 
 .section-title p{
-
     color:var(--muted);
-
 }
 
 
 /* =========================================================
-   BUSCADOR + ORDEN
+   BUSCADOR
 ========================================================= */
 
 .search-tools{
-
     max-width:1000px;
 
     margin:0 auto 35px;
@@ -788,12 +571,10 @@ section{
     grid-template-columns:1fr 220px;
 
     gap:12px;
-
 }
 
 #searchInput,
 #sortProducts{
-
     width:100%;
 
     padding:16px 20px;
@@ -805,24 +586,18 @@ section{
     outline:none;
 
     background:#151515;
-
     color:#fff;
 
     font-size:15px;
-
 }
 
 #sortProducts{
-
     cursor:pointer;
-
 }
 
 #searchInput:focus,
 #sortProducts:focus{
-
     border-color:var(--gold);
-
 }
 
 
@@ -831,22 +606,18 @@ section{
 ========================================================= */
 
 .products{
-
     max-width:1250px;
 
     margin:auto;
 
     display:grid;
 
-    grid-template-columns:
-    repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     gap:25px;
-
 }
 
 .product{
-
     overflow:hidden;
 
     background:var(--card);
@@ -856,59 +627,44 @@ section{
     border-radius:18px;
 
     transition:.3s;
-
 }
 
 .product:hover{
-
     transform:translateY(-6px);
 
     border-color:var(--gold);
 
-    box-shadow:
-    0 12px 30px rgba(0,0,0,.25);
-
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
 }
 
 .product-image{
-
     position:relative;
 
     width:100%;
-
     height:280px;
 
     overflow:hidden;
 
     background:#222;
-
 }
 
 .product-image img{
-
     width:100%;
-
     height:100%;
 
     object-fit:cover;
 
     transition:.4s;
-
 }
 
-.product:hover
-.product-image img{
-
+.product:hover .product-image img{
     transform:scale(1.05);
-
 }
 
 .badge{
-
     position:absolute;
 
     top:12px;
-
     left:12px;
 
     padding:6px 10px;
@@ -916,29 +672,22 @@ section{
     border-radius:15px;
 
     background:var(--gold);
-
     color:#000;
 
     font-size:11px;
-
     font-weight:bold;
-
 }
 
 .favorite{
-
     position:absolute;
 
     top:10px;
-
     right:10px;
 
     width:38px;
-
     height:38px;
 
     border:none;
-
     border-radius:50%;
 
     background:rgba(0,0,0,.75);
@@ -948,23 +697,17 @@ section{
     font-size:20px;
 
     cursor:pointer;
-
 }
 
 .favorite.active{
-
     color:#ff4f70;
-
 }
 
 .product-info{
-
     padding:18px;
-
 }
 
 .product-category{
-
     color:#888;
 
     font-size:11px;
@@ -972,11 +715,9 @@ section{
     text-transform:uppercase;
 
     margin-bottom:7px;
-
 }
 
 .product-name{
-
     color:var(--text);
 
     font-size:18px;
@@ -984,21 +725,17 @@ section{
     font-weight:bold;
 
     margin-bottom:10px;
-
 }
 
 .price{
-
     color:var(--gold);
 
     font-size:21px;
 
     font-weight:bold;
-
 }
 
 .old-price{
-
     color:#777;
 
     text-decoration:line-through;
@@ -1006,46 +743,35 @@ section{
     font-size:14px;
 
     margin-right:7px;
-
 }
 
 .stock{
-
     margin-top:8px;
 
     color:var(--success);
 
     font-size:12px;
-
 }
 
 .stock.low{
-
     color:#ffd447;
-
 }
 
 .stock.out{
-
     color:var(--danger);
-
 }
 
 .product-buttons{
-
     display:grid;
 
-    grid-template-columns:
-    1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
     gap:8px;
 
     margin-top:15px;
-
 }
 
 .product-buttons button{
-
     padding:10px 5px;
 
     border:1px solid var(--gold);
@@ -1059,35 +785,24 @@ section{
     cursor:pointer;
 
     transition:.2s;
-
 }
 
 .product-buttons button:hover{
-
     background:var(--gold);
-
     color:#000;
-
 }
 
 .product-buttons .buy{
-
     background:var(--gold);
-
     color:#000;
-
 }
 
 .product-buttons button:disabled{
-
     opacity:.4;
-
     cursor:not-allowed;
-
 }
 
 .empty-products{
-
     grid-column:1/-1;
 
     text-align:center;
@@ -1095,7 +810,6 @@ section{
     padding:60px 20px;
 
     color:#888;
-
 }
 
 
@@ -1104,23 +818,19 @@ section{
 ========================================================= */
 
 .collections{
-
     max-width:1200px;
 
     margin:auto;
 
     display:grid;
 
-    grid-template-columns:
-    repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
 
     gap:25px;
-
 }
 
 .collection{
-
-    min-height:300px;
+    min-height:260px;
 
     border-radius:20px;
 
@@ -1139,14 +849,17 @@ section{
 
     border:1px solid var(--border);
 
+    transition:.3s;
+}
+
+.collection:hover{
+    transform:translateY(-5px);
+    border-color:var(--gold);
 }
 
 .collection h3{
-
     font-size:30px;
-
     margin-bottom:15px;
-
 }
 
 
@@ -1155,15 +868,11 @@ section{
 ========================================================= */
 
 .about{
-
     max-width:950px;
-
     margin:auto;
-
 }
 
 .about-box{
-
     background:var(--card);
 
     border:1px solid var(--border);
@@ -1173,27 +882,22 @@ section{
     padding:40px 30px;
 
     text-align:center;
-
 }
 
 .about-box h3{
-
     color:var(--gold);
 
     font-size:25px;
 
     margin-bottom:18px;
-
 }
 
 .about-box p{
-
     color:var(--muted);
 
     line-height:1.8;
 
     margin-bottom:15px;
-
 }
 
 
@@ -1202,22 +906,18 @@ section{
 ========================================================= */
 
 .shipping{
-
     max-width:1000px;
 
     margin:auto;
 
     display:grid;
 
-    grid-template-columns:
-    repeat(3,1fr);
+    grid-template-columns:repeat(3,1fr);
 
     gap:20px;
-
 }
 
 .shipping-card{
-
     background:var(--card);
 
     border:1px solid var(--border);
@@ -1227,23 +927,18 @@ section{
     padding:25px;
 
     text-align:center;
-
 }
 
 .shipping-card h3{
-
     color:var(--gold);
 
     margin:12px 0;
-
 }
 
 .shipping-card p{
-
     color:var(--muted);
 
     line-height:1.6;
-
 }
 
 
@@ -1252,15 +947,11 @@ section{
 ========================================================= */
 
 .contact{
-
     max-width:900px;
-
     margin:auto;
-
 }
 
 .contact-box{
-
     background:var(--card);
 
     border:1px solid var(--border);
@@ -1270,21 +961,17 @@ section{
     padding:40px 20px;
 
     text-align:center;
-
 }
 
 .email{
-
     color:var(--gold);
 
     font-size:19px;
 
     margin:20px 0;
-
 }
 
 .contact-buttons{
-
     display:flex;
 
     justify-content:center;
@@ -1292,7 +979,6 @@ section{
     gap:12px;
 
     flex-wrap:wrap;
-
 }
 
 
@@ -1301,7 +987,6 @@ section{
 ========================================================= */
 
 .cart-overlay{
-
     position:fixed;
 
     inset:0;
@@ -1311,21 +996,16 @@ section{
     display:none;
 
     z-index:4000;
-
 }
 
 .cart-overlay.show{
-
     display:block;
-
 }
 
 .cart{
-
     position:absolute;
 
     right:0;
-
     top:0;
 
     width:min(450px,100%);
@@ -1341,11 +1021,9 @@ section{
     color:#fff;
 
     border-left:1px solid #333;
-
 }
 
 .cart-header{
-
     display:flex;
 
     justify-content:space-between;
@@ -1353,17 +1031,13 @@ section{
     align-items:center;
 
     margin-bottom:20px;
-
 }
 
 .cart-header h2{
-
     color:var(--gold);
-
 }
 
 .close{
-
     border:none;
 
     background:none;
@@ -1373,15 +1047,12 @@ section{
     font-size:28px;
 
     cursor:pointer;
-
 }
 
 .cart-item{
-
     display:grid;
 
-    grid-template-columns:
-    70px 1fr auto;
+    grid-template-columns:70px 1fr auto;
 
     gap:12px;
 
@@ -1390,37 +1061,28 @@ section{
     padding:15px 0;
 
     border-bottom:1px solid #292929;
-
 }
 
 .cart-item img{
-
     width:70px;
-
     height:70px;
 
     object-fit:cover;
 
     border-radius:8px;
-
 }
 
 .cart-item h4{
-
     font-size:14px;
-
 }
 
 .cart-price{
-
     color:var(--gold);
 
     margin-top:5px;
-
 }
 
 .quantity{
-
     display:flex;
 
     align-items:center;
@@ -1428,13 +1090,10 @@ section{
     gap:7px;
 
     margin-top:8px;
-
 }
 
 .quantity button{
-
     width:25px;
-
     height:25px;
 
     border:none;
@@ -1446,11 +1105,9 @@ section{
     color:#fff;
 
     cursor:pointer;
-
 }
 
 .remove{
-
     border:none;
 
     background:none;
@@ -1458,21 +1115,17 @@ section{
     color:#ff5555;
 
     cursor:pointer;
-
 }
 
 .cart-total{
-
     margin-top:25px;
 
     padding-top:20px;
 
     border-top:1px solid #333;
-
 }
 
 .total-row{
-
     display:flex;
 
     justify-content:space-between;
@@ -1480,27 +1133,21 @@ section{
     font-size:21px;
 
     font-weight:bold;
-
 }
 
 .total-row span:last-child{
-
     color:var(--gold);
-
 }
 
 .cart-actions{
-
     display:flex;
 
     gap:10px;
 
     margin-top:15px;
-
 }
 
 .clear-cart{
-
     flex:1;
 
     padding:12px;
@@ -1514,15 +1161,11 @@ section{
     color:#aaa;
 
     cursor:pointer;
-
 }
 
 .clear-cart:hover{
-
     border-color:#ff5555;
-
     color:#ff5555;
-
 }
 
 
@@ -1531,21 +1174,16 @@ section{
 ========================================================= */
 
 .checkout{
-
     margin-top:25px;
-
 }
 
 .checkout h3{
-
     color:var(--gold);
 
     margin-bottom:15px;
-
 }
 
 .checkout label{
-
     display:block;
 
     margin:8px 0 5px;
@@ -1553,11 +1191,9 @@ section{
     color:#aaa;
 
     font-size:13px;
-
 }
 
 .checkout input{
-
     width:100%;
 
     padding:12px;
@@ -1571,17 +1207,13 @@ section{
     color:#fff;
 
     outline:none;
-
 }
 
 .checkout input:focus{
-
     border-color:var(--gold);
-
 }
 
 .shipping-only{
-
     width:100%;
 
     padding:12px;
@@ -1595,7 +1227,6 @@ section{
     color:var(--gold);
 
     font-weight:bold;
-
 }
 
 
@@ -1604,7 +1235,6 @@ section{
 ========================================================= */
 
 .modal{
-
     position:fixed;
 
     inset:0;
@@ -1620,17 +1250,13 @@ section{
     background:rgba(0,0,0,.85);
 
     z-index:5000;
-
 }
 
 .modal.show{
-
     display:flex;
-
 }
 
 .modal-content{
-
     position:relative;
 
     width:min(700px,100%);
@@ -1646,15 +1272,12 @@ section{
     border-radius:20px;
 
     border:1px solid #333;
-
 }
 
 .modal-close{
-
     position:absolute;
 
     top:12px;
-
     right:18px;
 
     border:none;
@@ -1666,11 +1289,9 @@ section{
     font-size:28px;
 
     cursor:pointer;
-
 }
 
 .modal-image{
-
     width:100%;
 
     max-height:450px;
@@ -1680,46 +1301,36 @@ section{
     border-radius:12px;
 
     background:#222;
-
 }
 
 .modal-info{
-
     margin-top:20px;
-
 }
 
 .modal-info h2{
-
     color:var(--gold);
 
     margin-bottom:10px;
-
 }
 
 .modal-info p{
-
     color:#aaa;
 
     line-height:1.6;
-
 }
 
 
 /* =========================================================
-   NOTIFICACIÓN
+   TOAST
 ========================================================= */
 
 .toast{
-
     position:fixed;
 
     left:50%;
-
     bottom:25px;
 
-    transform:
-    translate(-50%,120px);
+    transform:translate(-50%,120px);
 
     background:#181818;
 
@@ -1737,18 +1348,13 @@ section{
 
     transition:.3s;
 
-    box-shadow:
-    0 8px 30px rgba(0,0,0,.4);
-
+    box-shadow:0 8px 30px rgba(0,0,0,.4);
 }
 
 .toast.show{
-
     opacity:1;
 
-    transform:
-    translate(-50%,0);
-
+    transform:translate(-50%,0);
 }
 
 
@@ -1757,7 +1363,6 @@ section{
 ========================================================= */
 
 footer{
-
     background:#050505;
 
     border-top:1px solid #222;
@@ -1765,23 +1370,18 @@ footer{
     padding:45px 20px;
 
     text-align:center;
-
 }
 
 footer h2{
-
     color:var(--gold);
 
     margin-bottom:10px;
-
 }
 
 footer p{
-
     color:#777;
 
     margin:7px;
-
 }
 
 
@@ -1790,21 +1390,17 @@ footer p{
 ========================================================= */
 
 .whatsapp{
-
     position:fixed;
 
     right:20px;
-
     bottom:20px;
 
     width:58px;
-
     height:58px;
 
     display:flex;
 
     justify-content:center;
-
     align-items:center;
 
     background:#25d366;
@@ -1819,17 +1415,13 @@ footer p{
 
     z-index:1500;
 
-    box-shadow:
-    0 5px 20px rgba(0,0,0,.4);
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
 
     transition:.3s;
-
 }
 
 .whatsapp:hover{
-
     transform:scale(1.08);
-
 }
 
 
@@ -1840,10 +1432,11 @@ footer p{
 @media(max-width:1050px){
 
     .products{
+        grid-template-columns:repeat(3,1fr);
+    }
 
-        grid-template-columns:
-        repeat(3,1fr);
-
+    .collections{
+        grid-template-columns:repeat(2,1fr);
     }
 
 }
@@ -1851,36 +1444,24 @@ footer p{
 @media(max-width:800px){
 
     .info-grid{
-
         grid-template-columns:1fr;
-
     }
 
     .shipping{
-
         grid-template-columns:1fr;
-
     }
 
     .products{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
+        grid-template-columns:repeat(2,1fr);
         gap:15px;
-
     }
 
     .collections{
-
         grid-template-columns:1fr;
-
     }
 
     .search-tools{
-
         grid-template-columns:1fr;
-
     }
 
 }
@@ -1888,61 +1469,45 @@ footer p{
 @media(max-width:520px){
 
     .navbar{
-
         padding:12px 14px;
-
     }
 
     .logo{
-
         font-size:18px;
-
         letter-spacing:1px;
-
     }
 
     .hero{
+        min-height:560px;
+    }
 
-        min-height:550px;
-
+    .hero h1{
+        font-size:42px;
     }
 
     .products{
-
         grid-template-columns:1fr;
-
     }
 
     .product-image{
-
         height:310px;
-
     }
 
     .cart{
-
         width:100%;
-
     }
 
     .contact-buttons{
-
         flex-direction:column;
-
     }
 
     .contact-buttons .gold-button{
-
         width:100%;
-
     }
 
     .toast{
-
         width:90%;
-
         text-align:center;
-
     }
 
 }
@@ -1963,9 +1528,8 @@ footer p{
 
 <div class="navbar">
 
-
 <button
-class="icon-button menu-button"
+class="icon-button"
 onclick="openMenu()"
 aria-label="Abrir menú">
 
@@ -1984,7 +1548,6 @@ URBAN ESSENCE
 
 
 <div class="header-right">
-
 
 <button
 class="icon-button"
@@ -2014,7 +1577,6 @@ id="cartCount">
 
 </button>
 
-
 </div>
 
 </div>
@@ -2023,7 +1585,7 @@ id="cartCount">
 
 
 <!-- =========================================================
-     MENÚ
+     MENÚ LATERAL
 ========================================================= -->
 
 <div
@@ -2036,7 +1598,6 @@ onclick="closeMenu()">
 <aside
 class="side-menu"
 id="sideMenu">
-
 
 <div class="side-header">
 
@@ -2056,7 +1617,6 @@ onclick="closeMenu()">
 
 
 <div class="side-links">
-
 
 <a
 href="#inicio"
@@ -2121,9 +1681,7 @@ onclick="closeMenu()">
 
 
 <div class="side-section-title">
-
 Filtrar productos
-
 </div>
 
 
@@ -2183,6 +1741,24 @@ onclick="setFilter('Correas',this)">
 
 <button
 class="side-filter"
+onclick="setFilter('Fragancias',this)">
+
+🌸 Fragancias
+
+</button>
+
+
+<button
+class="side-filter"
+onclick="setFilter('Relojes',this)">
+
+⌚ Relojes
+
+</button>
+
+
+<button
+class="side-filter"
 onclick="setFilter('Nuevo',this)">
 
 ✨ Nuevos
@@ -2200,9 +1776,7 @@ onclick="setFilter('Más vendido',this)">
 
 
 <div class="side-section-title">
-
 Acciones
-
 </div>
 
 
@@ -2223,7 +1797,6 @@ onclick="resetFilters()">
 
 </button>
 
-
 </aside>
 
 
@@ -2234,6 +1807,68 @@ onclick="resetFilters()">
 <section
 class="hero"
 id="inicio">
+
+
+<div class="hero-slides">
+
+<!--
+=========================================================
+FOTOS DEL INICIO
+
+Por ahora usamos imágenes que YA existen en tu código.
+Cuando quieras poner las fotos específicas del inicio,
+solo cambia estos nombres.
+
+NO SE MEZCLAN CON LOS PRODUCTOS.
+=========================================================
+-->
+
+<div class="hero-slide active">
+
+<img
+src="billetera mujer 1.jpeg"
+alt="Urban Essence">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="billetera mujer 2.jpeg"
+alt="Urban Essence">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="billetera varon 1.jpeg"
+alt="Urban Essence">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="correa 1.jpeg"
+alt="Urban Essence">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="imagen.png"
+alt="Urban Essence">
+
+</div>
+
+</div>
+
 
 <div class="hero-content">
 
@@ -2264,6 +1899,12 @@ DESCUBRIR COLECCIÓN
 
 </div>
 
+
+<div
+class="hero-dots"
+id="heroDots">
+</div>
+
 </section>
 
 
@@ -2271,8 +1912,7 @@ DESCUBRIR COLECCIÓN
      INFORMACIÓN
 ========================================================= -->
 
-<div
-class="info-grid">
+<div class="info-grid">
 
 
 <div class="info-card">
@@ -2328,7 +1968,6 @@ con Urban Essence.
 
 </div>
 
-
 </div>
 
 
@@ -2338,7 +1977,6 @@ con Urban Essence.
 
 <section
 id="productos">
-
 
 <div class="section-title">
 
@@ -2354,7 +1992,6 @@ Encuentra el artículo perfecto para ti.
 
 
 <div class="search-tools">
-
 
 <input
 type="text"
@@ -2389,14 +2026,12 @@ Mayor stock
 
 </select>
 
-
 </div>
 
 
 <div
 class="products"
 id="products">
-
 </div>
 
 </section>
@@ -2408,7 +2043,6 @@ id="products">
 
 <section
 id="colecciones">
-
 
 <div class="section-title">
 
@@ -2468,6 +2102,27 @@ VER PRODUCTOS
 </div>
 
 
+<div class="collection">
+
+<div>
+
+<h3>
+⌚ Relojes
+</h3>
+
+<button
+class="gold-button"
+onclick="activateCollection('Relojes')">
+
+VER PRODUCTOS
+
+</button>
+
+</div>
+
+</div>
+
+
 </div>
 
 </section>
@@ -2479,7 +2134,6 @@ VER PRODUCTOS
 
 <section
 id="sobre-nosotros">
-
 
 <div class="section-title">
 
@@ -2544,7 +2198,6 @@ por su estilo, calidad y atención.
 
 <section
 id="envios-info">
-
 
 <div class="section-title">
 
@@ -2615,7 +2268,6 @@ tu pedido y entrega.
 
 </div>
 
-
 </div>
 
 </section>
@@ -2628,9 +2280,7 @@ tu pedido y entrega.
 <section
 id="contactanos">
 
-
 <div class="contact">
-
 
 <div class="section-title">
 
@@ -2680,7 +2330,6 @@ rel="noopener">
 💬 WHATSAPP
 
 </a>
-
 
 </div>
 
@@ -2774,7 +2423,6 @@ onclick="closeCart()">
 
 
 <div class="cart-total">
-
 
 <div class="total-row">
 
@@ -2879,7 +2527,7 @@ onclick="sendWhatsAppOrder()">
 
 
 <!-- =========================================================
-     MODAL PRODUCTO
+     MODAL
 ========================================================= -->
 
 <div
@@ -2908,10 +2556,6 @@ onclick="closeProductModal()">
 </div>
 
 
-<!-- =========================================================
-     TOAST
-========================================================= -->
-
 <div
 class="toast"
 id="toast">
@@ -2933,7 +2577,6 @@ const WHATSAPP_NUMBER =
 
 /* =========================================================
    PRODUCTOS
-   CADA IMAGEN ES UN PRODUCTO INDIVIDUAL
 ========================================================= */
 
 const products = [
@@ -3117,32 +2760,7 @@ localStorage.getItem("urbanEssenceCart")
 
 let currentFilter = "Todos";
 
-
-/* =========================================================
-   TOAST
-========================================================= */
-
-let toastTimer;
-
-function showToast(message){
-
-const toast =
-document.getElementById("toast");
-
-toast.textContent = message;
-
-toast.classList.add("show");
-
-clearTimeout(toastTimer);
-
-toastTimer =
-setTimeout(() => {
-
-toast.classList.remove("show");
-
-},2500);
-
-}
+let currentSlide = 0;
 
 
 /* =========================================================
@@ -3159,11 +2777,9 @@ document
 .getElementById("sideOverlay")
 .classList.add("show");
 
-document.body.style.overflow =
-"hidden";
+document.body.style.overflow="hidden";
 
 }
-
 
 function closeMenu(){
 
@@ -3175,8 +2791,7 @@ document
 .getElementById("sideOverlay")
 .classList.remove("show");
 
-document.body.style.overflow =
-"";
+document.body.style.overflow="";
 
 }
 
@@ -3188,60 +2803,42 @@ document.body.style.overflow =
 function applyTheme(){
 
 const theme =
-localStorage.getItem(
-"urbanEssenceTheme"
-) || "dark";
+localStorage.getItem("urbanEssenceTheme")
+|| "dark";
 
 const button =
-document.getElementById(
-"themeButton"
-);
+document.getElementById("themeButton");
 
-if(theme === "light"){
+if(theme==="light"){
 
-document.body.classList.add(
-"light"
-);
+document.body.classList.add("light");
 
-button.textContent =
-"☀️";
+button.textContent="☀️";
 
-}
+}else{
 
-else{
+document.body.classList.remove("light");
 
-document.body.classList.remove(
-"light"
-);
-
-button.textContent =
-"🌙";
+button.textContent="🌙";
 
 }
 
 }
-
 
 function toggleTheme(){
 
 const isLight =
-document.body.classList.toggle(
-"light"
-);
+document.body.classList.toggle("light");
 
 localStorage.setItem(
 "urbanEssenceTheme",
-isLight
-? "light"
-: "dark"
+isLight ? "light" : "dark"
 );
 
-document
-.getElementById("themeButton")
-.textContent =
-isLight
-? "☀️"
-: "🌙";
+document.getElementById(
+"themeButton"
+).textContent =
+isLight ? "☀️" : "🌙";
 
 showToast(
 isLight
@@ -3253,15 +2850,108 @@ isLight
 
 
 /* =========================================================
+   CARRUSEL
+========================================================= */
+
+const heroSlides =
+document.querySelectorAll(".hero-slide");
+
+const heroDots =
+document.getElementById("heroDots");
+
+
+heroSlides.forEach((slide,index)=>{
+
+const dot =
+document.createElement("button");
+
+dot.className =
+"hero-dot";
+
+if(index===0){
+
+dot.classList.add("active");
+
+}
+
+dot.onclick=()=>{
+
+goToSlide(index);
+
+};
+
+heroDots.appendChild(dot);
+
+});
+
+
+function goToSlide(index){
+
+heroSlides[currentSlide]
+.classList.remove("active");
+
+document
+.querySelectorAll(".hero-dot")
+[currentSlide]
+.classList.remove("active");
+
+currentSlide=index;
+
+heroSlides[currentSlide]
+.classList.add("active");
+
+document
+.querySelectorAll(".hero-dot")
+[currentSlide]
+.classList.add("active");
+
+}
+
+
+setInterval(()=>{
+
+goToSlide(
+(currentSlide+1)
+% heroSlides.length
+);
+
+},3500);
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer;
+
+function showToast(message){
+
+const toast =
+document.getElementById("toast");
+
+toast.textContent=message;
+
+toast.classList.add("show");
+
+clearTimeout(toastTimer);
+
+toastTimer=setTimeout(()=>{
+
+toast.classList.remove("show");
+
+},2500);
+
+}
+
+
+/* =========================================================
    RENDER PRODUCTOS
 ========================================================= */
 
 function renderProducts(){
 
 const container =
-document.getElementById(
-"products"
-);
+document.getElementById("products");
 
 const search =
 document
@@ -3277,19 +2967,18 @@ document
 
 
 let filtered =
-products.filter(product => {
+products.filter(product=>{
 
 const filterMatch =
 
-currentFilter === "Todos" ||
+currentFilter==="Todos" ||
 
-product.gender === currentFilter ||
+product.gender===currentFilter ||
 
-product.category === currentFilter ||
+product.category===currentFilter ||
 
-product.tags.includes(
-currentFilter
-);
+product.tags.includes(currentFilter);
+
 
 const searchMatch =
 
@@ -3309,57 +2998,45 @@ product.gender
 .toLowerCase()
 .includes(search);
 
-return filterMatch &&
-searchMatch;
+
+return filterMatch && searchMatch;
 
 });
 
 
-if(sort === "price-low"){
+if(sort==="price-low"){
 
-filtered.sort(
-(a,b) =>
-a.price - b.price
+filtered.sort((a,b)=>a.price-b.price);
+
+}
+
+else if(sort==="price-high"){
+
+filtered.sort((a,b)=>b.price-a.price);
+
+}
+
+else if(sort==="name"){
+
+filtered.sort((a,b)=>
+a.name.localeCompare(b.name)
 );
 
 }
 
-else if(sort === "price-high"){
+else if(sort==="stock"){
 
-filtered.sort(
-(a,b) =>
-b.price - a.price
-);
-
-}
-
-else if(sort === "name"){
-
-filtered.sort(
-(a,b) =>
-a.name.localeCompare(
-b.name
-)
-);
-
-}
-
-else if(sort === "stock"){
-
-filtered.sort(
-(a,b) =>
-b.stock - a.stock
-);
+filtered.sort((a,b)=>b.stock-a.stock);
 
 }
 
 
-container.innerHTML = "";
+container.innerHTML="";
 
 
-if(filtered.length === 0){
+if(filtered.length===0){
 
-container.innerHTML = `
+container.innerHTML=`
 
 <div class="empty-products">
 
@@ -3385,44 +3062,35 @@ JSON.parse(
 localStorage.getItem(
 "urbanEssenceFavorites"
 )
-) || [];
+)||[];
 
 
-filtered.forEach(product => {
-
+filtered.forEach(product=>{
 
 let stockText;
+let stockClass="";
 
-let stockClass;
 
+if(product.stock<=0){
 
-if(product.stock <= 0){
-
-stockText =
-"🔴 Agotado";
-
-stockClass =
-"out";
+stockText="🔴 Agotado";
+stockClass="out";
 
 }
 
-else if(product.stock <= 3){
+else if(product.stock<=3){
 
-stockText =
+stockText=
 `🟡 Últimas ${product.stock} unidades`;
 
-stockClass =
-"low";
+stockClass="low";
 
 }
 
 else{
 
-stockText =
+stockText=
 `🟢 ${product.stock} disponibles`;
-
-stockClass =
-"";
 
 }
 
@@ -3432,7 +3100,7 @@ let priceHTML;
 
 if(product.oldPrice){
 
-priceHTML = `
+priceHTML=`
 
 <span class="old-price">
 S/ ${product.oldPrice.toFixed(2)}
@@ -3444,11 +3112,9 @@ S/ ${product.price.toFixed(2)}
 
 `;
 
-}
+}else{
 
-else{
-
-priceHTML = `
+priceHTML=`
 
 <span class="price">
 S/ ${product.price.toFixed(2)}
@@ -3463,13 +3129,11 @@ const favoriteActive =
 favorites.includes(product.id);
 
 
-container.innerHTML += `
+container.innerHTML+=`
 
 <div class="product">
 
-
 <div class="product-image">
-
 
 <img
 src="${product.image}"
@@ -3477,52 +3141,40 @@ alt="${product.name}"
 loading="lazy"
 onerror="imageError(this)">
 
-
 <div class="badge">
 ${product.badge}
 </div>
 
-
 <button
-class="favorite ${favoriteActive ? "active" : ""}"
-onclick="toggleFavorite(${product.id},this)"
-aria-label="Favorito">
+class="favorite ${favoriteActive?"active":""}"
+onclick="toggleFavorite(${product.id},this)">
 
-${favoriteActive
-? "♥"
-: "♡"}
+${favoriteActive?"♥":"♡"}
 
 </button>
-
 
 </div>
 
 
 <div class="product-info">
 
-
 <div class="product-category">
 ${product.category}
 </div>
-
 
 <div class="product-name">
 ${product.name}
 </div>
 
-
 <div>
 ${priceHTML}
 </div>
-
 
 <div class="stock ${stockClass}">
 ${stockText}
 </div>
 
-
 <div class="product-buttons">
-
 
 <button
 onclick="openProductModal(${product.id})">
@@ -3531,21 +3183,16 @@ onclick="openProductModal(${product.id})">
 
 </button>
 
-
 <button
 class="buy"
 onclick="addToCart(${product.id})"
-${product.stock <= 0
-? "disabled"
-: ""}>
+${product.stock<=0?"disabled":""}>
 
 🛒 Comprar
 
 </button>
 
-
 </div>
-
 
 </div>
 
@@ -3559,7 +3206,7 @@ ${product.stock <= 0
 
 
 /* =========================================================
-   ERROR IMAGEN
+   ERROR DE IMAGEN
 ========================================================= */
 
 function imageError(image){
@@ -3570,15 +3217,12 @@ return;
 
 }
 
-image.dataset.error =
-"true";
+image.dataset.error="true";
 
-image.style.objectFit =
-"contain";
+image.style.objectFit="contain";
 
-image.src =
-"data:image/svg+xml;charset=UTF-8," +
-
+image.src=
+"data:image/svg+xml;charset=UTF-8,"+
 encodeURIComponent(`
 
 <svg
@@ -3614,34 +3258,21 @@ Urban Essence
    FILTROS
 ========================================================= */
 
-function setFilter(
-filter,
-button
-){
+function setFilter(filter,button){
 
-currentFilter =
-filter;
-
+currentFilter=filter;
 
 document
-.querySelectorAll(
-".side-filter"
-)
-.forEach(btn =>
-btn.classList.remove(
-"active"
-)
+.querySelectorAll(".side-filter")
+.forEach(btn=>
+btn.classList.remove("active")
 );
-
 
 if(button){
 
-button.classList.add(
-"active"
-);
+button.classList.add("active");
 
 }
-
 
 renderProducts();
 
@@ -3656,23 +3287,14 @@ behavior:"smooth"
 }
 
 
-function activateCollection(
-filter
-){
+function activateCollection(filter){
 
-currentFilter =
-filter;
-
+currentFilter=filter;
 
 document
-.querySelectorAll(
-".side-filter"
-)
-.forEach(btn => {
-
-btn.classList.remove(
-"active"
-);
+.querySelectorAll(".side-filter")
+.forEach(btn=>{
+btn.classList.remove("active");
 
 if(
 btn.textContent
@@ -3680,17 +3302,13 @@ btn.textContent
 .includes(filter)
 ){
 
-btn.classList.add(
-"active"
-);
+btn.classList.add("active");
 
 }
 
 });
 
-
 renderProducts();
-
 
 document
 .getElementById("productos")
@@ -3703,41 +3321,30 @@ behavior:"smooth"
 
 function resetFilters(){
 
-currentFilter =
-"Todos";
+currentFilter="Todos";
 
-document
-.getElementById(
+document.getElementById(
 "searchInput"
-)
-.value = "";
+).value="";
 
-document
-.getElementById(
+document.getElementById(
 "sortProducts"
-)
-.value = "default";
+).value="default";
 
 document
-.querySelectorAll(
-".side-filter"
-)
-.forEach(btn =>
-btn.classList.remove(
-"active"
-)
+.querySelectorAll(".side-filter")
+.forEach(btn=>
+btn.classList.remove("active")
 );
 
-const allButton =
+const allButton=
 document.querySelector(
 '.side-filter[onclick*="Todos"]'
 );
 
 if(allButton){
 
-allButton.classList.add(
-"active"
-);
+allButton.classList.add("active");
 
 }
 
@@ -3745,9 +3352,7 @@ renderProducts();
 
 closeMenu();
 
-showToast(
-"Filtros restablecidos"
-);
+showToast("Filtros restablecidos");
 
 }
 
@@ -3756,49 +3361,38 @@ showToast(
    FAVORITOS
 ========================================================= */
 
-function toggleFavorite(
-id,
-button
-){
+function toggleFavorite(id,button){
 
-let favorites =
+let favorites=
 JSON.parse(
 localStorage.getItem(
 "urbanEssenceFavorites"
 )
-) || [];
+)||[];
 
 
 if(favorites.includes(id)){
 
-favorites =
+favorites=
 favorites.filter(
-item => item !== id
+item=>item!==id
 );
 
-button.classList.remove(
-"active"
-);
+button.classList.remove("active");
 
-button.textContent =
-"♡";
+button.textContent="♡";
 
 showToast(
 "Eliminado de favoritos"
 );
 
-}
-
-else{
+}else{
 
 favorites.push(id);
 
-button.classList.add(
-"active"
-);
+button.classList.add("active");
 
-button.textContent =
-"♥";
+button.textContent="♥";
 
 showToast(
 "❤️ Agregado a favoritos"
@@ -3808,11 +3402,8 @@ showToast(
 
 
 localStorage.setItem(
-
 "urbanEssenceFavorites",
-
 JSON.stringify(favorites)
-
 );
 
 }
@@ -3820,15 +3411,15 @@ JSON.stringify(favorites)
 
 function showFavorites(){
 
-const favorites =
+const favorites=
 JSON.parse(
 localStorage.getItem(
 "urbanEssenceFavorites"
 )
-) || [];
+)||[];
 
 
-if(favorites.length === 0){
+if(favorites.length===0){
 
 closeMenu();
 
@@ -3841,39 +3432,24 @@ return;
 }
 
 
-currentFilter =
-"Favoritos";
+currentFilter="Favoritos";
 
+const container=
+document.getElementById("products");
 
-const container =
-document.getElementById(
-"products"
-);
-
-
-const favoriteProducts =
+const favoriteProducts=
 products.filter(
-product =>
-favorites.includes(
-product.id
-)
+product=>
+favorites.includes(product.id)
 );
 
 
-container.innerHTML =
-"";
+container.innerHTML="";
 
 
-favoriteProducts.forEach(
-product => {
+favoriteProducts.forEach(product=>{
 
-let stockText =
-product.stock > 0
-? `🟢 ${product.stock} disponibles`
-: "🔴 Agotado";
-
-
-container.innerHTML += `
+container.innerHTML+=`
 
 <div class="product">
 
@@ -3902,10 +3478,6 @@ ${product.name}
 
 <div class="price">
 S/ ${product.price.toFixed(2)}
-</div>
-
-<div class="stock">
-${stockText}
 </div>
 
 <div class="product-buttons">
@@ -3953,20 +3525,16 @@ behavior:"smooth"
 
 function addToCart(id){
 
-const product =
+const product=
 products.find(
-p => p.id === id
+p=>p.id===id
 );
 
-
 if(!product){
-
 return;
-
 }
 
-
-if(product.stock <= 0){
+if(product.stock<=0){
 
 showToast(
 "❌ Producto agotado"
@@ -3977,17 +3545,16 @@ return;
 }
 
 
-const existing =
+const existing=
 cart.find(
-item => item.id === id
+item=>item.id===id
 );
 
 
 if(existing){
 
 if(
-existing.quantity >=
-product.limit
+existing.quantity>=product.limit
 ){
 
 alert(
@@ -3998,10 +3565,8 @@ return;
 
 }
 
-
 if(
-existing.quantity >=
-product.stock
+existing.quantity>=product.stock
 ){
 
 alert(
@@ -4012,19 +3577,13 @@ return;
 
 }
 
-
 existing.quantity++;
 
-}
-
-else{
+}else{
 
 cart.push({
-
 id:id,
-
 quantity:1
-
 });
 
 }
@@ -4041,18 +3600,11 @@ openCart();
 }
 
 
-/* =========================================================
-   GUARDAR CARRITO
-========================================================= */
-
 function saveCart(){
 
 localStorage.setItem(
-
 "urbanEssenceCart",
-
 JSON.stringify(cart)
-
 );
 
 updateCart();
@@ -4060,40 +3612,33 @@ updateCart();
 }
 
 
-/* =========================================================
-   ACTUALIZAR CARRITO
-========================================================= */
-
 function updateCart(){
 
-const container =
+const container=
 document.getElementById(
 "cartItems"
 );
 
-const count =
+const count=
 document.getElementById(
 "cartCount"
 );
 
-const totalElement =
+const totalElement=
 document.getElementById(
 "cartTotal"
 );
 
 
-let total = 0;
+let total=0;
+let totalQuantity=0;
 
-let totalQuantity = 0;
-
-
-container.innerHTML =
-"";
+container.innerHTML="";
 
 
-if(cart.length === 0){
+if(cart.length===0){
 
-container.innerHTML = `
+container.innerHTML=`
 
 <p style="
 text-align:center;
@@ -4110,43 +3655,34 @@ Tu carrito está vacío.
 }
 
 
-cart.forEach(item => {
+cart.forEach(item=>{
 
-
-const product =
+const product=
 products.find(
-p => p.id === item.id
+p=>p.id===item.id
 );
 
-
 if(!product){
-
 return;
-
 }
 
 
-const subtotal =
-product.price *
-item.quantity;
+const subtotal=
+product.price*item.quantity;
+
+total+=subtotal;
+
+totalQuantity+=item.quantity;
 
 
-total += subtotal;
-
-totalQuantity +=
-item.quantity;
-
-
-container.innerHTML += `
+container.innerHTML+=`
 
 <div class="cart-item">
-
 
 <img
 src="${product.image}"
 alt="${product.name}"
 onerror="imageError(this)">
-
 
 <div>
 
@@ -4158,35 +3694,25 @@ ${product.name}
 S/ ${product.price.toFixed(2)}
 </div>
 
-
 <div class="quantity">
-
 
 <button
 onclick="changeQuantity(${product.id},-1)">
-
 −
-
 </button>
-
 
 <span>
 ${item.quantity}
 </span>
 
-
 <button
 onclick="changeQuantity(${product.id},1)">
-
 +
-
 </button>
 
-
 </div>
 
 </div>
-
 
 <button
 class="remove"
@@ -4196,7 +3722,6 @@ onclick="removeFromCart(${product.id})">
 
 </button>
 
-
 </div>
 
 `;
@@ -4204,48 +3729,37 @@ onclick="removeFromCart(${product.id})">
 });
 
 
-count.textContent =
+count.textContent=
 totalQuantity;
 
-
-totalElement.textContent =
+totalElement.textContent=
 `S/ ${total.toFixed(2)}`;
 
 }
 
 
-/* =========================================================
-   CANTIDADES
-========================================================= */
+function changeQuantity(id,change){
 
-function changeQuantity(
-id,
-change
-){
-
-const item =
+const item=
 cart.find(
-i => i.id === id
+i=>i.id===id
 );
 
-const product =
+const product=
 products.find(
-p => p.id === id
+p=>p.id===id
 );
 
-
-if(!item || !product){
-
+if(!item||!product){
 return;
-
 }
 
 
-const newQuantity =
-item.quantity + change;
+const newQuantity=
+item.quantity+change;
 
 
-if(newQuantity <= 0){
+if(newQuantity<=0){
 
 removeFromCart(id);
 
@@ -4254,10 +3768,7 @@ return;
 }
 
 
-if(
-newQuantity >
-product.limit
-){
+if(newQuantity>product.limit){
 
 alert(
 `El límite es ${product.limit} unidades.`
@@ -4268,10 +3779,7 @@ return;
 }
 
 
-if(
-newQuantity >
-product.stock
-){
+if(newQuantity>product.stock){
 
 alert(
 "No hay suficientes unidades disponibles."
@@ -4282,25 +3790,18 @@ return;
 }
 
 
-item.quantity =
-newQuantity;
-
+item.quantity=newQuantity;
 
 saveCart();
 
 }
 
 
-/* =========================================================
-   ELIMINAR
-========================================================= */
-
 function removeFromCart(id){
 
-cart =
+cart=
 cart.filter(
-item =>
-item.id !== id
+item=>item.id!==id
 );
 
 saveCart();
@@ -4312,18 +3813,11 @@ showToast(
 }
 
 
-/* =========================================================
-   VACIAR CARRITO
-========================================================= */
-
 function clearCart(){
 
-if(cart.length === 0){
-
+if(cart.length===0){
 return;
-
 }
-
 
 if(
 confirm(
@@ -4331,7 +3825,7 @@ confirm(
 )
 ){
 
-cart = [];
+cart=[];
 
 saveCart();
 
@@ -4344,22 +3838,15 @@ showToast(
 }
 
 
-/* =========================================================
-   ABRIR CARRITO
-========================================================= */
-
 function openCart(){
 
 document
-.getElementById(
-"cartOverlay"
-)
+.getElementById("cartOverlay")
 .classList.add("show");
 
 updateCart();
 
-document.body.style.overflow =
-"hidden";
+document.body.style.overflow="hidden";
 
 }
 
@@ -4367,49 +3854,42 @@ document.body.style.overflow =
 function closeCart(){
 
 document
-.getElementById(
-"cartOverlay"
-)
+.getElementById("cartOverlay")
 .classList.remove("show");
 
-document.body.style.overflow =
-"";
+document.body.style.overflow="";
 
 }
 
 
 /* =========================================================
-   MODAL
+   MODAL PRODUCTO
 ========================================================= */
 
 function openProductModal(id){
 
-const product =
+const product=
 products.find(
-p => p.id === id
+p=>p.id===id
 );
 
-
 if(!product){
-
 return;
-
 }
 
 
-const modal =
+const modal=
 document.getElementById(
 "productModal"
 );
 
-
-const content =
+const content=
 document.getElementById(
 "modalProduct"
 );
 
 
-content.innerHTML = `
+content.innerHTML=`
 
 <img
 class="modal-image"
@@ -4417,23 +3897,15 @@ src="${product.image}"
 alt="${product.name}"
 onerror="imageError(this)">
 
-
 <div class="modal-info">
 
-
 <div class="product-category">
-
 ${product.category}
-
 </div>
 
-
 <h2>
-
 ${product.name}
-
 </h2>
-
 
 <h3 style="
 color:#d4af37;
@@ -4444,29 +3916,17 @@ S/ ${product.price.toFixed(2)}
 
 </h3>
 
-
 <p>
-
 ${product.description}
-
 </p>
-
 
 <p style="margin-top:15px;">
-
-📦 Stock:
-${product.stock}
-
+📦 Stock: ${product.stock}
 </p>
-
 
 <p>
-
-🔢 Límite por compra:
-${product.limit}
-
+🔢 Límite por compra: ${product.limit}
 </p>
-
 
 <div style="
 display:flex;
@@ -4474,7 +3934,6 @@ gap:10px;
 flex-wrap:wrap;
 margin-top:20px;
 ">
-
 
 <button
 class="gold-button"
@@ -4487,7 +3946,6 @@ closeProductModal();
 
 </button>
 
-
 <button
 class="gold-button"
 onclick="shareProduct(${product.id})">
@@ -4496,21 +3954,16 @@ onclick="shareProduct(${product.id})">
 
 </button>
 
-
 </div>
-
 
 </div>
 
 `;
 
 
-modal.classList.add(
-"show"
-);
+modal.classList.add("show");
 
-document.body.style.overflow =
-"hidden";
+document.body.style.overflow="hidden";
 
 }
 
@@ -4518,15 +3971,10 @@ document.body.style.overflow =
 function closeProductModal(){
 
 document
-.getElementById(
-"productModal"
-)
-.classList.remove(
-"show"
-);
+.getElementById("productModal")
+.classList.remove("show");
 
-document.body.style.overflow =
-"";
+document.body.style.overflow="";
 
 }
 
@@ -4537,43 +3985,31 @@ document.body.style.overflow =
 
 function shareProduct(id){
 
-const product =
+const product=
 products.find(
-p => p.id === id
+p=>p.id===id
 );
 
-
 if(!product){
-
 return;
-
 }
 
 
-const text =
+const text=
 `Mira este producto de Urban Essence: ${product.name} - S/ ${product.price.toFixed(2)}`;
 
 
 if(navigator.share){
 
 navigator.share({
-
-title:
-product.name,
-
-text:
-text,
-
-url:
-window.location.href
-
+title:product.name,
+text:text,
+url:window.location.href
 });
 
 }
 
-else if(
-navigator.clipboard
-){
+else if(navigator.clipboard){
 
 navigator.clipboard.writeText(
 window.location.href
@@ -4602,7 +4038,7 @@ alert(
 
 function sendWhatsAppOrder(){
 
-if(cart.length === 0){
+if(cart.length===0){
 
 alert(
 "Tu carrito está vacío."
@@ -4613,42 +4049,31 @@ return;
 }
 
 
-const name =
-document
-.getElementById(
+const name=
+document.getElementById(
 "clientName"
-)
-.value.trim();
+).value.trim();
 
-
-const city =
-document
-.getElementById(
+const city=
+document.getElementById(
 "clientCity"
-)
-.value.trim();
+).value.trim();
 
-
-const district =
-document
-.getElementById(
+const district=
+document.getElementById(
 "clientDistrict"
-)
-.value.trim();
+).value.trim();
 
-
-const phone =
-document
-.getElementById(
+const phone=
+document.getElementById(
 "clientPhone"
-)
-.value.trim();
+).value.trim();
 
 
 if(
-!name ||
-!city ||
-!district ||
+!name||
+!city||
+!district||
 !phone
 ){
 
@@ -4661,78 +4086,63 @@ return;
 }
 
 
-let message =
+let message=
 "Hola, Urban Essence. 👋\n\n";
 
-
-message +=
+message+=
 "Quiero realizar el siguiente pedido:\n\n";
 
 
-let total = 0;
+let total=0;
 
 
-cart.forEach(item => {
+cart.forEach(item=>{
 
-
-const product =
+const product=
 products.find(
-p => p.id === item.id
+p=>p.id===item.id
 );
 
-
 if(!product){
-
 return;
-
 }
 
 
-const subtotal =
-product.price *
-item.quantity;
+const subtotal=
+product.price*item.quantity;
+
+total+=subtotal;
 
 
-total += subtotal;
-
-
-message +=
-
+message+=
 `• ${product.name} x${item.quantity} = S/ ${subtotal.toFixed(2)}\n`;
 
 });
 
 
-message +=
+message+=
 `\n💰 Total: S/ ${total.toFixed(2)}`;
 
-
-message +=
+message+=
 `\n\n👤 Nombre: ${name}`;
 
-
-message +=
+message+=
 `\n📍 Ciudad: ${city}`;
 
-
-message +=
+message+=
 `\n📍 Distrito: ${district}`;
 
-
-message +=
+message+=
 `\n📱 Teléfono: ${phone}`;
 
-
-message +=
+message+=
 `\n🚚 Método de entrega: Envío`;
 
-
-message +=
+message+=
 "\n\nQuedo atento/a a la confirmación. Gracias.";
 
 
-const url =
-
+const url=
 `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
 
@@ -4749,16 +4159,12 @@ url,
 ========================================================= */
 
 document
-.getElementById(
-"cartOverlay"
-)
+.getElementById("cartOverlay")
 .addEventListener(
 "click",
 function(event){
 
-if(
-event.target === this
-){
+if(event.target===this){
 
 closeCart();
 
@@ -4768,16 +4174,12 @@ closeCart();
 
 
 document
-.getElementById(
-"productModal"
-)
+.getElementById("productModal")
 .addEventListener(
 "click",
 function(event){
 
-if(
-event.target === this
-){
+if(event.target===this){
 
 closeProductModal();
 
@@ -4790,7 +4192,7 @@ document.addEventListener(
 "keydown",
 function(event){
 
-if(event.key === "Escape"){
+if(event.key==="Escape"){
 
 closeMenu();
 
@@ -4815,5 +4217,6 @@ updateCart();
 
 </script>
 
-
 </body>
+
+</html>
