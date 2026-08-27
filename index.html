@@ -2,18 +2,49 @@
 <html lang="es">
 
 <head>
-<meta name="google-site-verification" content="FOu36-sbYqsFFHqnjSwhBCUySz0WmSq3o_nhEl676zQ" />
+
+<meta name="google-site-verification" content="FOu36-sbYqsFFHqnjSwhBCUySz0WmSq3o_nhEl676zQ">
+
 <meta charset="UTF-8">
 
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Urban Essence | Artículos que elevan tu personalidad</title>
+<title>Urban Essence | Carteras, billeteras, correas y accesorios en Perú</title>
 
 <meta name="description"
-content="Urban Essence - Artículos y accesorios que elevan tu personalidad. Envíos a todo el Perú.">
+content="Urban Essence: descubre billeteras, carteras, correas, monederos, relojes, fragancias y accesorios. Envíos a todo el Perú.">
 
-<meta name="theme-color" content="#080808">
+<meta name="keywords"
+content="Urban Essence, billeteras, carteras, correas, monederos, accesorios, fragancias, relojes, Perú">
+
+<meta name="author"
+content="Urban Essence">
+
+<meta name="robots"
+content="index, follow">
+
+<meta name="theme-color"
+content="#080808">
+
+<link rel="canonical"
+href="https://sergiomathias384-ctrl.github.io/urban-essence/">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:title"
+content="Urban Essence | Artículos que elevan tu personalidad">
+
+<meta property="og:description"
+content="Descubre accesorios y artículos seleccionados para complementar tu estilo.">
+
+<meta property="og:url"
+content="https://sergiomathias384-ctrl.github.io/urban-essence/">
+
+<meta property="og:site_name"
+content="Urban Essence">
+
 
 <style>
 
@@ -34,11 +65,14 @@ body{
     transition:.3s;
 }
 
-button,input,select{
+button,
+input,
+select{
     font-family:inherit;
 }
 
-button,a{
+button,
+a{
     -webkit-tap-highlight-color:transparent;
 }
 
@@ -95,7 +129,8 @@ body.light .cart{
     color:#111;
 }
 
-body.light .checkout input{
+body.light .checkout input,
+body.light .newsletter-input{
     background:#f5f5f5;
     color:#111;
     border-color:#ccc;
@@ -119,72 +154,100 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
+
     background:rgba(5,5,5,.97);
+
     border-bottom:1px solid #292929;
+
     backdrop-filter:blur(12px);
 }
 
 .navbar{
     max-width:1250px;
     min-height:74px;
+
     margin:auto;
+
     padding:12px 22px;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
+
     gap:15px;
 }
 
 .logo{
     color:var(--gold);
+
     font-size:25px;
+
     font-weight:bold;
+
     letter-spacing:2px;
+
     text-decoration:none;
 }
 
 .header-right{
     display:flex;
+
     align-items:center;
+
     gap:10px;
 }
 
 .icon-button{
     position:relative;
+
     width:43px;
     height:43px;
+
     border:none;
+
     border-radius:50%;
+
     background:#191919;
+
     color:#fff;
+
     font-size:18px;
+
     cursor:pointer;
+
     transition:.3s;
 }
 
 .icon-button:hover{
     background:var(--gold);
+
     color:#000;
+
     transform:translateY(-2px);
 }
 
 .cart-count{
     position:absolute;
+
     top:-5px;
     right:-5px;
+
     width:20px;
     height:20px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
     border-radius:50%;
+
     background:var(--gold);
+
     color:#000;
 
     font-size:11px;
+
     font-weight:bold;
 }
 
@@ -195,26 +258,34 @@ header{
 
 .side-overlay{
     position:fixed;
+
     inset:0;
+
     background:rgba(0,0,0,.7);
+
     z-index:2500;
 
     opacity:0;
+
     visibility:hidden;
+
     transition:.3s;
 }
 
 .side-overlay.show{
     opacity:1;
+
     visibility:visible;
 }
 
 .side-menu{
     position:fixed;
+
     top:0;
     left:-350px;
 
     width:min(340px,90%);
+
     height:100vh;
 
     overflow-y:auto;
@@ -236,10 +307,13 @@ header{
 
 .side-header{
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     padding-bottom:20px;
+
     margin-bottom:15px;
 
     border-bottom:1px solid var(--border);
@@ -247,30 +321,39 @@ header{
 
 .side-header h2{
     color:var(--gold);
+
     font-size:22px;
 }
 
 .side-close{
     border:none;
+
     background:none;
+
     color:var(--text);
+
     font-size:30px;
+
     cursor:pointer;
 }
 
 .side-links{
     display:flex;
+
     flex-direction:column;
+
     gap:5px;
 }
 
 .side-link{
     display:block;
+
     padding:14px;
 
     border-radius:10px;
 
     color:#fff;
+
     text-decoration:none;
 
     transition:.2s;
@@ -278,17 +361,21 @@ header{
 
 .side-link:hover{
     background:var(--gold);
+
     color:#000;
 }
 
 .side-section-title{
     margin-top:22px;
+
     margin-bottom:10px;
 
     color:var(--gold);
 
     font-size:13px;
+
     text-transform:uppercase;
+
     letter-spacing:1px;
 }
 
@@ -296,15 +383,19 @@ header{
     width:100%;
 
     padding:11px;
+
     margin-bottom:7px;
 
     border:1px solid var(--border);
+
     border-radius:9px;
 
     background:transparent;
+
     color:var(--text);
 
     text-align:left;
+
     cursor:pointer;
 
     transition:.2s;
@@ -313,13 +404,15 @@ header{
 .side-filter:hover,
 .side-filter.active{
     background:var(--gold);
+
     color:#000;
+
     border-color:var(--gold);
 }
 
 
 /* =========================================================
-   HERO + CARRUSEL
+   HERO
 ========================================================= */
 
 .hero{
@@ -330,7 +423,9 @@ header{
     overflow:hidden;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
@@ -340,12 +435,15 @@ header{
 
 .hero-slides{
     position:absolute;
+
     inset:0;
+
     z-index:0;
 }
 
 .hero-slide{
     position:absolute;
+
     inset:0;
 
     opacity:0;
@@ -359,6 +457,7 @@ header{
 
 .hero-slide img{
     width:100%;
+
     height:100%;
 
     object-fit:cover;
@@ -372,6 +471,7 @@ header{
     content:"";
 
     position:absolute;
+
     inset:0;
 
     background:
@@ -386,6 +486,7 @@ header{
 
 .hero-content{
     position:relative;
+
     z-index:2;
 
     max-width:900px;
@@ -427,16 +528,19 @@ header{
     bottom:25px;
 
     left:50%;
+
     transform:translateX(-50%);
 
     z-index:3;
 
     display:flex;
+
     gap:8px;
 }
 
 .hero-dot{
     width:9px;
+
     height:9px;
 
     border-radius:50%;
@@ -450,6 +554,7 @@ header{
 
 .hero-dot.active{
     background:var(--gold);
+
     border-color:var(--gold);
 }
 
@@ -459,12 +564,15 @@ header{
     padding:14px 26px;
 
     border:none;
+
     border-radius:30px;
 
     background:var(--gold);
+
     color:#000;
 
     font-weight:bold;
+
     text-decoration:none;
 
     cursor:pointer;
@@ -474,6 +582,7 @@ header{
 
 .gold-button:hover{
     background:var(--gold-light);
+
     transform:translateY(-3px);
 }
 
@@ -512,6 +621,7 @@ header{
 
 .info-card:hover{
     transform:translateY(-5px);
+
     border-color:var(--gold);
 }
 
@@ -527,6 +637,7 @@ header{
 
 .info-card p{
     color:var(--muted);
+
     line-height:1.6;
 }
 
@@ -541,6 +652,7 @@ section{
 
 .section-title{
     text-align:center;
+
     margin-bottom:40px;
 }
 
@@ -586,6 +698,7 @@ section{
     outline:none;
 
     background:#151515;
+
     color:#fff;
 
     font-size:15px;
@@ -641,6 +754,7 @@ section{
     position:relative;
 
     width:100%;
+
     height:280px;
 
     overflow:hidden;
@@ -650,6 +764,7 @@ section{
 
 .product-image img{
     width:100%;
+
     height:100%;
 
     object-fit:cover;
@@ -672,9 +787,11 @@ section{
     border-radius:15px;
 
     background:var(--gold);
+
     color:#000;
 
     font-size:11px;
+
     font-weight:bold;
 }
 
@@ -688,6 +805,7 @@ section{
     height:38px;
 
     border:none;
+
     border-radius:50%;
 
     background:rgba(0,0,0,.75);
@@ -789,16 +907,19 @@ section{
 
 .product-buttons button:hover{
     background:var(--gold);
+
     color:#000;
 }
 
 .product-buttons .buy{
     background:var(--gold);
+
     color:#000;
 }
 
 .product-buttons button:disabled{
     opacity:.4;
+
     cursor:not-allowed;
 }
 
@@ -854,11 +975,13 @@ section{
 
 .collection:hover{
     transform:translateY(-5px);
+
     border-color:var(--gold);
 }
 
 .collection h3{
     font-size:30px;
+
     margin-bottom:15px;
 }
 
@@ -869,6 +992,7 @@ section{
 
 .about{
     max-width:950px;
+
     margin:auto;
 }
 
@@ -943,11 +1067,87 @@ section{
 
 
 /* =========================================================
+   REDES SOCIALES
+========================================================= */
+
+.social-section{
+    max-width:900px;
+
+    margin:auto;
+}
+
+.social-box{
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:35px 20px;
+
+    text-align:center;
+}
+
+.social-box h3{
+    color:var(--gold);
+
+    font-size:24px;
+
+    margin-bottom:10px;
+}
+
+.social-box p{
+    color:var(--muted);
+
+    margin-bottom:25px;
+}
+
+.social-links{
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+.social-link{
+    min-width:150px;
+
+    padding:13px 18px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    background:#191919;
+
+    color:#fff;
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+}
+
+.social-link:hover{
+    border-color:var(--gold);
+
+    background:var(--gold);
+
+    color:#000;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================================================
    CONTACTO
 ========================================================= */
 
 .contact{
     max-width:900px;
+
     margin:auto;
 }
 
@@ -1165,6 +1365,7 @@ section{
 
 .clear-cart:hover{
     border-color:#ff5555;
+
     color:#ff5555;
 }
 
@@ -1328,6 +1529,7 @@ section{
     position:fixed;
 
     left:50%;
+
     bottom:25px;
 
     transform:translate(-50%,120px);
@@ -1384,6 +1586,28 @@ footer p{
     margin:7px;
 }
 
+.footer-links{
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:20px 0;
+}
+
+.footer-links a{
+    color:#999;
+
+    text-decoration:none;
+}
+
+.footer-links a:hover{
+    color:var(--gold);
+}
+
 
 /* =========================================================
    WHATSAPP
@@ -1393,14 +1617,17 @@ footer p{
     position:fixed;
 
     right:20px;
+
     bottom:20px;
 
     width:58px;
+
     height:58px;
 
     display:flex;
 
     justify-content:center;
+
     align-items:center;
 
     background:#25d366;
@@ -1453,6 +1680,7 @@ footer p{
 
     .products{
         grid-template-columns:repeat(2,1fr);
+
         gap:15px;
     }
 
@@ -1474,6 +1702,7 @@ footer p{
 
     .logo{
         font-size:18px;
+
         letter-spacing:1px;
     }
 
@@ -1507,7 +1736,12 @@ footer p{
 
     .toast{
         width:90%;
+
         text-align:center;
+    }
+
+    .social-link{
+        width:100%;
     }
 
 }
@@ -1516,13 +1750,7 @@ footer p{
 
 </head>
 
-
 <body>
-
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
 
 <header>
 
@@ -1537,7 +1765,6 @@ aria-label="Abrir menú">
 
 </button>
 
-
 <a
 href="#inicio"
 class="logo">
@@ -1545,7 +1772,6 @@ class="logo">
 URBAN ESSENCE
 
 </a>
-
 
 <div class="header-right">
 
@@ -1558,7 +1784,6 @@ aria-label="Cambiar tema">
 🌙
 
 </button>
-
 
 <button
 class="icon-button"
@@ -1583,10 +1808,6 @@ id="cartCount">
 
 </header>
 
-
-<!-- =========================================================
-     MENÚ LATERAL
-========================================================= -->
 
 <div
 class="side-overlay"
@@ -1618,8 +1839,7 @@ onclick="closeMenu()">
 
 <div class="side-links">
 
-<a
-href="#inicio"
+<a href="#inicio"
 class="side-link"
 onclick="closeMenu()">
 
@@ -1627,9 +1847,7 @@ onclick="closeMenu()">
 
 </a>
 
-
-<a
-href="#productos"
+<a href="#productos"
 class="side-link"
 onclick="closeMenu()">
 
@@ -1637,9 +1855,7 @@ onclick="closeMenu()">
 
 </a>
 
-
-<a
-href="#colecciones"
+<a href="#colecciones"
 class="side-link"
 onclick="closeMenu()">
 
@@ -1647,9 +1863,7 @@ onclick="closeMenu()">
 
 </a>
 
-
-<a
-href="#sobre-nosotros"
+<a href="#sobre-nosotros"
 class="side-link"
 onclick="closeMenu()">
 
@@ -1657,9 +1871,7 @@ onclick="closeMenu()">
 
 </a>
 
-
-<a
-href="#envios-info"
+<a href="#envios-info"
 class="side-link"
 onclick="closeMenu()">
 
@@ -1667,9 +1879,15 @@ onclick="closeMenu()">
 
 </a>
 
+<a href="#redes"
+class="side-link"
+onclick="closeMenu()">
 
-<a
-href="#contactanos"
+📱 Síguenos
+
+</a>
+
+<a href="#contactanos"
 class="side-link"
 onclick="closeMenu()">
 
@@ -1684,7 +1902,6 @@ onclick="closeMenu()">
 Filtrar productos
 </div>
 
-
 <button
 class="side-filter active"
 onclick="setFilter('Todos',this)">
@@ -1692,7 +1909,6 @@ onclick="setFilter('Todos',this)">
 🛍️ Todos
 
 </button>
-
 
 <button
 class="side-filter"
@@ -1702,7 +1918,6 @@ onclick="setFilter('Mujer',this)">
 
 </button>
 
-
 <button
 class="side-filter"
 onclick="setFilter('Varón',this)">
@@ -1710,7 +1925,6 @@ onclick="setFilter('Varón',this)">
 👨 Varón
 
 </button>
-
 
 <button
 class="side-filter"
@@ -1720,7 +1934,6 @@ onclick="setFilter('Billeteras',this)">
 
 </button>
 
-
 <button
 class="side-filter"
 onclick="setFilter('Monederos',this)">
@@ -1728,7 +1941,6 @@ onclick="setFilter('Monederos',this)">
 💰 Monederos
 
 </button>
-
 
 <button
 class="side-filter"
@@ -1738,15 +1950,13 @@ onclick="setFilter('Correas',this)">
 
 </button>
 
-
 <button
 class="side-filter"
 onclick="setFilter('Fragancias',this)">
 
- Fragancias
+🌸 Fragancias
 
 </button>
-
 
 <button
 class="side-filter"
@@ -1756,7 +1966,6 @@ onclick="setFilter('Relojes',this)">
 
 </button>
 
-
 <button
 class="side-filter"
 onclick="setFilter('Nuevo',this)">
@@ -1764,7 +1973,6 @@ onclick="setFilter('Nuevo',this)">
 ✨ Nuevos
 
 </button>
-
 
 <button
 class="side-filter"
@@ -1779,7 +1987,6 @@ onclick="setFilter('Más vendido',this)">
 Acciones
 </div>
 
-
 <button
 class="side-filter"
 onclick="showFavorites()">
@@ -1787,7 +1994,6 @@ onclick="showFavorites()">
 ❤️ Mis favoritos
 
 </button>
-
 
 <button
 class="side-filter"
@@ -1800,70 +2006,49 @@ onclick="resetFilters()">
 </aside>
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
-
 <section
 class="hero"
 id="inicio">
 
-
 <div class="hero-slides">
-
-<!--
-=========================================================
-FOTOS DEL INICIO
-
-Por ahora usamos imágenes que YA existen en tu código.
-Cuando quieras poner las fotos específicas del inicio,
-solo cambia estos nombres.
-
-NO SE MEZCLAN CON LOS PRODUCTOS.
-=========================================================
--->
 
 <div class="hero-slide active">
 
 <img
 src="billetera mujer 1.jpeg"
-alt="Urban Essence">
+alt="Billetera para mujer Urban Essence">
 
 </div>
-
 
 <div class="hero-slide">
 
 <img
 src="billetera mujer 2.jpeg"
-alt="Urban Essence">
+alt="Billetera para mujer Urban Essence">
 
 </div>
-
 
 <div class="hero-slide">
 
 <img
 src="billetera varon 1.jpeg"
-alt="Urban Essence">
+alt="Billetera para varón Urban Essence">
 
 </div>
-
 
 <div class="hero-slide">
 
 <img
 src="correa 1.jpeg"
-alt="Urban Essence">
+alt="Correa para varón Urban Essence">
 
 </div>
-
 
 <div class="hero-slide">
 
 <img
 src="imagen.png"
-alt="Urban Essence">
+alt="Urban Essence accesorios">
 
 </div>
 
@@ -1881,13 +2066,10 @@ Artículos que elevan tu personalidad
 </h2>
 
 <p>
-
 Descubre accesorios seleccionados
 para complementar tu estilo,
 personalidad y forma de expresarte.
-
 </p>
-
 
 <a
 href="#productos"
@@ -1908,12 +2090,7 @@ id="heroDots">
 </section>
 
 
-<!-- =========================================================
-     INFORMACIÓN
-========================================================= -->
-
 <div class="info-grid">
-
 
 <div class="info-card">
 
@@ -1971,12 +2148,7 @@ con Urban Essence.
 </div>
 
 
-<!-- =========================================================
-     PRODUCTOS
-========================================================= -->
-
-<section
-id="productos">
+<section id="productos">
 
 <div class="section-title">
 
@@ -1998,7 +2170,6 @@ type="text"
 id="searchInput"
 placeholder="🔎 Buscar productos..."
 oninput="renderProducts()">
-
 
 <select
 id="sortProducts"
@@ -2037,12 +2208,7 @@ id="products">
 </section>
 
 
-<!-- =========================================================
-     COLECCIONES
-========================================================= -->
-
-<section
-id="colecciones">
+<section id="colecciones">
 
 <div class="section-title">
 
@@ -2058,7 +2224,6 @@ Descubre nuestros productos por categoría.
 
 
 <div class="collections">
-
 
 <div class="collection">
 
@@ -2122,18 +2287,12 @@ VER PRODUCTOS
 
 </div>
 
-
 </div>
 
 </section>
 
 
-<!-- =========================================================
-     SOBRE NOSOTROS
-========================================================= -->
-
-<section
-id="sobre-nosotros">
+<section id="sobre-nosotros">
 
 <div class="section-title">
 
@@ -2157,32 +2316,26 @@ Nuestra esencia
 </h3>
 
 <p>
-
 En <strong>Urban Essence</strong>
 buscamos ofrecer artículos
 que no solamente sean útiles,
 sino que también representen
 el estilo y personalidad
 de cada persona.
-
 </p>
 
 <p>
-
 Seleccionamos nuestros productos
 pensando en diseño, funcionalidad
 y una experiencia de compra
 sencilla para nuestros clientes.
-
 </p>
 
 <p>
-
 Queremos crecer junto a nuestros
 clientes y convertir Urban Essence
 en una marca reconocida
 por su estilo, calidad y atención.
-
 </p>
 
 </div>
@@ -2192,12 +2345,7 @@ por su estilo, calidad y atención.
 </section>
 
 
-<!-- =========================================================
-     ENVÍOS
-========================================================= -->
-
-<section
-id="envios-info">
+<section id="envios-info">
 
 <div class="section-title">
 
@@ -2213,7 +2361,6 @@ Compra desde cualquier lugar del Perú.
 
 
 <div class="shipping">
-
 
 <div class="shipping-card">
 
@@ -2273,306 +2420,40 @@ tu pedido y entrega.
 </section>
 
 
-<!-- =========================================================
-     CONTACTO
-========================================================= -->
-
-<section
-id="contactanos">
-
-<div class="contact">
-
-<div class="section-title">
-
-<h2>
-Contáctanos
-</h2>
-
-<p>
-Estamos para ayudarte.
-</p>
-
-</div>
-
-
-<div class="contact-box">
-
-<h3>
-📧 Correo de Urban Essence
-</h3>
-
-
-<div class="email">
-
-urban.essence.corporativo@gmail.com
-
-</div>
-
-
-<div class="contact-buttons">
-
-
-<a
-class="gold-button"
-href="mailto:urban.essence.corporativo@gmail.com">
-
-📧 ESCRÍBENOS
-
-</a>
-
-
-<a
-class="gold-button"
-href="https://wa.me/51986788414"
-target="_blank"
-rel="noopener">
-
-💬 WHATSAPP
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer>
-
-<h2>
-URBAN ESSENCE
-</h2>
-
-<p>
-Artículos que elevan tu personalidad.
-</p>
-
-<p>
-🇵🇪 Envíos a todo el Perú
-</p>
-
-<p>
-📧 urban.essence.corporativo@gmail.com
-</p>
-
-<p>
-💬 986 788 414
-</p>
-
-<p>
-© 2026 Urban Essence
-</p>
-
-</footer>
-
-
-<!-- =========================================================
-     WHATSAPP
-========================================================= -->
-
-<a
-class="whatsapp"
-href="https://wa.me/51986788414"
-target="_blank"
-rel="noopener"
-title="Escribir por WhatsApp">
-
-💬
-
-</a>
-
-
-<!-- =========================================================
-     CARRITO
-========================================================= -->
-
-<div
-class="cart-overlay"
-id="cartOverlay">
-
-
-<div class="cart">
-
-
-<div class="cart-header">
-
-<h2>
-🛒 Tu carrito
-</h2>
-
-<button
-class="close"
-onclick="closeCart()">
-
-×
-
-</button>
-
-</div>
-
-
-<div id="cartItems">
-</div>
-
-
-<div class="cart-total">
-
-<div class="total-row">
-
-<span>
-Total
-</span>
-
-<span id="cartTotal">
-S/ 0.00
-</span>
-
-</div>
-
-
-<div class="cart-actions">
-
-<button
-class="clear-cart"
-onclick="clearCart()">
-
-🗑️ Vaciar carrito
-
-</button>
-
-</div>
-
-
-<div class="checkout">
-
-<h3>
-Datos del cliente
-</h3>
-
-
-<label>
-Nombre
-</label>
-
-<input
-type="text"
-id="clientName"
-placeholder="Tu nombre">
-
-
-<label>
-Ciudad
-</label>
-
-<input
-type="text"
-id="clientCity"
-placeholder="Ej. Cajamarca">
-
-
-<label>
-Distrito
-</label>
-
-<input
-type="text"
-id="clientDistrict"
-placeholder="Tu distrito">
-
-
-<label>
-Número de teléfono
-</label>
-
-<input
-type="tel"
-id="clientPhone"
-placeholder="Tu número">
-
-
-<label>
-Método de entrega
-</label>
-
-<div class="shipping-only">
-
-🚚 Envío
-
-</div>
-
-
-<button
-class="gold-button"
-style="width:100%;margin-top:15px;"
-onclick="sendWhatsAppOrder()">
-
-💬 CONFIRMAR PEDIDO
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =========================================================
-     MODAL
-========================================================= -->
-
-<div
-class="modal"
-id="productModal">
-
-
-<div class="modal-content">
-
-
-<button
-class="modal-close"
-onclick="closeProductModal()">
-
-×
-
-</button>
-
-
-<div id="modalProduct">
-</div>
-
-
-</div>
-
-</div>
-
-
-<div
-class="toast"
-id="toast">
-
-Producto agregado al carrito.
-
-</div>
-
-
 <script>
+
+/* =========================================================
+   URBAN ESSENCE
+   JAVASCRIPT FINAL
+========================================================= */
+
 
 /* =========================================================
    CONFIGURACIÓN
 ========================================================= */
 
-const WHATSAPP_NUMBER =
-"51986788414";
+const WHATSAPP_NUMBER = "51986788414";
+
+const STORE_NAME = "Urban Essence";
+
+const STORE_URL = window.location.href;
+
+
+/*
+   REDES SOCIALES
+
+   IMPORTANTE:
+   Cambia solamente estos enlaces cuando tengas
+   las cuentas oficiales de Urban Essence.
+
+   NO necesitas cambiar nada más del código.
+*/
+
+const SOCIAL_LINKS = {
+    instagram: "#",
+    tiktok: "#",
+    facebook: "#"
+};
 
 
 /* =========================================================
@@ -2743,8 +2624,9 @@ limit:1,
 badge:"Nuevo",
 tags:["Mujer","Nuevo"],
 image:"billetera mujer 4.jpeg",
-description:"Billetera para mujer con acabados premium"
+description:"Billetera para mujer con acabados premium."
 },
+
 {
 id:12,
 name:"Billetera de varón",
@@ -2757,8 +2639,9 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Nuevo"],
 image:"billetera varon 3.jpeg",
-description:"billetera para varón"
+description:"Billetera para varón."
 },
+
 {
 id:13,
 name:"Billetera de varón",
@@ -2771,9 +2654,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Nuevo"],
 image:"billetera varon 4.png",
-description:"Billetera para varón"
+description:"Billetera para varón."
 },
-    {
+
+{
 id:14,
 name:"Billetera de Varón",
 category:"Accesorios",
@@ -2785,9 +2669,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Nuevo"],
 image:"billetera varon 5.png",
-description:"Billetera para varón"
+description:"Billetera para varón."
 },
-    {
+
+{
 id:15,
 name:"Billetera de varón",
 category:"Accesorios",
@@ -2799,8 +2684,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Nuevo"],
 image:"billetera varon 6.png",
-description:"billetera para varón"
-},{
+description:"Billetera para varón."
+},
+
+{
 id:16,
 name:"Billetera de varón",
 category:"Accesorios",
@@ -2812,9 +2699,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Nuevo"],
 image:"billetera varon 7.png",
-description:"billetera para varón"
+description:"Billetera para varón."
 },
-    {
+
+{
 id:17,
 name:"Correa para varón",
 category:"Correas",
@@ -2826,9 +2714,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 2.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-   {
+
+{
 id:18,
 name:"Correa para varón",
 category:"Correas",
@@ -2840,9 +2729,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 3.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:19,
 name:"Correa para varón",
 category:"Correas",
@@ -2854,9 +2744,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 4.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:20,
 name:"Correa para varón",
 category:"Correas",
@@ -2868,9 +2759,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 5.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:21,
 name:"Correa para varón",
 category:"Correas",
@@ -2882,9 +2774,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 6.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:22,
 name:"Correa para varón",
 category:"Correas",
@@ -2896,9 +2789,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 7.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:23,
 name:"Correa para varón",
 category:"Correas",
@@ -2910,9 +2804,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 8.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:24,
 name:"Correa para varón",
 category:"Correas",
@@ -2924,9 +2819,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 9.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:25,
 name:"Correa para varón",
 category:"Correas",
@@ -2938,9 +2834,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 10.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:26,
 name:"Correa para varón",
 category:"Correas",
@@ -2952,9 +2849,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 11.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:27,
 name:"Correa para varón",
 category:"Correas",
@@ -2966,9 +2864,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 12.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:28,
 name:"Correa para varón",
 category:"Correas",
@@ -2980,9 +2879,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 13.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:29,
 name:"Correa para varón",
 category:"Correas",
@@ -2994,9 +2894,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 14.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:30,
 name:"Correa para varón",
 category:"Correas",
@@ -3008,9 +2909,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 15.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:31,
 name:"Correa para varón",
 category:"Correas",
@@ -3022,9 +2924,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 16.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-      {
+
+{
 id:32,
 name:"Correa para varón",
 category:"Correas",
@@ -3036,9 +2939,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 17.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-    {
+
+{
 id:33,
 name:"Correa para varón",
 category:"Correas",
@@ -3050,9 +2954,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 18.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-    {
+
+{
 id:34,
 name:"Correa para varón",
 category:"Correas",
@@ -3064,9 +2969,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 19.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-    {
+
+{
 id:35,
 name:"Correa para varón",
 category:"Correas",
@@ -3078,9 +2984,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 20.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-    {
+
+{
 id:36,
 name:"Correa para varón",
 category:"Correas",
@@ -3092,9 +2999,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 21.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-    {
+
+{
 id:37,
 name:"Correa para varón",
 category:"Correas",
@@ -3106,9 +3014,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 22.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-    {
+
+{
 id:38,
 name:"Correa para varón",
 category:"Correas",
@@ -3120,9 +3029,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 23.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-    {
+
+{
 id:39,
 name:"Correa para varón",
 category:"Correas",
@@ -3134,9 +3044,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 24.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-    {
+
+{
 id:40,
 name:"Correa para varón",
 category:"Correas",
@@ -3148,9 +3059,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 25.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-    {
+
+{
 id:41,
 name:"Correa para varón",
 category:"Correas",
@@ -3162,9 +3074,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 26.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-    {
+
+{
 id:42,
 name:"Correa para varón",
 category:"Correas",
@@ -3176,9 +3089,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 27.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-    {
+
+{
 id:43,
 name:"Correa para varón",
 category:"Correas",
@@ -3190,9 +3104,10 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 28.png",
-description:"correa para varón"
+description:"Correa para varón."
 },
-    {
+
+{
 id:44,
 name:"Correa para varón",
 category:"Correas",
@@ -3204,8 +3119,9 @@ limit:1,
 badge:"Nuevo",
 tags:["Varón","Correas","Nuevo"],
 image:"correa 29.png",
-description:"correa para varón"
-},
+description:"Correa para varón."
+}
+
 ];
 
 
@@ -3222,9 +3138,22 @@ let currentFilter = "Todos";
 
 let currentSlide = 0;
 
+let toastTimer;
+
 
 /* =========================================================
-   MENÚ
+   ELEMENTOS
+========================================================= */
+
+const heroSlides =
+document.querySelectorAll(".hero-slide");
+
+const heroDots =
+document.getElementById("heroDots");
+
+
+/* =========================================================
+   MENÚ LATERAL
 ========================================================= */
 
 function openMenu(){
@@ -3240,6 +3169,7 @@ document
 document.body.style.overflow="hidden";
 
 }
+
 
 function closeMenu(){
 
@@ -3257,7 +3187,7 @@ document.body.style.overflow="";
 
 
 /* =========================================================
-   TEMA
+   TEMA OSCURO / CLARO
 ========================================================= */
 
 function applyTheme(){
@@ -3273,17 +3203,22 @@ if(theme==="light"){
 
 document.body.classList.add("light");
 
+if(button){
 button.textContent="☀️";
+}
 
 }else{
 
 document.body.classList.remove("light");
 
+if(button){
 button.textContent="🌙";
-
 }
 
 }
+
+}
+
 
 function toggleTheme(){
 
@@ -3295,10 +3230,15 @@ localStorage.setItem(
 isLight ? "light" : "dark"
 );
 
-document.getElementById(
-"themeButton"
-).textContent =
+const button =
+document.getElementById("themeButton");
+
+if(button){
+
+button.textContent =
 isLight ? "☀️" : "🌙";
+
+}
 
 showToast(
 isLight
@@ -3313,20 +3253,19 @@ isLight
    CARRUSEL
 ========================================================= */
 
-const heroSlides =
-document.querySelectorAll(".hero-slide");
-
-const heroDots =
-document.getElementById("heroDots");
-
+if(heroSlides.length && heroDots){
 
 heroSlides.forEach((slide,index)=>{
 
 const dot =
 document.createElement("button");
 
-dot.className =
-"hero-dot";
+dot.className="hero-dot";
+
+dot.setAttribute(
+"aria-label",
+`Ver imagen ${index+1}`
+);
 
 if(index===0){
 
@@ -3334,39 +3273,50 @@ dot.classList.add("active");
 
 }
 
-dot.onclick=()=>{
-
-goToSlide(index);
-
-};
+dot.onclick=()=>goToSlide(index);
 
 heroDots.appendChild(dot);
 
 });
 
+}
+
 
 function goToSlide(index){
+
+if(!heroSlides.length){
+return;
+}
 
 heroSlides[currentSlide]
 .classList.remove("active");
 
-document
-.querySelectorAll(".hero-dot")
-[currentSlide]
+const dots =
+document.querySelectorAll(".hero-dot");
+
+if(dots[currentSlide]){
+
+dots[currentSlide]
 .classList.remove("active");
+
+}
 
 currentSlide=index;
 
 heroSlides[currentSlide]
 .classList.add("active");
 
-document
-.querySelectorAll(".hero-dot")
-[currentSlide]
+if(dots[currentSlide]){
+
+dots[currentSlide]
 .classList.add("active");
 
 }
 
+}
+
+
+if(heroSlides.length>1){
 
 setInterval(()=>{
 
@@ -3377,17 +3327,21 @@ goToSlide(
 
 },3500);
 
+}
+
 
 /* =========================================================
    TOAST
 ========================================================= */
 
-let toastTimer;
-
 function showToast(message){
 
 const toast =
 document.getElementById("toast");
+
+if(!toast){
+return;
+}
 
 toast.textContent=message;
 
@@ -3405,7 +3359,7 @@ toast.classList.remove("show");
 
 
 /* =========================================================
-   RENDER PRODUCTOS
+   BUSCAR PRODUCTOS
 ========================================================= */
 
 function renderProducts(){
@@ -3413,20 +3367,47 @@ function renderProducts(){
 const container =
 document.getElementById("products");
 
+if(!container){
+return;
+}
+
+const searchInput =
+document.getElementById("searchInput");
+
+const sortInput =
+document.getElementById("sortProducts");
+
 const search =
-document
-.getElementById("searchInput")
-.value
-.toLowerCase()
-.trim();
+searchInput
+? searchInput.value.toLowerCase().trim()
+: "";
 
 const sort =
-document
-.getElementById("sortProducts")
-.value;
+sortInput
+? sortInput.value
+: "default";
 
 
-let filtered =
+let filtered;
+
+
+if(currentFilter==="Favoritos"){
+
+const favorites =
+JSON.parse(
+localStorage.getItem(
+"urbanEssenceFavorites"
+)
+)||[];
+
+filtered =
+products.filter(
+product=>favorites.includes(product.id)
+);
+
+}else{
+
+filtered =
 products.filter(product=>{
 
 const filterMatch =
@@ -3456,37 +3437,58 @@ product.category
 
 product.gender
 .toLowerCase()
-.includes(search);
+.includes(search)
+
+||
+
+product.tags.some(
+tag=>
+tag.toLowerCase().includes(search)
+);
 
 
 return filterMatch && searchMatch;
 
 });
 
+}
+
+
+/* ORDENAMIENTO */
 
 if(sort==="price-low"){
 
-filtered.sort((a,b)=>a.price-b.price);
+filtered.sort(
+(a,b)=>a.price-b.price
+);
 
 }
 
 else if(sort==="price-high"){
 
-filtered.sort((a,b)=>b.price-a.price);
+filtered.sort(
+(a,b)=>b.price-a.price
+);
 
 }
 
 else if(sort==="name"){
 
-filtered.sort((a,b)=>
-a.name.localeCompare(b.name)
+filtered.sort(
+(a,b)=>
+a.name.localeCompare(
+b.name,
+"es"
+)
 );
 
 }
 
 else if(sort==="stock"){
 
-filtered.sort((a,b)=>b.stock-a.stock);
+filtered.sort(
+(a,b)=>b.stock-a.stock
+);
 
 }
 
@@ -3500,13 +3502,20 @@ container.innerHTML=`
 
 <div class="empty-products">
 
-<h2>
-No encontramos productos
-</h2>
+<h2>🔎 No encontramos productos</h2>
 
 <p>
 Prueba con otra búsqueda o filtro.
 </p>
+
+<button
+class="gold-button"
+style="margin-top:20px;"
+onclick="resetFilters()">
+
+🔄 Ver todos
+
+</button>
 
 </div>
 
@@ -3534,6 +3543,7 @@ let stockClass="";
 if(product.stock<=0){
 
 stockText="🔴 Agotado";
+
 stockClass="out";
 
 }
@@ -3591,13 +3601,15 @@ favorites.includes(product.id);
 
 container.innerHTML+=`
 
-<div class="product">
+<article
+class="product"
+data-product-id="${product.id}">
 
 <div class="product-image">
 
 <img
 src="${product.image}"
-alt="${product.name}"
+alt="${product.name} Urban Essence"
 loading="lazy"
 onerror="imageError(this)">
 
@@ -3607,7 +3619,8 @@ ${product.badge}
 
 <button
 class="favorite ${favoriteActive?"active":""}"
-onclick="toggleFavorite(${product.id},this)">
+onclick="toggleFavorite(${product.id},this)"
+aria-label="Agregar ${product.name} a favoritos">
 
 ${favoriteActive?"♥":"♡"}
 
@@ -3637,7 +3650,8 @@ ${stockText}
 <div class="product-buttons">
 
 <button
-onclick="openProductModal(${product.id})">
+onclick="openProductModal(${product.id})"
+aria-label="Ver ${product.name}">
 
 👁️ Ver
 
@@ -3656,7 +3670,7 @@ ${product.stock<=0?"disabled":""}>
 
 </div>
 
-</div>
+</article>
 
 `;
 
@@ -3671,10 +3685,8 @@ ${product.stock<=0?"disabled":""}>
 
 function imageError(image){
 
-if(image.dataset.error){
-
+if(!image || image.dataset.error){
 return;
-
 }
 
 image.dataset.error="true";
@@ -3754,6 +3766,7 @@ currentFilter=filter;
 document
 .querySelectorAll(".side-filter")
 .forEach(btn=>{
+
 btn.classList.remove("active");
 
 if(
@@ -3783,13 +3796,23 @@ function resetFilters(){
 
 currentFilter="Todos";
 
+const search =
 document.getElementById(
 "searchInput"
-).value="";
+);
 
+const sort =
 document.getElementById(
 "sortProducts"
-).value="default";
+);
+
+if(search){
+search.value="";
+}
+
+if(sort){
+sort.value="default";
+}
 
 document
 .querySelectorAll(".side-filter")
@@ -3812,7 +3835,9 @@ renderProducts();
 
 closeMenu();
 
-showToast("Filtros restablecidos");
+showToast(
+"🔄 Filtros restablecidos"
+);
 
 }
 
@@ -3838,21 +3863,29 @@ favorites.filter(
 item=>item!==id
 );
 
+if(button){
+
 button.classList.remove("active");
 
 button.textContent="♡";
 
+}
+
 showToast(
-"Eliminado de favoritos"
+"♡ Eliminado de favoritos"
 );
 
 }else{
 
 favorites.push(id);
 
+if(button){
+
 button.classList.add("active");
 
 button.textContent="♥";
+
+}
 
 showToast(
 "❤️ Agregado a favoritos"
@@ -3884,7 +3917,7 @@ if(favorites.length===0){
 closeMenu();
 
 showToast(
-"No tienes favoritos todavía"
+"❤️ No tienes favoritos todavía"
 );
 
 return;
@@ -3894,79 +3927,7 @@ return;
 
 currentFilter="Favoritos";
 
-const container=
-document.getElementById("products");
-
-const favoriteProducts=
-products.filter(
-product=>
-favorites.includes(product.id)
-);
-
-
-container.innerHTML="";
-
-
-favoriteProducts.forEach(product=>{
-
-container.innerHTML+=`
-
-<div class="product">
-
-<div class="product-image">
-
-<img
-src="${product.image}"
-alt="${product.name}"
-onerror="imageError(this)">
-
-<div class="badge">
-❤️ Favorito
-</div>
-
-</div>
-
-<div class="product-info">
-
-<div class="product-category">
-${product.category}
-</div>
-
-<div class="product-name">
-${product.name}
-</div>
-
-<div class="price">
-S/ ${product.price.toFixed(2)}
-</div>
-
-<div class="product-buttons">
-
-<button
-onclick="openProductModal(${product.id})">
-
-👁️ Ver
-
-</button>
-
-<button
-class="buy"
-onclick="addToCart(${product.id})">
-
-🛒 Comprar
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-`;
-
-});
-
+renderProducts();
 
 closeMenu();
 
@@ -4018,7 +3979,7 @@ existing.quantity>=product.limit
 ){
 
 alert(
-`El límite de compra es ${product.limit} unidades.`
+`El límite de compra es ${product.limit} unidad(es).`
 );
 
 return;
@@ -4074,23 +4035,29 @@ updateCart();
 
 function updateCart(){
 
-const container=
+const container =
 document.getElementById(
 "cartItems"
 );
 
-const count=
+const count =
 document.getElementById(
 "cartCount"
 );
 
-const totalElement=
+const totalElement =
 document.getElementById(
 "cartTotal"
 );
 
 
+if(!container || !count || !totalElement){
+return;
+}
+
+
 let total=0;
+
 let totalQuantity=0;
 
 container.innerHTML="";
@@ -4106,7 +4073,7 @@ color:#777;
 padding:35px 0;
 ">
 
-Tu carrito está vacío.
+🛒 Tu carrito está vacío.
 
 </p>
 
@@ -4142,6 +4109,2709 @@ container.innerHTML+=`
 <img
 src="${product.image}"
 alt="${product.name}"
+loading="lazy"
+onerror="imageError(this)">
+
+<div>
+
+<h4>
+${product.name}
+</h4>
+
+<div class="cart-price">
+S/ ${product.price.toFixed(2)}
+</div>
+
+<div class="quantity">
+
+<button
+onclick="changeQuantity(${product.id},-1)"
+aria-label="Disminuir cantidad">
+
+−
+
+</button>
+
+<span>
+${item.quantity}
+</span>
+
+<button
+onclick="changeQuantity(${product.id},1)"
+aria-label="Aumentar cantidad">
+
++
+
+</button>
+
+</div>
+
+</div>
+
+<button
+class="remove"
+onclick="removeFromCart(${product.id})"
+aria-label="Eliminar producto">
+
+🗑️
+
+</button>
+
+</div>
+
+`;
+
+});
+
+
+count.textContent=
+totalQuantity;
+
+totalElement.textContent=
+`S/ ${total.toFixed(2)}`;
+
+}
+
+
+function changeQuantity(id,change){
+
+const item=
+cart.find(
+i=>i.id===id
+);
+
+const product=
+products.find(
+p=>p.id===id
+);
+
+if(!item||!product){
+return;
+}
+
+
+const newQuantity=
+item.quantity+change;
+
+
+if(newQuantity<=0){
+
+removeFromCart(id);
+
+return;
+
+}
+
+
+if(newQuantity>product.limit){
+
+alert(
+`El límite es ${product.limit} unidad(es).`
+);
+
+return;
+
+}
+
+
+if(newQuantity>product.stock){
+
+alert(
+"No hay suficientes unidades disponibles."
+);
+
+return;
+
+}
+
+
+item.quantity=newQuantity;
+
+saveCart();
+
+}
+
+
+function removeFromCart(id){
+
+cart=
+cart.filter(
+item=>item.id!==id
+);
+
+saveCart();
+
+showToast(
+"🗑️ Producto eliminado"
+);
+
+}
+
+
+function clearCart(){
+
+if(cart.length===0){
+return;
+}
+
+if(
+confirm(
+"¿Seguro que quieres vaciar el carrito?"
+)
+){
+
+cart=[];
+
+saveCart();
+
+showToast(
+"🗑️ Carrito vaciado"
+);
+
+}
+
+}
+
+
+function openCart(){
+
+document
+.getElementById("cartOverlay")
+.classList.add("show");
+
+updateCart();
+
+document.body.style.overflow="hidden";
+
+}
+
+
+function closeCart(){
+
+document
+.getElementById("cartOverlay")
+.classList.remove("show");
+
+document.body.style.overflow="";
+
+}
+
+
+/* =========================================================
+   MODAL DE PRODUCTO
+========================================================= */
+
+function openProductModal(id){
+
+const product=
+products.find(
+p=>p.id===id
+);
+
+if(!product){
+return;
+}
+
+
+const modal=
+document.getElementById(
+"productModal"
+);
+
+const content=
+document.getElementById(
+"modalProduct"
+);
+
+
+if(!modal || !content){
+return;
+}
+
+
+content.innerHTML=`
+
+<img
+class="modal-image"
+src="${product.image}"
+alt="${product.name} Urban Essence"
+onerror="imageError(this)">
+
+<div class="modal-info">
+
+<div class="product-category">
+${product.category}
+</div>
+
+<h2>
+${product.name}
+</h2>
+
+<h3 style="
+color:#d4af37;
+margin:10px 0;
+">
+
+S/ ${product.price.toFixed(2)}
+
+</h3>
+
+<p>
+${product.description}
+</p>
+
+<p style="margin-top:15px;">
+📦 Stock: ${product.stock}
+</p>
+
+<p>
+🔢 Límite por compra: ${product.limit}
+</p>
+
+<div style="
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:20px;
+">
+
+<button
+class="gold-button"
+onclick="
+addToCart(${product.id});
+closeProductModal();
+">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+class="gold-button"
+onclick="shareProduct(${product.id})">
+
+↗️ Compartir producto
+
+</button>
+
+<button
+class="gold-button"
+onclick="shareProductImage(${product.id})">
+
+📸 Compartir foto
+
+</button>
+
+</div>
+
+</div>
+
+`;
+
+
+modal.classList.add("show");
+
+document.body.style.overflow="hidden";
+
+}
+
+
+/* =========================================================
+   CERRAR MODAL
+========================================================= */
+
+function closeProductModal(){
+
+const modal =
+document.getElementById(
+"productModal"
+);
+
+if(modal){
+
+modal.classList.remove("show");
+
+}
+
+document.body.style.overflow="";
+
+}
+
+
+/* =========================================================
+   COMPARTIR PRODUCTO
+========================================================= */
+
+async function shareProduct(id){
+
+const product=
+products.find(
+p=>p.id===id
+);
+
+if(!product){
+return;
+}
+
+
+const text=
+`🛍️ ${product.name}
+💰 S/ ${product.price.toFixed(2)}
+
+Descúbrelo en ${STORE_NAME}.`;
+
+
+if(navigator.share){
+
+try{
+
+await navigator.share({
+
+title:
+`${product.name} | ${STORE_NAME}`,
+
+text:text,
+
+url:STORE_URL
+
+});
+
+return;
+
+}catch(error){
+
+if(error.name==="AbortError"){
+return;
+}
+
+}
+
+}
+
+
+if(navigator.clipboard){
+
+try{
+
+await navigator.clipboard.writeText(
+`${text}\n${STORE_URL}`
+);
+
+showToast(
+"🔗 Enlace del producto copiado"
+);
+
+return;
+
+}catch(error){}
+
+}
+
+
+alert(
+"Comparte este enlace:\n\n"+
+STORE_URL
+);
+
+}
+
+
+/* =========================================================
+   COMPARTIR FOTO DEL PRODUCTO
+========================================================= */
+
+async function shareProductImage(id){
+
+const product=
+products.find(
+p=>p.id===id
+);
+
+if(!product){
+return;
+}
+
+
+try{
+
+const response =
+await fetch(product.image);
+
+if(!response.ok){
+throw new Error("No se pudo cargar la imagen.");
+}
+
+const blob =
+await response.blob();
+
+const extension =
+blob.type.includes("png")
+? "png"
+: "jpg";
+
+const file =
+new File(
+[blob],
+`${product.name}.${extension}`,
+{
+type:blob.type
+}
+);
+
+
+const shareData={
+
+title:
+`${product.name} | ${STORE_NAME}`,
+
+text:
+`🛍️ ${product.name} - S/ ${product.price.toFixed(2)}\n${STORE_URL}`,
+
+files:[file]
+
+};
+
+
+if(
+navigator.canShare &&
+navigator.canShare({
+files:[file]
+})
+){
+
+await navigator.share(
+shareData
+);
+
+showToast(
+"📸 Producto compartido"
+);
+
+return;
+
+}
+
+
+/*
+   Si el navegador no permite compartir archivos,
+   copiamos el enlace.
+*/
+
+await shareProduct(id);
+
+}catch(error){
+
+console.log(
+"Compartir imagen:",
+error
+);
+
+showToast(
+"🔗 El navegador no permite compartir la foto directamente. Se compartirá el enlace."
+);
+
+await shareProduct(id);
+
+}
+
+}
+
+
+/* =========================================================
+   PEDIDO POR WHATSAPP
+========================================================= */
+
+function sendWhatsAppOrder(){
+
+if(cart.length===0){
+
+alert(
+"Tu carrito está vacío."
+);
+
+return;
+
+}
+
+
+const name=
+document.getElementById(
+"clientName"
+).value.trim();
+
+const city=
+document.getElementById(
+"clientCity"
+).value.trim();
+
+const district=
+document.getElementById(
+"clientDistrict"
+).value.trim();
+
+const phone=
+document.getElementById(
+"clientPhone"
+).value.trim();
+
+
+if(
+!name||
+!city||
+!district||
+!phone
+){
+
+alert(
+"Completa todos tus datos antes de continuar."
+);
+
+return;
+
+}
+
+
+let message=
+"Hola, Urban Essence. 👋\n\n";
+
+message+=
+"Quiero realizar el siguiente pedido:\n\n";
+
+
+let total=0;
+
+
+cart.forEach(item=>{
+
+const product=
+products.find(
+p=>p.id===item.id
+);
+
+if(!product){
+return;
+}
+
+
+const subtotal=
+product.price*item.quantity;
+
+total+=subtotal;
+
+
+message+=
+`🛍️ ${product.name} x${item.quantity} = S/ ${subtotal.toFixed(2)}\n`;
+
+});
+
+
+message+=
+`\n💰 Total: S/ ${total.toFixed(2)}`;
+
+message+=
+`\n\n👤 Nombre: ${name}`;
+
+message+=
+`\n📍 Ciudad: ${city}`;
+
+message+=
+`\n📍 Distrito: ${district}`;
+
+message+=
+`\n📱 Teléfono: ${phone}`;
+
+message+=
+`\n🚚 Método de entrega: Envío`;
+
+message+=
+`\n\n🌐 ${STORE_URL}`;
+
+message+=
+"\n\nQuedo atento/a a la confirmación. Gracias.";
+
+
+const url=
+`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+
+window.open(
+url,
+"_blank",
+"noopener"
+);
+
+}
+
+
+/* =========================================================
+   CONTACTO POR WHATSAPP
+========================================================= */
+
+function openWhatsApp(){
+
+const url=
+`https://wa.me/${WHATSAPP_NUMBER}`;
+
+window.open(
+url,
+"_blank",
+"noopener"
+);
+
+}
+
+
+/* =========================================================
+   REDES SOCIALES
+========================================================= */
+
+function setupSocialLinks(){
+
+const instagramLinks =
+document.querySelectorAll(
+'[data-social="instagram"]'
+);
+
+const tiktokLinks =
+document.querySelectorAll(
+'[data-social="tiktok"]'
+);
+
+const facebookLinks =
+document.querySelectorAll(
+'[data-social="facebook"]'
+);
+
+
+instagramLinks.forEach(link=>{
+
+link.href=SOCIAL_LINKS.instagram;
+
+if(
+SOCIAL_LINKS.instagram!=="#"
+){
+
+link.target="_blank";
+
+link.rel="noopener";
+
+}
+
+});
+
+
+tiktokLinks.forEach(link=>{
+
+link.href=SOCIAL_LINKS.tiktok;
+
+if(
+SOCIAL_LINKS.tiktok!=="#"
+){
+
+link.target="_blank";
+
+link.rel="noopener";
+
+}
+
+});
+
+
+facebookLinks.forEach(link=>{
+
+link.href=SOCIAL_LINKS.facebook;
+
+if(
+SOCIAL_LINKS.facebook!=="#"
+){
+
+link.target="_blank";
+
+link.rel="noopener";
+
+}
+
+});
+
+}
+
+
+/* =========================================================
+   BOTÓN VOLVER ARRIBA
+========================================================= */
+
+function createBackToTop(){
+
+if(
+document.getElementById(
+"backToTop"
+)
+){
+return;
+}
+
+
+const button =
+document.createElement("button");
+
+button.id="backToTop";
+
+button.innerHTML="↑";
+
+button.setAttribute(
+"aria-label",
+"Volver arriba"
+);
+
+button.style.cssText=`
+
+position:fixed;
+right:20px;
+bottom:90px;
+width:45px;
+height:45px;
+border:none;
+border-radius:50%;
+background:#d4af37;
+color:#000;
+font-size:22px;
+font-weight:bold;
+cursor:pointer;
+z-index:1400;
+opacity:0;
+visibility:hidden;
+transition:.3s;
+box-shadow:0 5px 20px rgba(0,0,0,.35);
+
+`;
+
+
+button.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+
+document.body.appendChild(button);
+
+
+window.addEventListener(
+"scroll",
+()=>{
+
+if(window.scrollY>500){
+
+button.style.opacity="1";
+
+button.style.visibility="visible";
+
+}else{
+
+button.style.opacity="0";
+
+button.style.visibility="hidden";
+
+}
+
+}
+);
+
+}
+
+
+/* =========================================================
+   PREVENIR FORMULARIOS ACCIDENTALES
+========================================================= */
+
+document.addEventListener(
+"submit",
+function(event){
+
+event.preventDefault();
+
+}
+);
+
+
+/* =========================================================
+   EVENTOS DEL CARRITO
+========================================================= */
+
+const cartOverlay =
+document.getElementById(
+"cartOverlay"
+);
+
+if(cartOverlay){
+
+cartOverlay.addEventListener(
+"click",
+function(event){
+
+if(event.target===this){
+
+closeCart();
+
+}
+
+}
+);
+
+}
+
+
+/* =========================================================
+   EVENTOS DEL MODAL
+========================================================= */
+
+const productModal =
+document.getElementById(
+"productModal"
+);
+
+if(productModal){
+
+productModal.addEventListener(
+"click",
+function(event){
+
+if(event.target===this){
+
+closeProductModal();
+
+}
+
+}
+);
+
+}
+
+
+/* =========================================================
+   TECLA ESC
+========================================================= */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+if(event.key==="Escape"){
+
+closeMenu();
+
+closeCart();
+
+closeProductModal();
+
+}
+
+});
+
+
+/* =========================================================
+   TECLADO: ENTER EN BÚSQUEDA
+========================================================= */
+
+const searchInput =
+document.getElementById(
+"searchInput"
+);
+
+if(searchInput){
+
+searchInput.addEventListener(
+"keydown",
+function(event){
+
+if(event.key==="Enter"){
+
+event.preventDefault();
+
+document
+.getElementById("productos")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+}
+);
+
+}
+
+
+/* =========================================================
+   DETECCIÓN DE CONEXIÓN
+========================================================= */
+
+window.addEventListener(
+"offline",
+function(){
+
+showToast(
+"⚠️ Estás sin conexión a Internet"
+);
+
+}
+);
+
+
+window.addEventListener(
+"online",
+function(){
+
+showToast(
+"✅ Conexión restaurada"
+);
+
+}
+);
+
+
+/* =========================================================
+   GUARDAR CARRITO ANTES DE SALIR
+========================================================= */
+
+window.addEventListener(
+"beforeunload",
+function(){
+
+localStorage.setItem(
+"urbanEssenceCart",
+JSON.stringify(cart)
+);
+
+}
+);
+
+
+/* =========================================================
+   INICIALIZACIÓN
+========================================================= */
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+applyTheme();
+
+renderProducts();
+
+updateCart();
+
+setupSocialLinks();
+
+createBackToTop();
+
+});
+
+</script>
+<script>
+
+/* =========================================================
+   URBAN ESSENCE
+   JAVASCRIPT FINAL
+========================================================= */
+
+
+/* =========================================================
+   CONFIGURACIÓN
+========================================================= */
+
+const WHATSAPP_NUMBER = "51986788414";
+
+const STORE_NAME = "Urban Essence";
+
+const STORE_URL = window.location.href;
+
+
+/* =========================================================
+   REDES SOCIALES
+========================================================= */
+
+const SOCIAL_LINKS = {
+    instagram: "#",
+    tiktok: "#",
+    facebook: "#"
+};
+
+
+/* =========================================================
+   PRODUCTOS
+========================================================= */
+
+const products = [
+
+{
+id:1,
+name:"Billetera de mujer",
+category:"Billeteras",
+gender:"Mujer",
+price:120.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Mujer","Billeteras","Nuevo"],
+image:"billetera mujer 1.jpeg",
+description:"Billetera para mujer con diseño elegante y moderno."
+},
+
+{
+id:2,
+name:"Billetera de mujer",
+category:"Billeteras",
+gender:"Mujer",
+price:120.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Mujer","Billeteras","Nuevo"],
+image:"billetera mujer 2.jpeg",
+description:"Billetera para mujer ideal para complementar tu estilo."
+},
+
+{
+id:3,
+name:"Billetera Mujer",
+category:"Billeteras",
+gender:"Mujer",
+price:120.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Recomendado",
+tags:["Mujer","Billeteras"],
+image:"billetera mujer 3.jpeg",
+description:"Billetera elegante para el uso diario."
+},
+
+{
+id:4,
+name:"Billetera Varón",
+category:"Billeteras",
+gender:"Varón",
+price:115.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Billeteras","Nuevo"],
+image:"billetera varon 1.jpeg",
+description:"Billetera para varón con diseño moderno."
+},
+
+{
+id:5,
+name:"Billetera Varón",
+category:"Billeteras",
+gender:"Varón",
+price:130.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Recomendado",
+tags:["Varón","Billeteras"],
+image:"billetera varon 2.jpeg",
+description:"Billetera práctica y elegante para el día a día."
+},
+
+{
+id:6,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 1.jpeg",
+description:"Correa de estilo clásico para complementar tu outfit."
+},
+
+{
+id:7,
+name:"Monedero Varón",
+category:"Monederos",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Monederos","Nuevo"],
+image:"monedero varon 1.jpeg",
+description:"Monedero compacto y práctico."
+},
+
+{
+id:8,
+name:"Monedero Varón",
+category:"Monederos",
+gender:"Varón",
+price:80.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Monederos","Nuevo"],
+image:"monedero varon 2.jpeg",
+description:"Monedero diseñado para llevar tus objetos esenciales."
+},
+
+{
+id:9,
+name:"Monedero Varón",
+category:"Monederos",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Recomendado",
+tags:["Varón","Monederos"],
+image:"monedero varon 3.jpeg",
+description:"Diseño compacto y funcional."
+},
+
+{
+id:10,
+name:"Monedero Varón",
+category:"Monederos",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Monederos","Nuevo"],
+image:"monedero varon 4.jpeg",
+description:"Monedero práctico para acompañarte todos los días."
+},
+
+{
+id:11,
+name:"Billetera de mujer",
+category:"Accesorios",
+gender:"Mujer",
+price:120.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Mujer","Nuevo"],
+image:"billetera mujer 4.jpeg",
+description:"Billetera para mujer con acabados premium."
+},
+
+{
+id:12,
+name:"Billetera de varón",
+category:"Accesorios",
+gender:"Varón",
+price:120.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Nuevo"],
+image:"billetera varon 3.jpeg",
+description:"Billetera para varón."
+},
+
+{
+id:13,
+name:"Billetera de varón",
+category:"Accesorios",
+gender:"Varón",
+price:140.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Nuevo"],
+image:"billetera varon 4.png",
+description:"Billetera para varón."
+},
+
+{
+id:14,
+name:"Billetera de Varón",
+category:"Accesorios",
+gender:"Varón",
+price:120.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Nuevo"],
+image:"billetera varon 5.png",
+description:"Billetera para varón."
+},
+
+{
+id:15,
+name:"Billetera de varón",
+category:"Accesorios",
+gender:"Varón",
+price:130.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Nuevo"],
+image:"billetera varon 6.png",
+description:"Billetera para varón."
+},
+
+{
+id:16,
+name:"Billetera de varón",
+category:"Accesorios",
+gender:"Varón",
+price:140.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Nuevo"],
+image:"billetera varon 7.png",
+description:"Billetera para varón."
+},
+
+{
+id:17,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 2.png",
+description:"Correa para varón."
+},
+
+{
+id:18,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 3.png",
+description:"Correa para varón."
+},
+
+{
+id:19,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 4.png",
+description:"Correa para varón."
+},
+
+{
+id:20,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 5.png",
+description:"Correa para varón."
+},
+
+{
+id:21,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 6.png",
+description:"Correa para varón."
+},
+
+{
+id:22,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 7.png",
+description:"Correa para varón."
+},
+
+{
+id:23,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 8.png",
+description:"Correa para varón."
+},
+
+{
+id:24,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 9.png",
+description:"Correa para varón."
+},
+
+{
+id:25,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 10.png",
+description:"Correa para varón."
+},
+
+{
+id:26,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 11.png",
+description:"Correa para varón."
+},
+
+{
+id:27,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 12.png",
+description:"Correa para varón."
+},
+
+{
+id:28,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 13.png",
+description:"Correa para varón."
+},
+
+{
+id:29,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 14.png",
+description:"Correa para varón."
+},
+
+{
+id:30,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 15.png",
+description:"Correa para varón."
+},
+
+{
+id:31,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 16.png",
+description:"Correa para varón."
+},
+
+{
+id:32,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 17.png",
+description:"Correa para varón."
+},
+
+{
+id:33,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 18.png",
+description:"Correa para varón."
+},
+
+{
+id:34,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 19.png",
+description:"Correa para varón."
+},
+
+{
+id:35,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 20.png",
+description:"Correa para varón."
+},
+
+{
+id:36,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 21.png",
+description:"Correa para varón."
+},
+
+{
+id:37,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 22.png",
+description:"Correa para varón."
+},
+
+{
+id:38,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 23.png",
+description:"Correa para varón."
+},
+
+{
+id:39,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 24.png",
+description:"Correa para varón."
+},
+
+{
+id:40,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 25.png",
+description:"Correa para varón."
+},
+
+{
+id:41,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 26.png",
+description:"Correa para varón."
+},
+
+{
+id:42,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 27.png",
+description:"Correa para varón."
+},
+
+{
+id:43,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 28.png",
+description:"Correa para varón."
+},
+
+{
+id:44,
+name:"Correa para varón",
+category:"Correas",
+gender:"Varón",
+price:85.00,
+oldPrice:null,
+stock:1,
+limit:1,
+badge:"Nuevo",
+tags:["Varón","Correas","Nuevo"],
+image:"correa 29.png",
+description:"Correa para varón."
+}
+
+];
+
+
+/* =========================================================
+   ESTADO
+========================================================= */
+
+let cart =
+JSON.parse(
+localStorage.getItem("urbanEssenceCart")
+) || [];
+
+let currentFilter = "Todos";
+
+let currentSlide = 0;
+
+let toastTimer;
+
+
+/* =========================================================
+   ELEMENTOS
+========================================================= */
+
+const heroSlides =
+document.querySelectorAll(".hero-slide");
+
+const heroDots =
+document.getElementById("heroDots");
+
+
+/* =========================================================
+   MENÚ LATERAL
+========================================================= */
+
+function openMenu(){
+
+document
+.getElementById("sideMenu")
+.classList.add("show");
+
+document
+.getElementById("sideOverlay")
+.classList.add("show");
+
+document.body.style.overflow="hidden";
+
+}
+
+
+function closeMenu(){
+
+document
+.getElementById("sideMenu")
+.classList.remove("show");
+
+document
+.getElementById("sideOverlay")
+.classList.remove("show");
+
+document.body.style.overflow="";
+
+}
+
+
+/* =========================================================
+   TEMA
+========================================================= */
+
+function applyTheme(){
+
+const theme =
+localStorage.getItem("urbanEssenceTheme")
+|| "dark";
+
+const button =
+document.getElementById("themeButton");
+
+if(theme==="light"){
+
+document.body.classList.add("light");
+
+if(button){
+button.textContent="☀️";
+}
+
+}else{
+
+document.body.classList.remove("light");
+
+if(button){
+button.textContent="🌙";
+}
+
+}
+
+}
+
+
+function toggleTheme(){
+
+const isLight =
+document.body.classList.toggle("light");
+
+localStorage.setItem(
+"urbanEssenceTheme",
+isLight ? "light" : "dark"
+);
+
+const button =
+document.getElementById("themeButton");
+
+if(button){
+
+button.textContent =
+isLight ? "☀️" : "🌙";
+
+}
+
+showToast(
+isLight
+? "☀️ Modo claro activado"
+: "🌙 Modo oscuro activado"
+);
+
+}
+
+
+/* =========================================================
+   CARRUSEL
+========================================================= */
+
+if(heroSlides.length && heroDots){
+
+heroSlides.forEach((slide,index)=>{
+
+const dot =
+document.createElement("button");
+
+dot.className="hero-dot";
+
+dot.setAttribute(
+"aria-label",
+`Ver imagen ${index+1}`
+);
+
+if(index===0){
+
+dot.classList.add("active");
+
+}
+
+dot.onclick=()=>goToSlide(index);
+
+heroDots.appendChild(dot);
+
+});
+
+}
+
+
+function goToSlide(index){
+
+if(!heroSlides.length){
+return;
+}
+
+heroSlides[currentSlide]
+.classList.remove("active");
+
+const dots =
+document.querySelectorAll(".hero-dot");
+
+if(dots[currentSlide]){
+
+dots[currentSlide]
+.classList.remove("active");
+
+}
+
+currentSlide=index;
+
+heroSlides[currentSlide]
+.classList.add("active");
+
+if(dots[currentSlide]){
+
+dots[currentSlide]
+.classList.add("active");
+
+}
+
+}
+
+
+if(heroSlides.length>1){
+
+setInterval(()=>{
+
+goToSlide(
+(currentSlide+1)
+% heroSlides.length
+);
+
+},3500);
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+function showToast(message){
+
+const toast =
+document.getElementById("toast");
+
+if(!toast){
+return;
+}
+
+toast.textContent=message;
+
+toast.classList.add("show");
+
+clearTimeout(toastTimer);
+
+toastTimer=setTimeout(()=>{
+
+toast.classList.remove("show");
+
+},2500);
+
+}
+
+
+/* =========================================================
+   RENDER PRODUCTOS
+========================================================= */
+
+function renderProducts(){
+
+const container =
+document.getElementById("products");
+
+if(!container){
+return;
+}
+
+const searchInput =
+document.getElementById("searchInput");
+
+const sortInput =
+document.getElementById("sortProducts");
+
+const search =
+searchInput
+? searchInput.value.toLowerCase().trim()
+: "";
+
+const sort =
+sortInput
+? sortInput.value
+: "default";
+
+
+let filtered;
+
+
+if(currentFilter==="Favoritos"){
+
+const favorites =
+JSON.parse(
+localStorage.getItem(
+"urbanEssenceFavorites"
+)
+)||[];
+
+filtered =
+products.filter(
+product=>favorites.includes(product.id)
+);
+
+}else{
+
+filtered =
+products.filter(product=>{
+
+const filterMatch =
+
+currentFilter==="Todos" ||
+
+product.gender===currentFilter ||
+
+product.category===currentFilter ||
+
+product.tags.includes(currentFilter);
+
+const searchMatch =
+
+product.name
+.toLowerCase()
+.includes(search)
+
+||
+
+product.category
+.toLowerCase()
+.includes(search)
+
+||
+
+product.gender
+.toLowerCase()
+.includes(search)
+
+||
+
+product.tags.some(
+tag=>
+tag.toLowerCase().includes(search)
+);
+
+return filterMatch && searchMatch;
+
+});
+
+}
+
+
+/* =========================================================
+   ORDENAMIENTO
+========================================================= */
+
+if(sort==="price-low"){
+
+filtered.sort(
+(a,b)=>a.price-b.price
+);
+
+}
+
+else if(sort==="price-high"){
+
+filtered.sort(
+(a,b)=>b.price-a.price
+);
+
+}
+
+else if(sort==="name"){
+
+filtered.sort(
+(a,b)=>
+a.name.localeCompare(
+b.name,
+"es"
+)
+);
+
+}
+
+else if(sort==="stock"){
+
+filtered.sort(
+(a,b)=>b.stock-a.stock
+);
+
+}
+
+
+container.innerHTML="";
+
+
+if(filtered.length===0){
+
+container.innerHTML=`
+
+<div class="empty-products">
+
+<h2>🔎 No encontramos productos</h2>
+
+<p>
+Prueba con otra búsqueda o filtro.
+</p>
+
+<button
+class="gold-button"
+style="margin-top:20px;"
+onclick="resetFilters()">
+
+🔄 Ver todos
+
+</button>
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+const favorites =
+JSON.parse(
+localStorage.getItem(
+"urbanEssenceFavorites"
+)
+)||[];
+
+
+filtered.forEach(product=>{
+
+let stockText;
+let stockClass="";
+
+
+if(product.stock<=0){
+
+stockText="🔴 Agotado";
+
+stockClass="out";
+
+}
+
+else if(product.stock<=3){
+
+stockText=
+`🟡 Últimas ${product.stock} unidades`;
+
+stockClass="low";
+
+}
+
+else{
+
+stockText=
+`🟢 ${product.stock} disponibles`;
+
+}
+
+
+let priceHTML;
+
+
+if(product.oldPrice){
+
+priceHTML=`
+
+<span class="old-price">
+S/ ${product.oldPrice.toFixed(2)}
+</span>
+
+<span class="price">
+S/ ${product.price.toFixed(2)}
+</span>
+
+`;
+
+}else{
+
+priceHTML=`
+
+<span class="price">
+S/ ${product.price.toFixed(2)}
+</span>
+
+`;
+
+}
+
+
+const favoriteActive =
+favorites.includes(product.id);
+
+
+container.innerHTML+=`
+
+<article
+class="product"
+data-product-id="${product.id}">
+
+<div class="product-image">
+
+<img
+src="${product.image}"
+alt="${product.name} Urban Essence"
+loading="lazy"
+onerror="imageError(this)">
+
+<div class="badge">
+${product.badge}
+</div>
+
+<button
+class="favorite ${favoriteActive?"active":""}"
+onclick="toggleFavorite(${product.id},this)"
+aria-label="Agregar ${product.name} a favoritos">
+
+${favoriteActive?"♥":"♡"}
+
+</button>
+
+</div>
+
+
+<div class="product-info">
+
+<div class="product-category">
+${product.category}
+</div>
+
+<div class="product-name">
+${product.name}
+</div>
+
+<div>
+${priceHTML}
+</div>
+
+<div class="stock ${stockClass}">
+${stockText}
+</div>
+
+<div class="product-buttons">
+
+<button
+onclick="openProductModal(${product.id})">
+
+👁️ Ver
+
+</button>
+
+<button
+class="buy"
+onclick="addToCart(${product.id})"
+${product.stock<=0?"disabled":""}>
+
+🛒 Agregar
+
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+`;
+
+});
+
+}
+
+
+/* =========================================================
+   ERROR DE IMAGEN
+========================================================= */
+
+function imageError(image){
+
+if(!image || image.dataset.error){
+return;
+}
+
+image.dataset.error="true";
+
+image.style.objectFit="contain";
+
+image.src=
+"data:image/svg+xml;charset=UTF-8,"+
+encodeURIComponent(`
+
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="500"
+height="500">
+
+<rect
+width="100%"
+height="100%"
+fill="#222"/>
+
+<text
+x="50%"
+y="50%"
+dominant-baseline="middle"
+text-anchor="middle"
+fill="#d4af37"
+font-size="24">
+
+Urban Essence
+
+</text>
+
+</svg>
+
+`);
+
+}
+
+
+/* =========================================================
+   FILTROS
+========================================================= */
+
+function setFilter(filter,button){
+
+currentFilter=filter;
+
+document
+.querySelectorAll(".side-filter")
+.forEach(btn=>
+btn.classList.remove("active")
+);
+
+if(button){
+
+button.classList.add("active");
+
+}
+
+renderProducts();
+
+closeMenu();
+
+const section =
+document.getElementById("productos");
+
+if(section){
+
+section.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+}
+
+
+function activateCollection(filter){
+
+currentFilter=filter;
+
+document
+.querySelectorAll(".side-filter")
+.forEach(btn=>{
+
+btn.classList.remove("active");
+
+if(
+btn.textContent
+.trim()
+.includes(filter)
+){
+
+btn.classList.add("active");
+
+}
+
+});
+
+renderProducts();
+
+const section =
+document.getElementById("productos");
+
+if(section){
+
+section.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+}
+
+
+function resetFilters(){
+
+currentFilter="Todos";
+
+const search =
+document.getElementById(
+"searchInput"
+);
+
+const sort =
+document.getElementById(
+"sortProducts"
+);
+
+if(search){
+search.value="";
+}
+
+if(sort){
+sort.value="default";
+}
+
+document
+.querySelectorAll(".side-filter")
+.forEach(btn=>
+btn.classList.remove("active")
+);
+
+const allButton=
+document.querySelector(
+'.side-filter[onclick*="Todos"]'
+);
+
+if(allButton){
+
+allButton.classList.add("active");
+
+}
+
+renderProducts();
+
+closeMenu();
+
+showToast(
+"🔄 Filtros restablecidos"
+);
+
+}
+
+
+/* =========================================================
+   FAVORITOS
+========================================================= */
+
+function toggleFavorite(id,button){
+
+let favorites=
+JSON.parse(
+localStorage.getItem(
+"urbanEssenceFavorites"
+)
+)||[];
+
+
+if(favorites.includes(id)){
+
+favorites=
+favorites.filter(
+item=>item!==id
+);
+
+if(button){
+
+button.classList.remove("active");
+
+button.textContent="♡";
+
+}
+
+showToast(
+"♡ Eliminado de favoritos"
+);
+
+}else{
+
+favorites.push(id);
+
+if(button){
+
+button.classList.add("active");
+
+button.textContent="♥";
+
+}
+
+showToast(
+"❤️ Agregado a favoritos"
+);
+
+}
+
+
+localStorage.setItem(
+"urbanEssenceFavorites",
+JSON.stringify(favorites)
+);
+
+}
+
+
+function showFavorites(){
+
+const favorites=
+JSON.parse(
+localStorage.getItem(
+"urbanEssenceFavorites"
+)
+)||[];
+
+
+if(favorites.length===0){
+
+closeMenu();
+
+showToast(
+"❤️ No tienes favoritos todavía"
+);
+
+return;
+
+}
+
+
+currentFilter="Favoritos";
+
+renderProducts();
+
+closeMenu();
+
+const section =
+document.getElementById("productos");
+
+if(section){
+
+section.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+}
+
+
+/* =========================================================
+   CARRITO
+========================================================= */
+
+function addToCart(id){
+
+const product=
+products.find(
+p=>p.id===id
+);
+
+if(!product){
+return;
+}
+
+if(product.stock<=0){
+
+showToast(
+"❌ Producto agotado"
+);
+
+return;
+
+}
+
+
+const existing=
+cart.find(
+item=>item.id===id
+);
+
+
+if(existing){
+
+if(
+existing.quantity>=product.limit
+){
+
+alert(
+`El límite de compra es ${product.limit} unidad(es).`
+);
+
+return;
+
+}
+
+if(
+existing.quantity>=product.stock
+){
+
+alert(
+"No hay más unidades disponibles."
+);
+
+return;
+
+}
+
+existing.quantity++;
+
+}else{
+
+cart.push({
+id:id,
+quantity:1
+});
+
+}
+
+
+saveCart();
+
+showToast(
+`🛒 ${product.name} agregado al carrito`
+);
+
+openCart();
+
+}
+
+
+function saveCart(){
+
+localStorage.setItem(
+"urbanEssenceCart",
+JSON.stringify(cart)
+);
+
+updateCart();
+
+}
+
+
+function updateCart(){
+
+const container =
+document.getElementById(
+"cartItems"
+);
+
+const count =
+document.getElementById(
+"cartCount"
+);
+
+const totalElement =
+document.getElementById(
+"cartTotal"
+);
+
+
+if(!container || !count || !totalElement){
+return;
+}
+
+
+let total=0;
+
+let totalQuantity=0;
+
+container.innerHTML="";
+
+
+if(cart.length===0){
+
+container.innerHTML=`
+
+<p style="
+text-align:center;
+color:#777;
+padding:35px 0;
+">
+
+🛒 Tu carrito está vacío.
+
+</p>
+
+`;
+
+}
+
+
+cart.forEach(item=>{
+
+const product=
+products.find(
+p=>p.id===item.id
+);
+
+if(!product){
+return;
+}
+
+
+const subtotal=
+product.price*item.quantity;
+
+total+=subtotal;
+
+totalQuantity+=item.quantity;
+
+
+container.innerHTML+=`
+
+<div class="cart-item">
+
+<img
+src="${product.image}"
+alt="${product.name}"
+loading="lazy"
 onerror="imageError(this)">
 
 <div>
@@ -4158,7 +6828,9 @@ S/ ${product.price.toFixed(2)}
 
 <button
 onclick="changeQuantity(${product.id},-1)">
+
 −
+
 </button>
 
 <span>
@@ -4167,7 +6839,9 @@ ${item.quantity}
 
 <button
 onclick="changeQuantity(${product.id},1)">
+
 +
+
 </button>
 
 </div>
@@ -4231,7 +6905,7 @@ return;
 if(newQuantity>product.limit){
 
 alert(
-`El límite es ${product.limit} unidades.`
+`El límite es ${product.limit} unidad(es).`
 );
 
 return;
@@ -4267,7 +6941,7 @@ item=>item.id!==id
 saveCart();
 
 showToast(
-"Producto eliminado"
+"🗑️ Producto eliminado"
 );
 
 }
@@ -4300,9 +6974,14 @@ showToast(
 
 function openCart(){
 
-document
-.getElementById("cartOverlay")
-.classList.add("show");
+const overlay =
+document.getElementById("cartOverlay");
+
+if(!overlay){
+return;
+}
+
+overlay.classList.add("show");
 
 updateCart();
 
@@ -4313,9 +6992,14 @@ document.body.style.overflow="hidden";
 
 function closeCart(){
 
-document
-.getElementById("cartOverlay")
-.classList.remove("show");
+const overlay =
+document.getElementById("cartOverlay");
+
+if(overlay){
+
+overlay.classList.remove("show");
+
+}
 
 document.body.style.overflow="";
 
@@ -4349,12 +7033,17 @@ document.getElementById(
 );
 
 
+if(!modal || !content){
+return;
+}
+
+
 content.innerHTML=`
 
 <img
 class="modal-image"
 src="${product.image}"
-alt="${product.name}"
+alt="${product.name} Urban Essence"
 onerror="imageError(this)">
 
 <div class="modal-info">
@@ -4410,7 +7099,15 @@ closeProductModal();
 class="gold-button"
 onclick="shareProduct(${product.id})">
 
-↗️ Compartir
+↗️ Compartir producto
+
+</button>
+
+<button
+class="gold-button"
+onclick="shareProductImage(${product.id})">
+
+📸 Compartir foto
 
 </button>
 
@@ -4430,9 +7127,16 @@ document.body.style.overflow="hidden";
 
 function closeProductModal(){
 
-document
-.getElementById("productModal")
-.classList.remove("show");
+const modal =
+document.getElementById(
+"productModal"
+);
+
+if(modal){
+
+modal.classList.remove("show");
+
+}
 
 document.body.style.overflow="";
 
@@ -4440,10 +7144,10 @@ document.body.style.overflow="";
 
 
 /* =========================================================
-   COMPARTIR
+   COMPARTIR PRODUCTO
 ========================================================= */
 
-function shareProduct(id){
+async function shareProduct(id){
 
 const product=
 products.find(
@@ -4455,37 +7159,154 @@ return;
 }
 
 
+const productURL =
+new URL(
+window.location.href
+);
+
+productURL.hash =
+`producto-${product.id}`;
+
+
 const text=
-`Mira este producto de Urban Essence: ${product.name} - S/ ${product.price.toFixed(2)}`;
+`🛍️ ${product.name}
+💰 S/ ${product.price.toFixed(2)}
+
+✨ Descubre este producto en ${STORE_NAME}.
+
+${productURL.href}`;
 
 
 if(navigator.share){
 
-navigator.share({
-title:product.name,
+try{
+
+await navigator.share({
+
+title:
+`${product.name} | ${STORE_NAME}`,
+
 text:text,
-url:window.location.href
+
+url:productURL.href
+
 });
+
+return;
+
+}catch(error){
+
+if(error.name==="AbortError"){
+return;
+}
 
 }
 
-else if(navigator.clipboard){
+}
 
-navigator.clipboard.writeText(
-window.location.href
+
+try{
+
+await navigator.clipboard.writeText(text);
+
+showToast(
+"🔗 Enlace del producto copiado"
+);
+
+}catch(error){
+
+alert(text);
+
+}
+
+}
+
+
+/* =========================================================
+   COMPARTIR FOTO
+========================================================= */
+
+async function shareProductImage(id){
+
+const product=
+products.find(
+p=>p.id===id
+);
+
+if(!product){
+return;
+}
+
+
+try{
+
+const response =
+await fetch(product.image);
+
+if(!response.ok){
+throw new Error("Imagen no disponible");
+}
+
+const blob =
+await response.blob();
+
+const extension =
+blob.type.includes("png")
+? "png"
+: "jpg";
+
+const file =
+new File(
+[blob],
+`${product.name}.${extension}`,
+{
+type:blob.type
+}
+);
+
+
+if(
+navigator.canShare &&
+navigator.canShare({
+files:[file]
+})
+){
+
+await navigator.share({
+
+title:
+`${product.name} | ${STORE_NAME}`,
+
+text:
+`🛍️ ${product.name} - S/ ${product.price.toFixed(2)}`,
+
+files:[file]
+
+});
+
+showToast(
+"📸 Producto compartido"
+);
+
+return;
+
+}
+
+
+await shareProduct(id);
+
+}catch(error){
+
+console.log(
+"Compartir imagen:",
+error
 );
 
 showToast(
-"🔗 Enlace copiado"
+"🔗 Compartiendo el enlace del producto..."
 );
 
-}
-
-else{
-
-alert(
-"Comparte el enlace de esta página."
-);
+await shareProduct(id);
 
 }
 
@@ -4575,13 +7396,16 @@ total+=subtotal;
 
 
 message+=
-`• ${product.name} x${item.quantity} = S/ ${subtotal.toFixed(2)}\n`;
+`🛍️ ${product.name} x${item.quantity} = S/ ${subtotal.toFixed(2)}\n`;
+
+message+=
+`📸 Foto: ${new URL(product.image,window.location.href).href}\n\n`;
 
 });
 
 
 message+=
-`\n💰 Total: S/ ${total.toFixed(2)}`;
+`💰 Total: S/ ${total.toFixed(2)}`;
 
 message+=
 `\n\n👤 Nombre: ${name}`;
@@ -4599,7 +7423,10 @@ message+=
 `\n🚚 Método de entrega: Envío`;
 
 message+=
-"\n\nQuedo atento/a a la confirmación. Gracias.";
+`\n\n🌐 ${STORE_URL}`;
+
+message+=
+"\n\nQuedo atento/a a la confirmación. Gracias. 🙌";
 
 
 const url=
@@ -4608,7 +7435,170 @@ const url=
 
 window.open(
 url,
-"_blank"
+"_blank",
+"noopener"
+);
+
+}
+
+
+/* =========================================================
+   CONTACTO
+========================================================= */
+
+function openWhatsApp(){
+
+const url=
+`https://wa.me/${WHATSAPP_NUMBER}`;
+
+window.open(
+url,
+"_blank",
+"noopener"
+);
+
+}
+
+
+/* =========================================================
+   REDES SOCIALES
+========================================================= */
+
+function setupSocialLinks(){
+
+document
+.querySelectorAll('[data-social="instagram"]')
+.forEach(link=>{
+
+link.href=SOCIAL_LINKS.instagram;
+
+if(SOCIAL_LINKS.instagram!=="#"){
+
+link.target="_blank";
+link.rel="noopener";
+
+}
+
+});
+
+
+document
+.querySelectorAll('[data-social="tiktok"]')
+.forEach(link=>{
+
+link.href=SOCIAL_LINKS.tiktok;
+
+if(SOCIAL_LINKS.tiktok!=="#"){
+
+link.target="_blank";
+link.rel="noopener";
+
+}
+
+});
+
+
+document
+.querySelectorAll('[data-social="facebook"]')
+.forEach(link=>{
+
+link.href=SOCIAL_LINKS.facebook;
+
+if(SOCIAL_LINKS.facebook!=="#"){
+
+link.target="_blank";
+link.rel="noopener";
+
+}
+
+});
+
+}
+
+
+/* =========================================================
+   BOTÓN VOLVER ARRIBA
+========================================================= */
+
+function createBackToTop(){
+
+if(
+document.getElementById("backToTop")
+){
+return;
+}
+
+
+const button =
+document.createElement("button");
+
+button.id="backToTop";
+
+button.innerHTML="↑";
+
+button.setAttribute(
+"aria-label",
+"Volver arriba"
+);
+
+button.style.cssText=`
+
+position:fixed;
+right:20px;
+bottom:90px;
+width:45px;
+height:45px;
+border:none;
+border-radius:50%;
+background:#d4af37;
+color:#000;
+font-size:22px;
+font-weight:bold;
+cursor:pointer;
+z-index:1400;
+opacity:0;
+visibility:hidden;
+transition:.3s;
+box-shadow:0 5px 20px rgba(0,0,0,.35);
+
+`;
+
+
+button.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+
+document.body.appendChild(button);
+
+
+window.addEventListener(
+"scroll",
+()=>{
+
+if(window.scrollY>500){
+
+button.style.opacity="1";
+
+button.style.visibility="visible";
+
+}else{
+
+button.style.opacity="0";
+
+button.style.visibility="hidden";
+
+}
+
+}
 );
 
 }
@@ -4618,9 +7608,24 @@ url,
    EVENTOS
 ========================================================= */
 
-document
-.getElementById("cartOverlay")
-.addEventListener(
+document.addEventListener(
+"submit",
+function(event){
+
+event.preventDefault();
+
+}
+);
+
+
+const cartOverlay =
+document.getElementById(
+"cartOverlay"
+);
+
+if(cartOverlay){
+
+cartOverlay.addEventListener(
 "click",
 function(event){
 
@@ -4630,12 +7635,20 @@ closeCart();
 
 }
 
-});
+}
+);
+
+}
 
 
-document
-.getElementById("productModal")
-.addEventListener(
+const productModal =
+document.getElementById(
+"productModal"
+);
+
+if(productModal){
+
+productModal.addEventListener(
 "click",
 function(event){
 
@@ -4645,7 +7658,10 @@ closeProductModal();
 
 }
 
-});
+}
+);
+
+}
 
 
 document.addEventListener(
@@ -4666,8 +7682,103 @@ closeProductModal();
 
 
 /* =========================================================
-   INICIAR
+   BÚSQUEDA
 ========================================================= */
+
+const searchInput =
+document.getElementById(
+"searchInput"
+);
+
+if(searchInput){
+
+searchInput.addEventListener(
+"input",
+function(){
+
+renderProducts();
+
+});
+
+searchInput.addEventListener(
+"keydown",
+function(event){
+
+if(event.key==="Enter"){
+
+event.preventDefault();
+
+const section =
+document.getElementById("productos");
+
+if(section){
+
+section.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+}
+
+}
+);
+
+}
+
+
+/* =========================================================
+   CONEXIÓN
+========================================================= */
+
+window.addEventListener(
+"offline",
+function(){
+
+showToast(
+"⚠️ Estás sin conexión a Internet"
+);
+
+}
+);
+
+
+window.addEventListener(
+"online",
+function(){
+
+showToast(
+"✅ Conexión restaurada"
+);
+
+}
+);
+
+
+/* =========================================================
+   GUARDAR CARRITO
+========================================================= */
+
+window.addEventListener(
+"beforeunload",
+function(){
+
+localStorage.setItem(
+"urbanEssenceCart",
+JSON.stringify(cart)
+);
+
+}
+);
+
+
+/* =========================================================
+   INICIALIZACIÓN
+========================================================= */
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
 
 applyTheme();
 
@@ -4675,8 +7786,11 @@ renderProducts();
 
 updateCart();
 
+setupSocialLinks();
+
+createBackToTop();
+
+});
+
+
 </script>
-
-</body>
-
-</html>
