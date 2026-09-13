@@ -2423,7 +2423,104 @@ tu pedido y entrega.
 
 </section>
 
+<!-- CARRITO -->
+<div class="cart-overlay" id="cartOverlay">
+  <div class="cart">
 
+    <div class="cart-header">
+      <h2>🛒 Tu carrito</h2>
+      <button class="close" onclick="closeCart()" aria-label="Cerrar carrito">×</button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+      <div class="total-row">
+        <span>Total</span>
+        <span id="cartTotal">S/ 0.00</span>
+      </div>
+
+      <button
+        class="gold-button"
+        style="width:100%;margin-top:15px;"
+        onclick="sendWhatsAppOrder()">
+        📲 Pedir por WhatsApp
+      </button>
+
+      <button
+        class="clear-cart"
+        style="width:100%;margin-top:10px;"
+        onclick="clearCart()">
+        🗑️ Vaciar carrito
+      </button>
+    </div>
+
+    <div class="checkout">
+      <h3>Datos para el pedido</h3>
+
+      <label for="clientName">Nombre</label>
+      <input
+        id="clientName"
+        type="text"
+        placeholder="Tu nombre"
+        autocomplete="name">
+
+      <label for="clientCity">Ciudad</label>
+      <input
+        id="clientCity"
+        type="text"
+        placeholder="Tu ciudad"
+        autocomplete="address-level2">
+
+      <label for="clientDistrict">Distrito</label>
+      <input
+        id="clientDistrict"
+        type="text"
+        placeholder="Tu distrito"
+        autocomplete="address-level3">
+
+      <label for="clientPhone">Teléfono</label>
+      <input
+        id="clientPhone"
+        type="tel"
+        placeholder="Tu teléfono"
+        autocomplete="tel">
+
+      <div class="shipping-only" style="margin-top:12px;">
+        🚚 Método de entrega: Envío
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL DE PRODUCTO -->
+<div
+  class="modal"
+  id="productModal"
+  onclick="if(event.target===this) closeProductModal()">
+
+  <div class="modal-content">
+
+    <button
+      class="modal-close"
+      onclick="closeProductModal()"
+      aria-label="Cerrar">
+      ×
+    </button>
+
+    <div id="modalProduct"></div>
+
+  </div>
+</div>
+
+<!-- MENSAJES -->
+<div
+  class="toast"
+  id="toast"
+  role="status"
+  aria-live="polite">
+</div>
 <script>
 
 /* =========================================================
