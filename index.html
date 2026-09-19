@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
 <meta name="google-site-verification" content="FOu36-sbYqsFFHqnjSwhBCUySz0WmSq3o_nhEl676zQ">
 
 <meta charset="UTF-8">
@@ -31,11 +31,7 @@ content="index, follow">
 content="#080808">
 
 <link rel="canonical"
-href="https://urban-essence/">
-
-<link rel="icon" type="image/png" sizes="512x512" href="logo-urban-essence.png">
-<link rel="apple-touch-icon" href="logo-urban-essence.png">
-<meta property="og:image" content="https://urban-essence/logo-urban-essence.png">
+href="https://sergiomathias384-ctrl.github.io/urban-essence/">
 
 <meta property="og:type"
 content="website">
@@ -47,7 +43,7 @@ content="Urban Essence | Artículos que elevan tu personalidad">
 content="Descubre accesorios y artículos seleccionados para complementar tu estilo.">
 
 <meta property="og:url"
-content="https://urban-essence/">
+content="https://sergiomathias384-ctrl.github.io/urban-essence/">
 
 <meta property="og:site_name"
 content="Urban Essence">
@@ -67,7 +63,7 @@ html{
 
 body{
     font-family:'Playfair Display',serif;
-    background:#07111F;
+    background:#07140F;
     color:#fff;
     transition:.3s;
 }
@@ -84,22 +80,30 @@ a{
 }
 
 :root{
-    ---black:#07111F;
---gold:#D4AF37;
---white:#FFFFFF;
+    --gold:#D4AF37;
+    --gold-light:#E8CF72;
+    --dark:#07140F;
+    --card:#0D241A;
+    --card2:#173D2B;
+    --border:#28513D;
+    --text:#FFFFFF;
+    --muted:#D7DEE8;
+    --success:#55dc78;
+    --danger:#ff5555;
 }
 
 body.light{
-    --dark:#0B1D33;
-    --card:#163A5F;
-    --card2:#0B1D33;
-    --border:#284765;
-    --text:#FFFFFF;
-    --muted:#D7DEE8;
+    --dark:#f5f5f5;
+    --card:#fff;
+    --card2:#eee;
+    --border:#d8d8d8;
+    --text:#111;
+    --muted:#666;
 
-    background:#07111F;
-    color:#FFFFFF;
+    background:#f5f5f5;
+    color:#111;
 }
+
 body.light header{
     background:rgba(255,255,255,.97);
     border-color:#ddd;
@@ -141,7 +145,7 @@ body.light .modal-content{
 }
 
 body.light footer{
-    background:#111;
+    background:#0B1D16;
 }
 
 
@@ -153,8 +157,11 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-   background:#07111F;
-border-bottom:1px solid #284765;
+
+    background:rgba(7,20,15,.97);
+
+    border-bottom:1px solid #28513D;
+
     backdrop-filter:blur(12px);
 }
 
@@ -176,12 +183,12 @@ border-bottom:1px solid #284765;
 .logo{
     color:var(--gold);
 
-    font-size:32px;
+    font-size:25px;
 
     font-weight:500;
-    
+
     font-family:'Playfair Display',serif;
-    
+
     letter-spacing:2px;
 
     text-decoration:none;
@@ -205,7 +212,7 @@ border-bottom:1px solid #284765;
 
     border-radius:50%;
 
-    background:#191919;
+    background:#10251B;
 
     color:#fff;
 
@@ -259,7 +266,7 @@ border-bottom:1px solid #284765;
 
     inset:0;
 
-    background:rgba(0,0,0,.7);
+    background:rgba(4,18,12,.78);
 
     z-index:2500;
 
@@ -288,7 +295,7 @@ border-bottom:1px solid #284765;
 
     overflow-y:auto;
 
-    background:#111;
+    background:#0B1D16;
 
     z-index:3000;
 
@@ -428,7 +435,7 @@ border-bottom:1px solid #284765;
 
     text-align:center;
 
-    background:#050505;
+    background:#07140F;
 }
 
 .hero-slides{
@@ -475,8 +482,8 @@ border-bottom:1px solid #284765;
     background:
     linear-gradient(
         to bottom,
-        rgba(0,0,0,.35),
-        rgba(0,0,0,.8)
+        rgba(4,20,13,.28),
+        rgba(3,16,10,.88)
     );
 
     z-index:1;
@@ -689,13 +696,13 @@ section{
 
     padding:16px 20px;
 
-    border:1px solid #444;
+    border:1px solid #28513D;
 
     border-radius:30px;
 
     outline:none;
 
-    background:#151515;
+    background:#0D241A;
 
     color:#fff;
 
@@ -745,7 +752,7 @@ section{
 
     border-color:var(--gold);
 
-    box-shadow:0 12px 30px rgba(0,0,0,.25);
+    box-shadow:0 12px 30px rgba(3,16,10,.45);
 }
 
 .product-image{
@@ -757,7 +764,7 @@ section{
 
     overflow:hidden;
 
-    background:#222;
+    background:#10251B;
 }
 
 .product-image img{
@@ -806,7 +813,7 @@ section{
 
     border-radius:50%;
 
-    background:rgba(0,0,0,.75);
+    background:rgba(3,16,10,.82);
 
     color:#fff;
 
@@ -962,8 +969,8 @@ section{
     background:
     linear-gradient(
         135deg,
-        #201c0c,
-        #090909
+        #173D2B,
+        #07140F
     );
 
     border:1px solid var(--border);
@@ -1119,7 +1126,7 @@ section{
 
     text-decoration:none;
 
-    background:#191919;
+    background:#10251B;
 
     color:#fff;
 
@@ -1189,7 +1196,7 @@ section{
 
     inset:0;
 
-    background:rgba(0,0,0,.75);
+    background:rgba(3,16,10,.82);
 
     display:none;
 
@@ -1214,11 +1221,11 @@ section{
 
     padding:25px;
 
-    background:#101010;
+    background:#0B1D16;
 
     color:#fff;
 
-    border-left:1px solid #333;
+    border-left:1px solid #28513D;
 }
 
 .cart-header{
@@ -1258,7 +1265,7 @@ section{
 
     padding:15px 0;
 
-    border-bottom:1px solid #292929;
+    border-bottom:1px solid #28513D;
 }
 
 .cart-item img{
@@ -1298,7 +1305,7 @@ section{
 
     border-radius:4px;
 
-    background:#333;
+    background:#173D2B;
 
     color:#fff;
 
@@ -1320,7 +1327,7 @@ section{
 
     padding-top:20px;
 
-    border-top:1px solid #333;
+    border-top:1px solid #28513D;
 }
 
 .total-row{
@@ -1350,7 +1357,7 @@ section{
 
     padding:12px;
 
-    border:1px solid #555;
+    border:1px solid #4A6B59;
 
     border-radius:8px;
 
@@ -1397,11 +1404,11 @@ section{
 
     padding:12px;
 
-    border:1px solid #444;
+    border:1px solid #28513D;
 
     border-radius:7px;
 
-    background:#1b1b1b;
+    background:#10251B;
 
     color:#fff;
 
@@ -1421,7 +1428,7 @@ section{
 
     border-radius:7px;
 
-    background:#1b1b1b;
+    background:#10251B;
 
     color:var(--gold);
 
@@ -1446,7 +1453,7 @@ section{
 
     padding:20px;
 
-    background:rgba(0,0,0,.85);
+    background:rgba(3,16,10,.88);
 
     z-index:5000;
 }
@@ -1466,11 +1473,11 @@ section{
 
     padding:30px;
 
-    background:#151515;
+    background:#0D241A;
 
     border-radius:20px;
 
-    border:1px solid #333;
+    border:1px solid #28513D;
 }
 
 .modal-close{
@@ -1499,7 +1506,7 @@ section{
 
     border-radius:12px;
 
-    background:#222;
+    background:#10251B;
 }
 
 .modal-info{
@@ -1532,7 +1539,7 @@ section{
 
     transform:translate(-50%,120px);
 
-    background:#181818;
+    background:#10251B;
 
     color:#fff;
 
@@ -1563,9 +1570,9 @@ section{
 ========================================================= */
 
 footer{
-    background:#050505;
+    background:#07140F;
 
-    border-top:1px solid #222;
+    border-top:1px solid #28513D;
 
     padding:45px 20px;
 
@@ -2417,104 +2424,56 @@ tu pedido y entrega.
 
 </section>
 
+
+
 <!-- CARRITO -->
 <div class="cart-overlay" id="cartOverlay">
-  <div class="cart">
-
-    <div class="cart-header">
-      <h2>🛒 Tu carrito</h2>
-      <button class="close" onclick="closeCart()" aria-label="Cerrar carrito">×</button>
-    </div>
-
-    <div id="cartItems"></div>
-
-    <div class="cart-total">
-      <div class="total-row">
-        <span>Total</span>
-        <span id="cartTotal">S/ 0.00</span>
-      </div>
-
-      <button
-        class="gold-button"
-        style="width:100%;margin-top:15px;"
-        onclick="sendWhatsAppOrder()">
-        📲 Pedir por WhatsApp
-      </button>
-
-      <button
-        class="clear-cart"
-        style="width:100%;margin-top:10px;"
-        onclick="clearCart()">
-        🗑️ Vaciar carrito
-      </button>
-    </div>
-
-    <div class="checkout">
-      <h3>Datos para el pedido</h3>
-
-      <label for="clientName">Nombre</label>
-      <input
-        id="clientName"
-        type="text"
-        placeholder="Tu nombre"
-        autocomplete="name">
-
-      <label for="clientCity">Ciudad</label>
-      <input
-        id="clientCity"
-        type="text"
-        placeholder="Tu ciudad"
-        autocomplete="address-level2">
-
-      <label for="clientDistrict">Distrito</label>
-      <input
-        id="clientDistrict"
-        type="text"
-        placeholder="Tu distrito"
-        autocomplete="address-level3">
-
-      <label for="clientPhone">Teléfono</label>
-      <input
-        id="clientPhone"
-        type="tel"
-        placeholder="Tu teléfono"
-        autocomplete="tel">
-
-      <div class="shipping-only" style="margin-top:12px;">
-        🚚 Método de entrega: Envío
-      </div>
-    </div>
-
-  </div>
+<div class="cart">
+<div class="cart-header">
+<h2>🛒 Tu carrito</h2>
+<button class="close" onclick="closeCart()" aria-label="Cerrar carrito">×</button>
+</div>
+<div id="cartItems"></div>
+<div class="cart-total">
+<div class="total-row">
+<span>Total</span>
+<span id="cartTotal">S/ 0.00</span>
+</div>
+<button class="gold-button" style="width:100%;margin-top:15px;" onclick="sendWhatsAppOrder()">
+📲 Pedir por WhatsApp
+</button>
+<button class="clear-cart" style="width:100%;margin-top:10px;" onclick="clearCart()">
+🗑️ Vaciar carrito
+</button>
+</div>
+<div class="checkout">
+<h3>Datos para el pedido</h3>
+<label for="clientName">Nombre</label>
+<input id="clientName" type="text" placeholder="Tu nombre" autocomplete="name">
+<label for="clientCity">Ciudad</label>
+<input id="clientCity" type="text" placeholder="Tu ciudad" autocomplete="address-level2">
+<label for="clientDistrict">Distrito</label>
+<input id="clientDistrict" type="text" placeholder="Tu distrito" autocomplete="address-level3">
+<label for="clientPhone">Teléfono</label>
+<input id="clientPhone" type="tel" placeholder="Tu teléfono" autocomplete="tel">
+<div class="shipping-only" style="margin-top:12px;">
+🚚 Método de entrega: Envío
+</div>
+</div>
+</div>
 </div>
 
 <!-- MODAL DE PRODUCTO -->
-<div
-  class="modal"
-  id="productModal"
-  onclick="if(event.target===this) closeProductModal()">
-
-  <div class="modal-content">
-
-    <button
-      class="modal-close"
-      onclick="closeProductModal()"
-      aria-label="Cerrar">
-      ×
-    </button>
-
-    <div id="modalProduct"></div>
-
-  </div>
+<div class="modal" id="productModal" onclick="if(event.target===this) closeProductModal()">
+<div class="modal-content">
+<button class="modal-close" onclick="closeProductModal()" aria-label="Cerrar">×</button>
+<div id="modalProduct"></div>
+</div>
 </div>
 
 <!-- MENSAJES -->
-<div
-  class="toast"
-  id="toast"
-  role="status"
-  aria-live="polite">
-</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
 
 /* =========================================================
@@ -5209,6 +5168,5 @@ createBackToTop();
 });
 
 </script>
-
 </body>
 </html>
