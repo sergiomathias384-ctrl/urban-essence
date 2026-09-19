@@ -2,7 +2,10 @@
 <html lang="es">
 
 <head>
-
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <meta name="google-site-verification" content="FOu36-sbYqsFFHqnjSwhBCUySz0WmSq3o_nhEl676zQ">
 
 <meta charset="UTF-8">
@@ -25,10 +28,14 @@ content="Urban Essence">
 content="index, follow">
 
 <meta name="theme-color"
-content="#0b241c">
+content="#080808">
 
 <link rel="canonical"
-href="https://sergiomathias384-ctrl.github.io/urban-essence/">
+href="https://urban-essence/">
+
+<link rel="icon" type="image/png" sizes="512x512" href="logo-urban-essence.png">
+<link rel="apple-touch-icon" href="logo-urban-essence.png">
+<meta property="og:image" content="https://urban-essence/logo-urban-essence.png">
 
 <meta property="og:type"
 content="website">
@@ -40,33 +47,13 @@ content="Urban Essence | Artículos que elevan tu personalidad">
 content="Descubre accesorios y artículos seleccionados para complementar tu estilo.">
 
 <meta property="og:url"
-content="https://sergiomathias384-ctrl.github.io/urban-essence/">
+content="https://urban-essence/">
 
 <meta property="og:site_name"
 content="Urban Essence">
 
 
-<!-- =========================================================
-     FUENTE
-========================================================= -->
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap"
-rel="stylesheet">
-
-
 <style>
-
-/* =========================================================
-   BASE
-========================================================= */
 
 *{
     margin:0;
@@ -78,154 +65,83 @@ html{
     scroll-behavior:smooth;
 }
 
-:root{
-
-    --green-dark:#071b15;
-
-    --green:#0b241c;
-
-    --green-light:#12382c;
-
-    --gold:#d4af37;
-
-    --gold-light:#f1d35c;
-
-    --dark:#071b15;
-
-    --card:#0d2920;
-
-    --card2:#12382c;
-
-    --border:#285344;
-
-    --text:#fff;
-
-    --muted:#aabbb4;
-
-    --success:#55dc78;
-
-    --danger:#ff5555;
-}
-
 body{
-
     font-family:'Playfair Display',serif;
-
-    background:var(--green-dark);
-
-    color:var(--text);
-
+    background:#07111F;
+    color:#fff;
     transition:.3s;
-
 }
 
 button,
 input,
 select{
-
-    font-family:'Playfair Display',serif;
-
+    font-family:inherit;
 }
 
 button,
 a{
-
     -webkit-tap-highlight-color:transparent;
-
 }
 
-
-/* =========================================================
-   TEMA CLARO
-========================================================= */
+:root{
+    ---black:#07111F;
+--gold:#D4AF37;
+--white:#FFFFFF;
+}
 
 body.light{
+    --dark:#0B1D33;
+    --card:#163A5F;
+    --card2:#0B1D33;
+    --border:#284765;
+    --text:#FFFFFF;
+    --muted:#D7DEE8;
 
-    --dark:#f5f5f5;
-
-    --card:#fff;
-
-    --card2:#eef3f0;
-
-    --border:#d2ddd8;
-
-    --text:#111;
-
-    --muted:#66736e;
-
-    background:#f5f5f5;
-
-    color:#111;
-
+    background:#07111F;
+    color:#FFFFFF;
 }
-
 body.light header{
-
-    background:rgba(245,248,246,.97);
-
-    border-color:#d2ddd8;
-
+    background:rgba(255,255,255,.97);
+    border-color:#ddd;
 }
 
 body.light .icon-button{
-
-    background:#e8eee9;
-
+    background:#eee;
     color:#111;
-
 }
 
 body.light .side-menu{
-
     background:#fff;
-
 }
 
 body.light .side-link{
-
     color:#222;
-
 }
 
 body.light .side-filter{
-
     background:#f5f5f5;
-
     color:#222;
-
 }
 
 body.light .cart{
-
     background:#fff;
-
     color:#111;
-
 }
 
 body.light .checkout input,
 body.light .newsletter-input{
-
     background:#f5f5f5;
-
     color:#111;
-
     border-color:#ccc;
-
 }
 
 body.light .modal-content{
-
     background:#fff;
-
     color:#111;
-
 }
 
 body.light footer{
-
-    background:#071b15;
-
+    background:#111;
 }
 
 
@@ -234,92 +150,62 @@ body.light footer{
 ========================================================= */
 
 header{
-
     position:sticky;
-
     top:0;
-
     z-index:1000;
-
-    background:rgba(7,27,21,.97);
-
-    border-bottom:1px solid #285344;
-
+   background:#07111F;
+border-bottom:1px solid #284765;
     backdrop-filter:blur(12px);
-
 }
 
 .navbar{
-
     max-width:1250px;
-
-    min-height:76px;
+    min-height:74px;
 
     margin:auto;
 
     padding:12px 22px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
 
-    gap:18px;
-
-}
-
-.header-left{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
+    gap:15px;
 }
 
 .logo{
-
     color:var(--gold);
 
+    font-size:32px;
+
+    font-weight:500;
+    
     font-family:'Playfair Display',serif;
-
-    font-size:25px;
-
-    font-weight:700;
-
+    
     letter-spacing:2px;
 
     text-decoration:none;
-
-    white-space:nowrap;
-
 }
 
 .header-right{
-
     display:flex;
 
     align-items:center;
 
     gap:10px;
-
 }
 
 .icon-button{
-
     position:relative;
 
     width:43px;
-
     height:43px;
 
     border:none;
 
     border-radius:50%;
 
-    background:#12382c;
+    background:#191919;
 
     color:#fff;
 
@@ -328,35 +214,28 @@ header{
     cursor:pointer;
 
     transition:.3s;
-
 }
 
 .icon-button:hover{
-
     background:var(--gold);
 
     color:#000;
 
     transform:translateY(-2px);
-
 }
 
 .cart-count{
-
     position:absolute;
 
     top:-5px;
-
     right:-5px;
 
     width:20px;
-
     height:20px;
 
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     border-radius:50%;
@@ -368,74 +247,6 @@ header{
     font-size:11px;
 
     font-weight:bold;
-
-}
-
-
-/* =========================================================
-   BUSCADOR DEL HEADER
-========================================================= */
-
-.header-search-wrap{
-
-    position:relative;
-
-    flex:1;
-
-    max-width:520px;
-
-}
-
-.header-search{
-
-    width:100%;
-
-    height:44px;
-
-    padding:0 45px 0 20px;
-
-    border:1px solid #285344;
-
-    border-radius:30px;
-
-    outline:none;
-
-    background:#0d2920;
-
-    color:#fff;
-
-    font-size:14px;
-
-}
-
-.header-search::placeholder{
-
-    color:#9aaca5;
-
-}
-
-.header-search:focus{
-
-    border-color:var(--gold);
-
-}
-
-.header-search-icon{
-
-    position:absolute;
-
-    right:18px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    color:var(--gold);
-
-    font-size:20px;
-
-    pointer-events:none;
-
 }
 
 
@@ -444,7 +255,6 @@ header{
 ========================================================= */
 
 .side-overlay{
-
     position:fixed;
 
     inset:0;
@@ -458,23 +268,18 @@ header{
     visibility:hidden;
 
     transition:.3s;
-
 }
 
 .side-overlay.show{
-
     opacity:1;
 
     visibility:visible;
-
 }
 
 .side-menu{
-
     position:fixed;
 
     top:0;
-
     left:-350px;
 
     width:min(340px,90%);
@@ -483,7 +288,7 @@ header{
 
     overflow-y:auto;
 
-    background:#071b15;
+    background:#111;
 
     z-index:3000;
 
@@ -492,17 +297,13 @@ header{
     box-shadow:10px 0 35px rgba(0,0,0,.6);
 
     transition:.35s;
-
 }
 
 .side-menu.show{
-
     left:0;
-
 }
 
 .side-header{
-
     display:flex;
 
     align-items:center;
@@ -514,19 +315,15 @@ header{
     margin-bottom:15px;
 
     border-bottom:1px solid var(--border);
-
 }
 
 .side-header h2{
-
     color:var(--gold);
 
     font-size:22px;
-
 }
 
 .side-close{
-
     border:none;
 
     background:none;
@@ -536,21 +333,17 @@ header{
     font-size:30px;
 
     cursor:pointer;
-
 }
 
 .side-links{
-
     display:flex;
 
     flex-direction:column;
 
     gap:5px;
-
 }
 
 .side-link{
-
     display:block;
 
     padding:14px;
@@ -562,19 +355,15 @@ header{
     text-decoration:none;
 
     transition:.2s;
-
 }
 
 .side-link:hover{
-
     background:var(--gold);
 
     color:#000;
-
 }
 
 .side-section-title{
-
     margin-top:22px;
 
     margin-bottom:10px;
@@ -586,11 +375,9 @@ header{
     text-transform:uppercase;
 
     letter-spacing:1px;
-
 }
 
 .side-filter{
-
     width:100%;
 
     padding:11px;
@@ -610,18 +397,15 @@ header{
     cursor:pointer;
 
     transition:.2s;
-
 }
 
 .side-filter:hover,
 .side-filter.active{
-
     background:var(--gold);
 
     color:#000;
 
     border-color:var(--gold);
-
 }
 
 
@@ -630,7 +414,6 @@ header{
 ========================================================= */
 
 .hero{
-
     position:relative;
 
     min-height:620px;
@@ -645,22 +428,18 @@ header{
 
     text-align:center;
 
-    background:var(--green-dark);
-
+    background:#050505;
 }
 
 .hero-slides{
-
     position:absolute;
 
     inset:0;
 
     z-index:0;
-
 }
 
 .hero-slide{
-
     position:absolute;
 
     inset:0;
@@ -668,17 +447,13 @@ header{
     opacity:0;
 
     transition:opacity 1.2s ease;
-
 }
 
 .hero-slide.active{
-
     opacity:1;
-
 }
 
 .hero-slide img{
-
     width:100%;
 
     height:100%;
@@ -688,11 +463,9 @@ header{
     filter:brightness(.42);
 
     transform:scale(1.03);
-
 }
 
 .hero::after{
-
     content:"";
 
     position:absolute;
@@ -702,16 +475,14 @@ header{
     background:
     linear-gradient(
         to bottom,
-        rgba(7,27,21,.35),
-        rgba(3,12,9,.88)
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.8)
     );
 
     z-index:1;
-
 }
 
 .hero-content{
-
     position:relative;
 
     z-index:2;
@@ -719,11 +490,9 @@ header{
     max-width:900px;
 
     padding:40px 20px;
-
 }
 
 .hero h1{
-
     color:var(--gold);
 
     font-size:clamp(42px,8vw,72px);
@@ -731,19 +500,15 @@ header{
     letter-spacing:clamp(3px,1vw,7px);
 
     margin-bottom:18px;
-
 }
 
 .hero h2{
-
     font-size:clamp(22px,4vw,31px);
 
     margin-bottom:18px;
-
 }
 
 .hero p{
-
     max-width:700px;
 
     margin:0 auto 32px;
@@ -753,11 +518,9 @@ header{
     font-size:18px;
 
     line-height:1.7;
-
 }
 
 .hero-dots{
-
     position:absolute;
 
     bottom:25px;
@@ -771,11 +534,9 @@ header{
     display:flex;
 
     gap:8px;
-
 }
 
 .hero-dot{
-
     width:9px;
 
     height:9px;
@@ -787,19 +548,15 @@ header{
     background:transparent;
 
     cursor:pointer;
-
 }
 
 .hero-dot.active{
-
     background:var(--gold);
 
     border-color:var(--gold);
-
 }
 
 .gold-button{
-
     display:inline-block;
 
     padding:14px 26px;
@@ -819,15 +576,12 @@ header{
     cursor:pointer;
 
     transition:.3s;
-
 }
 
 .gold-button:hover{
-
     background:var(--gold-light);
 
     transform:translateY(-3px);
-
 }
 
 
@@ -836,7 +590,6 @@ header{
 ========================================================= */
 
 .info-grid{
-
     max-width:1200px;
 
     margin:45px auto;
@@ -848,11 +601,9 @@ header{
     grid-template-columns:repeat(3,1fr);
 
     gap:20px;
-
 }
 
 .info-card{
-
     background:var(--card);
 
     border:1px solid var(--border);
@@ -864,37 +615,28 @@ header{
     text-align:center;
 
     transition:.3s;
-
 }
 
 .info-card:hover{
-
     transform:translateY(-5px);
 
     border-color:var(--gold);
-
 }
 
 .info-icon{
-
     font-size:35px;
-
 }
 
 .info-card h3{
-
     margin:12px 0;
 
     color:var(--gold);
-
 }
 
 .info-card p{
-
     color:var(--muted);
 
     line-height:1.6;
-
 }
 
 
@@ -903,42 +645,33 @@ header{
 ========================================================= */
 
 section{
-
     padding:75px 20px;
-
 }
 
 .section-title{
-
     text-align:center;
 
     margin-bottom:40px;
-
 }
 
 .section-title h2{
-
     color:var(--gold);
 
     font-size:clamp(30px,5vw,38px);
 
     margin-bottom:10px;
-
 }
 
 .section-title p{
-
     color:var(--muted);
-
 }
 
 
 /* =========================================================
-   BUSCADOR DE PRODUCTOS
+   BUSCADOR
 ========================================================= */
 
 .search-tools{
-
     max-width:1000px;
 
     margin:0 auto 35px;
@@ -948,41 +681,34 @@ section{
     grid-template-columns:1fr 220px;
 
     gap:12px;
-
 }
 
 #searchInput,
 #sortProducts{
-
     width:100%;
 
     padding:16px 20px;
 
-    border:1px solid #285344;
+    border:1px solid #444;
 
     border-radius:30px;
 
     outline:none;
 
-    background:#0d2920;
+    background:#151515;
 
     color:#fff;
 
     font-size:15px;
-
 }
 
 #sortProducts{
-
     cursor:pointer;
-
 }
 
 #searchInput:focus,
 #sortProducts:focus{
-
     border-color:var(--gold);
-
 }
 
 
@@ -991,7 +717,6 @@ section{
 ========================================================= */
 
 .products{
-
     max-width:1250px;
 
     margin:auto;
@@ -1001,11 +726,9 @@ section{
     grid-template-columns:repeat(4,1fr);
 
     gap:25px;
-
 }
 
 .product{
-
     overflow:hidden;
 
     background:var(--card);
@@ -1015,21 +738,17 @@ section{
     border-radius:18px;
 
     transition:.3s;
-
 }
 
 .product:hover{
-
     transform:translateY(-6px);
 
     border-color:var(--gold);
 
-    box-shadow:0 12px 30px rgba(0,0,0,.35);
-
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
 }
 
 .product-image{
-
     position:relative;
 
     width:100%;
@@ -1038,12 +757,10 @@ section{
 
     overflow:hidden;
 
-    background:#0b1f18;
-
+    background:#222;
 }
 
 .product-image img{
-
     width:100%;
 
     height:100%;
@@ -1051,21 +768,16 @@ section{
     object-fit:cover;
 
     transition:.4s;
-
 }
 
 .product:hover .product-image img{
-
     transform:scale(1.05);
-
 }
 
 .badge{
-
     position:absolute;
 
     top:12px;
-
     left:12px;
 
     padding:6px 10px;
@@ -1079,19 +791,15 @@ section{
     font-size:11px;
 
     font-weight:bold;
-
 }
 
 .favorite{
-
     position:absolute;
 
     top:10px;
-
     right:10px;
 
     width:38px;
-
     height:38px;
 
     border:none;
@@ -1105,35 +813,27 @@ section{
     font-size:20px;
 
     cursor:pointer;
-
 }
 
 .favorite.active{
-
     color:#ff4f70;
-
 }
 
 .product-info{
-
     padding:18px;
-
 }
 
 .product-category{
-
-    color:#8da49b;
+    color:#888;
 
     font-size:11px;
 
     text-transform:uppercase;
 
     margin-bottom:7px;
-
 }
 
 .product-name{
-
     color:var(--text);
 
     font-size:18px;
@@ -1141,21 +841,17 @@ section{
     font-weight:bold;
 
     margin-bottom:10px;
-
 }
 
 .price{
-
     color:var(--gold);
 
     font-size:21px;
 
     font-weight:bold;
-
 }
 
 .old-price{
-
     color:#777;
 
     text-decoration:line-through;
@@ -1163,33 +859,25 @@ section{
     font-size:14px;
 
     margin-right:7px;
-
 }
 
 .stock{
-
     margin-top:8px;
 
     color:var(--success);
 
     font-size:12px;
-
 }
 
 .stock.low{
-
     color:#ffd447;
-
 }
 
 .stock.out{
-
     color:var(--danger);
-
 }
 
 .product-buttons{
-
     display:grid;
 
     grid-template-columns:1fr 1fr;
@@ -1197,11 +885,9 @@ section{
     gap:8px;
 
     margin-top:15px;
-
 }
 
 .product-buttons button{
-
     padding:10px 5px;
 
     border:1px solid var(--gold);
@@ -1215,35 +901,27 @@ section{
     cursor:pointer;
 
     transition:.2s;
-
 }
 
 .product-buttons button:hover{
-
     background:var(--gold);
 
     color:#000;
-
 }
 
 .product-buttons .buy{
-
     background:var(--gold);
 
     color:#000;
-
 }
 
 .product-buttons button:disabled{
-
     opacity:.4;
 
     cursor:not-allowed;
-
 }
 
 .empty-products{
-
     grid-column:1/-1;
 
     text-align:center;
@@ -1251,7 +929,6 @@ section{
     padding:60px 20px;
 
     color:#888;
-
 }
 
 
@@ -1260,7 +937,6 @@ section{
 ========================================================= */
 
 .collections{
-
     max-width:1200px;
 
     margin:auto;
@@ -1270,11 +946,9 @@ section{
     grid-template-columns:repeat(3,1fr);
 
     gap:25px;
-
 }
 
 .collection{
-
     min-height:260px;
 
     border-radius:20px;
@@ -1288,30 +962,25 @@ section{
     background:
     linear-gradient(
         135deg,
-        #12382c,
-        #071b15
+        #201c0c,
+        #090909
     );
 
     border:1px solid var(--border);
 
     transition:.3s;
-
 }
 
 .collection:hover{
-
     transform:translateY(-5px);
 
     border-color:var(--gold);
-
 }
 
 .collection h3{
-
     font-size:30px;
 
     margin-bottom:15px;
-
 }
 
 
@@ -1320,54 +989,1020 @@ section{
 ========================================================= */
 
 .about{
-
     max-width:950px;
 
     margin:auto;
-
 }
 
 .about-box{
-
     background:var(--card);
 
     border:1px solid var(--border);
 
     border-radius:20px;
 
-    padding:35px;
+    padding:40px 30px;
 
-    line-height:1.8;
-
-    color:var(--muted);
-
+    text-align:center;
 }
 
 .about-box h3{
-
     color:var(--gold);
-
-    margin-bottom:15px;
 
     font-size:25px;
 
+    margin-bottom:18px;
+}
+
+.about-box p{
+    color:var(--muted);
+
+    line-height:1.8;
+
+    margin-bottom:15px;
 }
 
 
 /* =========================================================
-   FIN DE LA PARTE 1
+   ENVÍOS
 ========================================================= */
-    🔄 Ver todos
+
+.shipping{
+    max-width:1000px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.shipping-card{
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:25px;
+
+    text-align:center;
+}
+
+.shipping-card h3{
+    color:var(--gold);
+
+    margin:12px 0;
+}
+
+.shipping-card p{
+    color:var(--muted);
+
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   REDES SOCIALES
+========================================================= */
+
+.social-section{
+    max-width:900px;
+
+    margin:auto;
+}
+
+.social-box{
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:35px 20px;
+
+    text-align:center;
+}
+
+.social-box h3{
+    color:var(--gold);
+
+    font-size:24px;
+
+    margin-bottom:10px;
+}
+
+.social-box p{
+    color:var(--muted);
+
+    margin-bottom:25px;
+}
+
+.social-links{
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+.social-link{
+    min-width:150px;
+
+    padding:13px 18px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    background:#191919;
+
+    color:#fff;
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+}
+
+.social-link:hover{
+    border-color:var(--gold);
+
+    background:var(--gold);
+
+    color:#000;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================================================
+   CONTACTO
+========================================================= */
+
+.contact{
+    max-width:900px;
+
+    margin:auto;
+}
+
+.contact-box{
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:40px 20px;
+
+    text-align:center;
+}
+
+.email{
+    color:var(--gold);
+
+    font-size:19px;
+
+    margin:20px 0;
+}
+
+.contact-buttons{
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+
+/* =========================================================
+   CARRITO
+========================================================= */
+
+.cart-overlay{
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:none;
+
+    z-index:4000;
+}
+
+.cart-overlay.show{
+    display:block;
+}
+
+.cart{
+    position:absolute;
+
+    right:0;
+    top:0;
+
+    width:min(450px,100%);
+
+    height:100%;
+
+    overflow-y:auto;
+
+    padding:25px;
+
+    background:#101010;
+
+    color:#fff;
+
+    border-left:1px solid #333;
+}
+
+.cart-header{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.cart-header h2{
+    color:var(--gold);
+}
+
+.close{
+    border:none;
+
+    background:none;
+
+    color:#fff;
+
+    font-size:28px;
+
+    cursor:pointer;
+}
+
+.cart-item{
+    display:grid;
+
+    grid-template-columns:70px 1fr auto;
+
+    gap:12px;
+
+    align-items:center;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #292929;
+}
+
+.cart-item img{
+    width:70px;
+    height:70px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+}
+
+.cart-item h4{
+    font-size:14px;
+}
+
+.cart-price{
+    color:var(--gold);
+
+    margin-top:5px;
+}
+
+.quantity{
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    margin-top:8px;
+}
+
+.quantity button{
+    width:25px;
+    height:25px;
+
+    border:none;
+
+    border-radius:4px;
+
+    background:#333;
+
+    color:#fff;
+
+    cursor:pointer;
+}
+
+.remove{
+    border:none;
+
+    background:none;
+
+    color:#ff5555;
+
+    cursor:pointer;
+}
+
+.cart-total{
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:1px solid #333;
+}
+
+.total-row{
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:21px;
+
+    font-weight:bold;
+}
+
+.total-row span:last-child{
+    color:var(--gold);
+}
+
+.cart-actions{
+    display:flex;
+
+    gap:10px;
+
+    margin-top:15px;
+}
+
+.clear-cart{
+    flex:1;
+
+    padding:12px;
+
+    border:1px solid #555;
+
+    border-radius:8px;
+
+    background:transparent;
+
+    color:#aaa;
+
+    cursor:pointer;
+}
+
+.clear-cart:hover{
+    border-color:#ff5555;
+
+    color:#ff5555;
+}
+
+
+/* =========================================================
+   CHECKOUT
+========================================================= */
+
+.checkout{
+    margin-top:25px;
+}
+
+.checkout h3{
+    color:var(--gold);
+
+    margin-bottom:15px;
+}
+
+.checkout label{
+    display:block;
+
+    margin:8px 0 5px;
+
+    color:#aaa;
+
+    font-size:13px;
+}
+
+.checkout input{
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #444;
+
+    border-radius:7px;
+
+    background:#1b1b1b;
+
+    color:#fff;
+
+    outline:none;
+}
+
+.checkout input:focus{
+    border-color:var(--gold);
+}
+
+.shipping-only{
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid var(--gold);
+
+    border-radius:7px;
+
+    background:#1b1b1b;
+
+    color:var(--gold);
+
+    font-weight:bold;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal{
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:rgba(0,0,0,.85);
+
+    z-index:5000;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-content{
+    position:relative;
+
+    width:min(700px,100%);
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    padding:30px;
+
+    background:#151515;
+
+    border-radius:20px;
+
+    border:1px solid #333;
+}
+
+.modal-close{
+    position:absolute;
+
+    top:12px;
+    right:18px;
+
+    border:none;
+
+    background:none;
+
+    color:#fff;
+
+    font-size:28px;
+
+    cursor:pointer;
+}
+
+.modal-image{
+    width:100%;
+
+    max-height:450px;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+    background:#222;
+}
+
+.modal-info{
+    margin-top:20px;
+}
+
+.modal-info h2{
+    color:var(--gold);
+
+    margin-bottom:10px;
+}
+
+.modal-info p{
+    color:#aaa;
+
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast{
+    position:fixed;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:translate(-50%,120px);
+
+    background:#181818;
+
+    color:#fff;
+
+    border:1px solid var(--gold);
+
+    padding:13px 20px;
+
+    border-radius:30px;
+
+    z-index:7000;
+
+    opacity:0;
+
+    transition:.3s;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.4);
+}
+
+.toast.show{
+    opacity:1;
+
+    transform:translate(-50%,0);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#050505;
+
+    border-top:1px solid #222;
+
+    padding:45px 20px;
+
+    text-align:center;
+}
+
+footer h2{
+    color:var(--gold);
+
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#777;
+
+    margin:7px;
+}
+
+.footer-links{
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:20px 0;
+}
+
+.footer-links a{
+    color:#999;
+
+    text-decoration:none;
+}
+
+.footer-links a:hover{
+    color:var(--gold);
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp{
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#25d366;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:28px;
+
+    z-index:1500;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1050px){
+
+    .products{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .collections{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:800px){
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .shipping{
+        grid-template-columns:1fr;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
+    }
+
+    .collections{
+        grid-template-columns:1fr;
+    }
+
+    .search-tools{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:520px){
+
+    .navbar{
+        padding:12px 14px;
+    }
+
+    .logo{
+        font-size:18px;
+
+        letter-spacing:1px;
+    }
+
+    .hero{
+        min-height:560px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .product-image{
+        height:310px;
+    }
+
+    .cart{
+        width:100%;
+    }
+
+    .contact-buttons{
+        flex-direction:column;
+    }
+
+    .contact-buttons .gold-button{
+        width:100%;
+    }
+
+    .toast{
+        width:90%;
+
+        text-align:center;
+    }
+
+    .social-link{
+        width:100%;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<button
+class="icon-button"
+onclick="openMenu()"
+aria-label="Abrir menú">
+
+☰
+
+</button>
+
+<a
+href="#inicio"
+class="logo">
+
+URBAN ESSENCE
+
+</a>
+
+<div class="header-right">
+
+<button
+class="icon-button"
+id="themeButton"
+onclick="toggleTheme()"
+aria-label="Cambiar tema">
+
+🌙
+
+</button>
+
+<button
+class="icon-button"
+onclick="openCart()"
+aria-label="Abrir carrito">
+
+🛒
+
+<span
+class="cart-count"
+id="cartCount">
+
+0
+
+</span>
+
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<div
+class="side-overlay"
+id="sideOverlay"
+onclick="closeMenu()">
+</div>
+
+
+<aside
+class="side-menu"
+id="sideMenu">
+
+<div class="side-header">
+
+<h2>
+URBAN ESSENCE
+</h2>
+
+<button
+class="side-close"
+onclick="closeMenu()">
+
+×
+
+</button>
+
+</div>
+
+
+<div class="side-links">
+
+<a href="#inicio"
+class="side-link"
+onclick="closeMenu()">
+
+🏠 Inicio
+
+</a>
+
+<a href="#productos"
+class="side-link"
+onclick="closeMenu()">
+
+🛍️ Productos
+
+</a>
+
+<a href="#colecciones"
+class="side-link"
+onclick="closeMenu()">
+
+✨ Colecciones
+
+</a>
+
+<a href="#sobre-nosotros"
+class="side-link"
+onclick="closeMenu()">
+
+👥 Sobre nosotros
+
+</a>
+
+<a href="#envios-info"
+class="side-link"
+onclick="closeMenu()">
+
+🇵🇪 Envíos
+
+</a>
+
+<a href="#redes"
+class="side-link"
+onclick="closeMenu()">
+
+📱 Síguenos
+
+</a>
+
+<a href="#contactanos"
+class="side-link"
+onclick="closeMenu()">
+
+💬 Contáctanos
+
+</a>
+
+</div>
+
+
+<div class="side-section-title">
+Filtrar productos
+</div>
+
+<button
+class="side-filter active"
+onclick="setFilter('Todos',this)">
+
+🛍️ Todos
+
+</button>
+
+<button
+class="side-filter"
+onclick="setFilter('Mujer',this)">
+
+👩 Mujer
+
+</button>
+
+<button
+class="side-filter"
+onclick="setFilter('Varón',this)">
+
+👨 Varón
+
+</button>
+
+<button
+class="side-filter"
+onclick="setFilter('Billeteras',this)">
+
+👛 Billeteras
+
+</button>
+
+<button
+class="side-filter"
+onclick="setFilter('Monederos',this)">
+
+💰 Monederos
+
+</button>
+
+<button
+class="side-filter"
+onclick="setFilter('Correas',this)">
+
+🧷 Correas
+
+</button>
+
+<button
+class="side-filter"
+onclick="setFilter('Fragancias',this)">
+
+🌸 Fragancias
+
+</button>
+
+<button
+class="side-filter"
+onclick="setFilter('Relojes',this)">
+
+⌚ Relojes
+
+</button>
+
+<button
+class="side-filter"
+onclick="setFilter('Nuevo',this)">
+
+✨ Nuevos
+
+</button>
+
+<button
+class="side-filter"
+onclick="setFilter('Más vendido',this)">
+
+🔥 Más vendidos
+
+</button>
+
+
+<div class="side-section-title">
+Acciones
+</div>
+
+<button
+class="side-filter"
+onclick="showFavorites()">
+
+❤️ Mis favoritos
+
+</button>
+
+<button
+class="side-filter"
+onclick="resetFilters()">
+
+🔄 Restablecer filtros
+
 </button>
 
 </aside>
 
-
-<!-- =========================================================
-     INICIO / HERO
-========================================================= -->
-
-<main>
 
 <section
 class="hero"
@@ -1379,7 +2014,7 @@ id="inicio">
 
 <img
 src="billetera mujer 1.jpeg"
-alt="Urban Essence">
+alt="Billetera para mujer Urban Essence">
 
 </div>
 
@@ -1387,15 +2022,7 @@ alt="Urban Essence">
 
 <img
 src="billetera mujer 2.jpeg"
-alt="Urban Essence">
-
-</div>
-
-<div class="hero-slide">
-
-<img
-src="billetera mujer 3.jpeg"
-alt="Urban Essence">
+alt="Billetera para mujer Urban Essence">
 
 </div>
 
@@ -1403,7 +2030,7 @@ alt="Urban Essence">
 
 <img
 src="billetera varon 1.jpeg"
-alt="Urban Essence">
+alt="Billetera para varón Urban Essence">
 
 </div>
 
@@ -1411,7 +2038,15 @@ alt="Urban Essence">
 
 <img
 src="correa 1.jpeg"
-alt="Urban Essence">
+alt="Correa para varón Urban Essence">
+
+</div>
+
+<div class="hero-slide">
+
+<img
+src="imagen.png"
+alt="Urban Essence accesorios">
 
 </div>
 
@@ -1429,68 +2064,36 @@ Artículos que elevan tu personalidad
 </h2>
 
 <p>
-Descubre accesorios seleccionados para complementar
-tu estilo. Calidad, elegancia y personalidad en cada detalle.
+Descubre accesorios seleccionados
+para complementar tu estilo,
+personalidad y forma de expresarte.
 </p>
 
 <a
 href="#productos"
 class="gold-button">
 
-Ver productos
+DESCUBRIR COLECCIÓN
 
 </a>
 
 </div>
 
 
-<div class="hero-dots">
-
-<button
-class="hero-dot active"
-onclick="goToSlide(0)"
-aria-label="Imagen 1">
-</button>
-
-<button
-class="hero-dot"
-onclick="goToSlide(1)"
-aria-label="Imagen 2">
-</button>
-
-<button
-class="hero-dot"
-onclick="goToSlide(2)"
-aria-label="Imagen 3">
-</button>
-
-<button
-class="hero-dot"
-onclick="goToSlide(3)"
-aria-label="Imagen 4">
-</button>
-
-<button
-class="hero-dot"
-onclick="goToSlide(4)"
-aria-label="Imagen 5">
-</button>
-
+<div
+class="hero-dots"
+id="heroDots">
 </div>
 
 </section>
 
-
-<!-- =========================================================
-     BENEFICIOS
-========================================================= -->
 
 <div class="info-grid">
 
 <div class="info-card">
 
 <div class="info-icon">
-🚚
+🇵🇪
 </div>
 
 <h3>
@@ -1498,8 +2101,8 @@ Envíos a todo el Perú
 </h3>
 
 <p>
-Realizamos envíos para que puedas recibir
-tus productos donde estés.
+Realizamos envíos a diferentes
+ciudades del país.
 </p>
 
 </div>
@@ -1516,8 +2119,8 @@ Estilo y personalidad
 </h3>
 
 <p>
-Artículos seleccionados para complementar
-tu estilo y destacar tu personalidad.
+Artículos seleccionados
+para complementar tu estilo.
 </p>
 
 </div>
@@ -1534,8 +2137,8 @@ Atención personalizada
 </h3>
 
 <p>
-Te atendemos directamente para ayudarte
-con tus pedidos y consultas.
+Comunícate directamente
+con Urban Essence.
 </p>
 
 </div>
@@ -1543,21 +2146,16 @@ con tus pedidos y consultas.
 </div>
 
 
-<!-- =========================================================
-     PRODUCTOS
-========================================================= -->
-
-<section
-id="productos">
+<section id="productos">
 
 <div class="section-title">
 
 <h2>
-Productos Destacados
+Nuestra colección
 </h2>
 
 <p>
-Encuentra el artículo ideal para ti
+Encuentra el artículo perfecto para ti.
 </p>
 
 </div>
@@ -1566,33 +2164,33 @@ Encuentra el artículo ideal para ti
 <div class="search-tools">
 
 <input
-type="search"
+type="text"
 id="searchInput"
 placeholder="🔎 Buscar productos..."
-autocomplete="off"
->
+oninput="renderProducts()">
 
 <select
-id="sortProducts">
+id="sortProducts"
+onchange="renderProducts()">
 
 <option value="default">
 Ordenar productos
 </option>
 
-<option value="priceAsc">
+<option value="price-low">
 Precio: menor a mayor
 </option>
 
-<option value="priceDesc">
+<option value="price-high">
 Precio: mayor a menor
 </option>
 
-<option value="nameAsc">
+<option value="name">
 Nombre: A-Z
 </option>
 
-<option value="nameDesc">
-Nombre: Z-A
+<option value="stock">
+Mayor stock
 </option>
 
 </select>
@@ -1602,27 +2200,22 @@ Nombre: Z-A
 
 <div
 class="products"
-id="productsGrid">
+id="products">
 </div>
 
 </section>
 
 
-<!-- =========================================================
-     COLECCIONES
-========================================================= -->
-
-<section
-id="colecciones">
+<section id="colecciones">
 
 <div class="section-title">
 
 <h2>
-Nuestras Colecciones
+Colecciones
 </h2>
 
 <p>
-Encuentra diferentes estilos en Urban Essence
+Descubre nuestros productos por categoría.
 </p>
 
 </div>
@@ -1630,26 +2223,19 @@ Encuentra diferentes estilos en Urban Essence
 
 <div class="collections">
 
-
 <div class="collection">
 
 <div>
 
 <h3>
-Mujer
+👩 Mujer
 </h3>
-
-<p>
-Elegancia y estilo para cada ocasión.
-</p>
-
-<br>
 
 <button
 class="gold-button"
-onclick="setFilter('Mujer');scrollToProducts();">
+onclick="activateCollection('Mujer')">
 
-Ver colección
+VER PRODUCTOS
 
 </button>
 
@@ -1663,20 +2249,14 @@ Ver colección
 <div>
 
 <h3>
-Varón
+👨 Varón
 </h3>
-
-<p>
-Accesorios que complementan tu personalidad.
-</p>
-
-<br>
 
 <button
 class="gold-button"
-onclick="setFilter('Varón');scrollToProducts();">
+onclick="activateCollection('Varón')">
 
-Ver colección
+VER PRODUCTOS
 
 </button>
 
@@ -1690,48 +2270,36 @@ Ver colección
 <div>
 
 <h3>
-Accesorios
+⌚ Relojes
 </h3>
-
-<p>
-Detalles para completar tu estilo.
-</p>
-
-<br>
 
 <button
 class="gold-button"
-onclick="setFilter('Todos');scrollToProducts();">
+onclick="activateCollection('Relojes')">
 
-Ver productos
+VER PRODUCTOS
 
 </button>
 
 </div>
 
 </div>
-
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
-     SOBRE NOSOTROS
-========================================================= -->
-
-<section
-id="sobre-nosotros">
+<section id="sobre-nosotros">
 
 <div class="section-title">
 
 <h2>
-Sobre Urban Essence
+Sobre nosotros
 </h2>
 
 <p>
-Nuestra propuesta
+Conoce la esencia de Urban Essence.
 </p>
 
 </div>
@@ -1742,25 +2310,30 @@ Nuestra propuesta
 <div class="about-box">
 
 <h3>
-Urban Essence
+Nuestra esencia
 </h3>
 
 <p>
-En Urban Essence buscamos ofrecer artículos y
-accesorios que combinen estilo, personalidad y
-practicidad.
+En <strong>Urban Essence</strong>
+buscamos ofrecer artículos
+que no solamente sean útiles,
+sino que también representen
+el estilo y personalidad
+de cada persona.
 </p>
 
 <p>
-Seleccionamos nuestros productos pensando en
-personas que buscan complementar su imagen con
-detalles que marquen la diferencia.
+Seleccionamos nuestros productos
+pensando en diseño, funcionalidad
+y una experiencia de compra
+sencilla para nuestros clientes.
 </p>
 
 <p>
-Nuestro objetivo es brindar una experiencia sencilla,
-moderna y personalizada, desde que descubres un
-producto hasta que realizas tu pedido.
+Queremos crecer junto a nuestros
+clientes y convertir Urban Essence
+en una marca reconocida
+por su estilo, calidad y atención.
 </p>
 
 </div>
@@ -1770,12 +2343,7 @@ producto hasta que realizas tu pedido.
 </section>
 
 
-<!-- =========================================================
-     ENVÍOS
-========================================================= -->
-
-<section
-id="envios-info">
+<section id="envios-info">
 
 <div class="section-title">
 
@@ -1784,7 +2352,7 @@ Envíos
 </h2>
 
 <p>
-Información para tus pedidos
+Compra desde cualquier lugar del Perú.
 </p>
 
 </div>
@@ -1792,10 +2360,9 @@ Información para tus pedidos
 
 <div class="shipping">
 
-
 <div class="shipping-card">
 
-<div class="info-icon">
+<div style="font-size:35px;">
 🇵🇪
 </div>
 
@@ -1804,8 +2371,8 @@ Todo el Perú
 </h3>
 
 <p>
-Realizamos envíos a diferentes ciudades
-y zonas del país.
+Realizamos envíos a diferentes
+ciudades y destinos del país.
 </p>
 
 </div>
@@ -1813,17 +2380,17 @@ y zonas del país.
 
 <div class="shipping-card">
 
-<div class="info-icon">
+<div style="font-size:35px;">
 📦
 </div>
 
 <h3>
-Pedido preparado
+Pedido seguro
 </h3>
 
 <p>
-Coordinamos contigo los detalles de tu
-pedido antes del envío.
+Coordinamos los detalles del
+envío directamente contigo.
 </p>
 
 </div>
@@ -1831,90 +2398,18 @@ pedido antes del envío.
 
 <div class="shipping-card">
 
-<div class="info-icon">
+<div style="font-size:35px;">
 💬
 </div>
 
 <h3>
-Coordinación directa
+Confirmación
 </h3>
 
 <p>
-Puedes comunicarte con nosotros para
-consultar sobre tu pedido.
+Recibirás atención para coordinar
+tu pedido y entrega.
 </p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- =========================================================
-     REDES SOCIALES
-========================================================= -->
-
-<section
-id="redes">
-
-<div class="section-title">
-
-<h2>
-Síguenos
-</h2>
-
-<p>
-Mantente al tanto de Urban Essence
-</p>
-
-</div>
-
-
-<div class="social-section">
-
-<div class="social-box">
-
-<h3>
-Urban Essence
-</h3>
-
-<p>
-Síguenos en nuestras redes sociales.
-</p>
-
-<div class="social-links">
-
-<a
-href="#"
-class="social-link"
-onclick="showToast('Próximamente en Instagram');return false;">
-
-📸 Instagram
-
-</a>
-
-<a
-href="#"
-class="social-link"
-onclick="showToast('Próximamente en Facebook');return false;">
-
-📘 Facebook
-
-</a>
-
-<a
-href="https://wa.me/51986788414"
-target="_blank"
-rel="noopener noreferrer"
-class="social-link">
-
-📲 WhatsApp
-
-</a>
-
-</div>
 
 </div>
 
@@ -1922,268 +2417,104 @@ class="social-link">
 
 </section>
 
+<!-- CARRITO -->
+<div class="cart-overlay" id="cartOverlay">
+  <div class="cart">
 
-<!-- =========================================================
-     CONTACTO
-========================================================= -->
+    <div class="cart-header">
+      <h2>🛒 Tu carrito</h2>
+      <button class="close" onclick="closeCart()" aria-label="Cerrar carrito">×</button>
+    </div>
 
-<section
-id="contactanos">
+    <div id="cartItems"></div>
 
-<div class="section-title">
+    <div class="cart-total">
+      <div class="total-row">
+        <span>Total</span>
+        <span id="cartTotal">S/ 0.00</span>
+      </div>
 
-<h2>
-Contáctanos
-</h2>
+      <button
+        class="gold-button"
+        style="width:100%;margin-top:15px;"
+        onclick="sendWhatsAppOrder()">
+        📲 Pedir por WhatsApp
+      </button>
 
-<p>
-Estamos para ayudarte
-</p>
+      <button
+        class="clear-cart"
+        style="width:100%;margin-top:10px;"
+        onclick="clearCart()">
+        🗑️ Vaciar carrito
+      </button>
+    </div>
 
+    <div class="checkout">
+      <h3>Datos para el pedido</h3>
+
+      <label for="clientName">Nombre</label>
+      <input
+        id="clientName"
+        type="text"
+        placeholder="Tu nombre"
+        autocomplete="name">
+
+      <label for="clientCity">Ciudad</label>
+      <input
+        id="clientCity"
+        type="text"
+        placeholder="Tu ciudad"
+        autocomplete="address-level2">
+
+      <label for="clientDistrict">Distrito</label>
+      <input
+        id="clientDistrict"
+        type="text"
+        placeholder="Tu distrito"
+        autocomplete="address-level3">
+
+      <label for="clientPhone">Teléfono</label>
+      <input
+        id="clientPhone"
+        type="tel"
+        placeholder="Tu teléfono"
+        autocomplete="tel">
+
+      <div class="shipping-only" style="margin-top:12px;">
+        🚚 Método de entrega: Envío
+      </div>
+    </div>
+
+  </div>
 </div>
 
-
-<div class="contact">
-
-<div class="contact-box">
-
-<h3>
-¿Tienes alguna consulta?
-</h3>
-
-<p>
-Comunícate con Urban Essence directamente.
-</p>
-
-<div class="email">
-
-urban.essence.corporativo@gmail.com
-
-</div>
-
-
-<div class="contact-buttons">
-
-<a
-href="mailto:urban.essence.corporativo@gmail.com"
-class="gold-button">
-
-✉️ Enviar correo
-
-</a>
-
-<a
-href="https://wa.me/51986788414"
-target="_blank"
-rel="noopener noreferrer"
-class="gold-button">
-
-📲 WhatsApp
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================================================
-     CARRITO
-========================================================= -->
-
+<!-- MODAL DE PRODUCTO -->
 <div
-class="cart-overlay"
-id="cartOverlay">
+  class="modal"
+  id="productModal"
+  onclick="if(event.target===this) closeProductModal()">
 
-<div class="cart">
+  <div class="modal-content">
 
-<div class="cart-header">
+    <button
+      class="modal-close"
+      onclick="closeProductModal()"
+      aria-label="Cerrar">
+      ×
+    </button>
 
-<h2>
-🛒 Tu carrito
-</h2>
+    <div id="modalProduct"></div>
 
-<button
-class="close"
-onclick="closeCart()"
-aria-label="Cerrar carrito">
-
-×
-
-</button>
-
+  </div>
 </div>
 
-
-<div id="cartItems">
-</div>
-
-
-<div class="cart-total">
-
-<div class="total-row">
-
-<span>
-Total
-</span>
-
-<span id="cartTotal">
-S/ 0.00
-</span>
-
-</div>
-
-
-<div class="cart-actions">
-
-<button
-class="gold-button"
-style="flex:1"
-onclick="sendWhatsAppOrder()">
-
-📲 Pedir por WhatsApp
-
-</button>
-
-<button
-class="clear-cart"
-onclick="clearCart()">
-
-🗑️ Vaciar
-
-</button>
-
-</div>
-
-</div>
-
-
-<!-- =========================================================
-     DATOS DEL CLIENTE
-========================================================= -->
-
-<div class="checkout">
-
-<h3>
-Datos para el pedido
-</h3>
-
-
-<label for="clientName">
-Nombre
-</label>
-
-<input
-id="clientName"
-type="text"
-placeholder="Tu nombre"
-autocomplete="name"
->
-
-
-<label for="clientCity">
-Ciudad
-</label>
-
-<input
-id="clientCity"
-type="text"
-placeholder="Tu ciudad"
-autocomplete="address-level2"
->
-
-
-<label for="clientDistrict">
-Distrito
-</label>
-
-<input
-id="clientDistrict"
-type="text"
-placeholder="Tu distrito"
-autocomplete="address-level3"
->
-
-
-<label for="clientPhone">
-Teléfono
-</label>
-
-<input
-id="clientPhone"
-type="tel"
-placeholder="Tu teléfono"
-autocomplete="tel"
->
-
-
+<!-- MENSAJES -->
 <div
-class="shipping-only"
-style="margin-top:12px;">
-
-🚚 Método de entrega: Envío
-
+  class="toast"
+  id="toast"
+  role="status"
+  aria-live="polite">
 </div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =========================================================
-     MODAL DEL PRODUCTO
-========================================================= -->
-
-<div
-class="modal"
-id="productModal"
-onclick="if(event.target===this) closeProductModal()">
-
-<div class="modal-content">
-
-<button
-class="modal-close"
-onclick="closeProductModal()"
-aria-label="Cerrar">
-
-×
-
-</button>
-
-<div id="modalProduct">
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =========================================================
-     MENSAJES
-========================================================= -->
-
-<div
-class="toast"
-id="toast"
-role="status"
-aria-live="polite">
-</div>
-
-
-<!-- =========================================================
-     FIN DE LA PARTE 2
-========================================================= -->
-<!-- =========================================================
-     PARTE 3/8
-     JAVASCRIPT + PRODUCTOS
-========================================================= -->
-
 <script>
 
 /* =========================================================
@@ -2203,9 +2534,15 @@ const STORE_NAME = "Urban Essence";
 const STORE_URL = window.location.href;
 
 
-/* =========================================================
+/*
    REDES SOCIALES
-========================================================= */
+
+   IMPORTANTE:
+   Cambia solamente estos enlaces cuando tengas
+   las cuentas oficiales de Urban Essence.
+
+   NO necesitas cambiar nada más del código.
+*/
 
 const SOCIAL_LINKS = {
     instagram: "#",
@@ -2760,13 +3097,6 @@ image:"correa 21.png",
 description:"Correa para varón."
 },
 
-/* FIN DE LOS PRODUCTOS DE LA PARTE 3 */
-<!-- =========================================================
-     PARTE 4/8
-     PRODUCTOS 37 AL 44 + INICIO DEL JAVASCRIPT
-========================================================= -->
-
-
 {
 id:37,
 name:"Correa para varón",
@@ -3315,7 +3645,7 @@ stockClass="out";
 
 else if(product.stock<=3){
 
-stockText =
+stockText=
 `🟡 Últimas ${product.stock} unidades`;
 
 stockClass="low";
@@ -3324,7 +3654,7 @@ stockClass="low";
 
 else{
 
-stockText =
+stockText=
 `🟢 ${product.stock} disponibles`;
 
 }
@@ -3604,15 +3934,6 @@ showToast(
 "🔄 Filtros restablecidos"
 );
 
-
-/* =========================================================
-   FIN DE LA PARTE 4
-========================================================= */
-    <!-- =========================================================
-     PARTE 5/8
-     CONTINUACIÓN DEL JAVASCRIPT
-========================================================= -->
-
 }
 
 
@@ -3622,7 +3943,7 @@ showToast(
 
 function toggleFavorite(id,button){
 
-let favorites =
+let favorites=
 JSON.parse(
 localStorage.getItem(
 "urbanEssenceFavorites"
@@ -3632,7 +3953,7 @@ localStorage.getItem(
 
 if(favorites.includes(id)){
 
-favorites =
+favorites=
 favorites.filter(
 item=>item!==id
 );
@@ -3678,7 +3999,7 @@ JSON.stringify(favorites)
 
 function showFavorites(){
 
-const favorites =
+const favorites=
 JSON.parse(
 localStorage.getItem(
 "urbanEssenceFavorites"
@@ -3720,7 +4041,7 @@ behavior:"smooth"
 
 function addToCart(id){
 
-const product =
+const product=
 products.find(
 p=>p.id===id
 );
@@ -3740,7 +4061,7 @@ return;
 }
 
 
-const existing =
+const existing=
 cart.find(
 item=>item.id===id
 );
@@ -3795,10 +4116,6 @@ openCart();
 }
 
 
-/* =========================================================
-   GUARDAR CARRITO
-========================================================= */
-
 function saveCart(){
 
 localStorage.setItem(
@@ -3810,10 +4127,6 @@ updateCart();
 
 }
 
-
-/* =========================================================
-   ACTUALIZAR CARRITO
-========================================================= */
 
 function updateCart(){
 
@@ -3833,11 +4146,7 @@ document.getElementById(
 );
 
 
-if(
-!container ||
-!count ||
-!totalElement
-){
+if(!container || !count || !totalElement){
 return;
 }
 
@@ -3870,7 +4179,7 @@ padding:35px 0;
 
 cart.forEach(item=>{
 
-const product =
+const product=
 products.find(
 p=>p.id===item.id
 );
@@ -3880,7 +4189,7 @@ return;
 }
 
 
-const subtotal =
+const subtotal=
 product.price*item.quantity;
 
 total+=subtotal;
@@ -3950,37 +4259,33 @@ aria-label="Eliminar producto">
 });
 
 
-count.textContent =
+count.textContent=
 totalQuantity;
 
-totalElement.textContent =
+totalElement.textContent=
 `S/ ${total.toFixed(2)}`;
 
 }
 
 
-/* =========================================================
-   CAMBIAR CANTIDAD
-========================================================= */
-
 function changeQuantity(id,change){
 
-const item =
+const item=
 cart.find(
 i=>i.id===id
 );
 
-const product =
+const product=
 products.find(
 p=>p.id===id
 );
 
-if(!item || !product){
+if(!item||!product){
 return;
 }
 
 
-const newQuantity =
+const newQuantity=
 item.quantity+change;
 
 
@@ -4022,13 +4327,9 @@ saveCart();
 }
 
 
-/* =========================================================
-   ELIMINAR PRODUCTO
-========================================================= */
-
 function removeFromCart(id){
 
-cart =
+cart=
 cart.filter(
 item=>item.id!==id
 );
@@ -4041,10 +4342,6 @@ showToast(
 
 }
 
-
-/* =========================================================
-   VACIAR CARRITO
-========================================================= */
 
 function clearCart(){
 
@@ -4071,10 +4368,6 @@ showToast(
 }
 
 
-/* =========================================================
-   ABRIR CARRITO
-========================================================= */
-
 function openCart(){
 
 document
@@ -4087,10 +4380,6 @@ document.body.style.overflow="hidden";
 
 }
 
-
-/* =========================================================
-   CERRAR CARRITO
-========================================================= */
 
 function closeCart(){
 
@@ -4109,7 +4398,7 @@ document.body.style.overflow="";
 
 function openProductModal(id){
 
-const product =
+const product=
 products.find(
 p=>p.id===id
 );
@@ -4119,12 +4408,12 @@ return;
 }
 
 
-const modal =
+const modal=
 document.getElementById(
 "productModal"
 );
 
-const content =
+const content=
 document.getElementById(
 "modalProduct"
 );
@@ -4250,7 +4539,7 @@ document.body.style.overflow="";
 
 async function shareProduct(id){
 
-const product =
+const product=
 products.find(
 p=>p.id===id
 );
@@ -4260,7 +4549,7 @@ return;
 }
 
 
-const text =
+const text=
 `🛍️ ${product.name}
 💰 S/ ${product.price.toFixed(2)}
 
@@ -4328,7 +4617,7 @@ STORE_URL
 
 async function shareProductImage(id){
 
-const product =
+const product=
 products.find(
 p=>p.id===id
 );
@@ -4344,9 +4633,7 @@ const response =
 await fetch(product.image);
 
 if(!response.ok){
-throw new Error(
-"No se pudo cargar la imagen."
-);
+throw new Error("No se pudo cargar la imagen.");
 }
 
 const blob =
@@ -4426,15 +4713,6 @@ await shareProduct(id);
 
 
 /* =========================================================
-   FIN DE LA PARTE 5
-========================================================= */
-                   <!-- =========================================================
-     PARTE 6/8
-     WHATSAPP + EVENTOS + INICIALIZACIÓN
-========================================================= */
-
-
-/* =========================================================
    PEDIDO POR WHATSAPP
 ========================================================= */
 
@@ -4451,31 +4729,31 @@ return;
 }
 
 
-const name =
+const name=
 document.getElementById(
 "clientName"
 ).value.trim();
 
-const city =
+const city=
 document.getElementById(
 "clientCity"
 ).value.trim();
 
-const district =
+const district=
 document.getElementById(
 "clientDistrict"
 ).value.trim();
 
-const phone =
+const phone=
 document.getElementById(
 "clientPhone"
 ).value.trim();
 
 
 if(
-!name ||
-!city ||
-!district ||
+!name||
+!city||
+!district||
 !phone
 ){
 
@@ -4488,10 +4766,10 @@ return;
 }
 
 
-let message =
+let message=
 "Hola, Urban Essence. 👋\n\n";
 
-message +=
+message+=
 "Quiero realizar el siguiente pedido:\n\n";
 
 
@@ -4500,7 +4778,7 @@ let total=0;
 
 cart.forEach(item=>{
 
-const product =
+const product=
 products.find(
 p=>p.id===item.id
 );
@@ -4510,44 +4788,44 @@ return;
 }
 
 
-const subtotal =
+const subtotal=
 product.price*item.quantity;
 
-total += subtotal;
+total+=subtotal;
 
 
-message +=
+message+=
 `🛍️ ${product.name} x${item.quantity} = S/ ${subtotal.toFixed(2)}\n`;
 
 });
 
 
-message +=
+message+=
 `\n💰 Total: S/ ${total.toFixed(2)}`;
 
-message +=
+message+=
 `\n\n👤 Nombre: ${name}`;
 
-message +=
+message+=
 `\n📍 Ciudad: ${city}`;
 
-message +=
+message+=
 `\n📍 Distrito: ${district}`;
 
-message +=
+message+=
 `\n📱 Teléfono: ${phone}`;
 
-message +=
+message+=
 `\n🚚 Método de entrega: Envío`;
 
-message +=
+message+=
 `\n\n🌐 ${STORE_URL}`;
 
-message +=
+message+=
 "\n\nQuedo atento/a a la confirmación. Gracias.";
 
 
-const url =
+const url=
 `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
 
@@ -4566,7 +4844,7 @@ url,
 
 function openWhatsApp(){
 
-const url =
+const url=
 `https://wa.me/${WHATSAPP_NUMBER}`;
 
 window.open(
@@ -4602,8 +4880,7 @@ document.querySelectorAll(
 
 instagramLinks.forEach(link=>{
 
-link.href =
-SOCIAL_LINKS.instagram;
+link.href=SOCIAL_LINKS.instagram;
 
 if(
 SOCIAL_LINKS.instagram!=="#"
@@ -4620,8 +4897,7 @@ link.rel="noopener";
 
 tiktokLinks.forEach(link=>{
 
-link.href =
-SOCIAL_LINKS.tiktok;
+link.href=SOCIAL_LINKS.tiktok;
 
 if(
 SOCIAL_LINKS.tiktok!=="#"
@@ -4638,8 +4914,7 @@ link.rel="noopener";
 
 facebookLinks.forEach(link=>{
 
-link.href =
-SOCIAL_LINKS.facebook;
+link.href=SOCIAL_LINKS.facebook;
 
 if(
 SOCIAL_LINKS.facebook!=="#"
@@ -4667,9 +4942,7 @@ document.getElementById(
 "backToTop"
 )
 ){
-
 return;
-
 }
 
 
@@ -4834,8 +5107,7 @@ closeProductModal();
 
 }
 
-}
-);
+});
 
 
 /* =========================================================
@@ -4936,11 +5208,7 @@ createBackToTop();
 
 });
 
-
-/* =========================================================
-   FIN DE LA PARTE 6
-========================================================= */
-  </script>
+</script>
 
 </body>
 </html>
