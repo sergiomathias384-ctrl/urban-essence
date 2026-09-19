@@ -1891,7 +1891,7 @@ header{
 
 .side-menu{
     top:68px;
-    left:0;
+    left:-252px;
     width:252px;
     height:calc(100vh - 68px);
     padding:18px 0 25px;
@@ -2561,7 +2561,7 @@ onclick="closeMenu()">
 
 
 <aside
-class="side-menu"
+class="side-menu show"
 id="sideMenu">
 
 <div class="side-header">
@@ -3216,6 +3216,18 @@ tu pedido y entrega.
 </div>
 <div id="cartItems"></div>
 <div class="cart-total">
+<div id="cartPromo" style="
+display:none;
+margin-bottom:12px;
+padding:10px 12px;
+border:1px solid rgba(212,175,55,.55);
+border-radius:10px;
+background:rgba(212,175,55,.08);
+color:#d4af37;
+font-size:14px;
+line-height:1.45;
+text-align:center;
+"></div>
 <div class="total-row">
 <span>Total</span>
 <span id="cartTotal">S/ 0.00</span>
@@ -4868,6 +4880,51 @@ updateCart();
 }
 
 
+
+function getCartPromotion(){
+
+let totalQuantity=0;
+let discount=0;
+let secondProduct=null;
+
+for(const item of cart){
+
+const product=products.find(p=>p.id===item.id);
+
+if(!product){
+continue;
+}
+
+for(let i=0;i<item.quantity;i++){
+
+totalQuantity++;
+
+if(totalQuantity===2){
+
+secondProduct=product;
+discount=product.price*0.10;
+
+break;
+
+}
+
+}
+
+if(discount>0){
+break;
+}
+
+}
+
+return {
+totalQuantity,
+discount,
+secondProduct
+};
+
+}
+
+
 function updateCart(){
 
 const container =
@@ -4885,6 +4942,11 @@ document.getElementById(
 "cartTotal"
 );
 
+const promoElement =
+document.getElementById(
+"cartPromo"
+);
+
 
 if(!container || !count || !totalElement){
 return;
@@ -4892,7 +4954,6 @@ return;
 
 
 let total=0;
-
 let totalQuantity=0;
 
 container.innerHTML="";
@@ -4933,7 +4994,6 @@ const subtotal=
 product.price*item.quantity;
 
 total+=subtotal;
-
 totalQuantity+=item.quantity;
 
 
@@ -4999,11 +5059,51 @@ aria-label="Eliminar producto">
 });
 
 
+const promotion=getCartPromotion();
+
+const finalTotal=
+Math.max(
+0,
+total-promotion.discount
+);
+
+
 count.textContent=
 totalQuantity;
 
+
+if(promotion.discount>0){
+
+if(promoElement){
+
+promoElement.innerHTML=`
+🎉 <strong>¡Promoción activa!</strong><br>
+El segundo producto tiene <strong>10% de descuento</strong>.
+`;
+
+promoElement.style.display="block";
+
+}
+
+totalElement.innerHTML=`
+<span style="text-decoration:line-through;opacity:.55;font-size:.82em;">
+S/ ${total.toFixed(2)}
+</span>
+&nbsp; S/ ${finalTotal.toFixed(2)}
+`;
+
+}else{
+
+if(promoElement){
+
+promoElement.style.display="none";
+
+}
+
 totalElement.textContent=
 `S/ ${total.toFixed(2)}`;
+
+}
 
 }
 
@@ -5117,6 +5217,16 @@ document
 updateCart();
 
 document.body.style.overflow="hidden";
+
+const promotion=getCartPromotion();
+
+if(promotion.totalQuantity>=2){
+
+showToast(
+"🎉 ¡Tienes 10% de descuento en tu segundo producto!"
+);
+
+}
 
 }
 
@@ -5540,8 +5650,24 @@ message+=
 });
 
 
+const promotion=getCartPromotion();
+
+const finalTotal=
+Math.max(
+0,
+total-promotion.discount
+);
+
+
+if(promotion.discount>0){
+
 message+=
-`\n💰 Total: S/ ${total.toFixed(2)}`;
+`\n🎉 Promoción: 10% de descuento en el segundo producto = -S/ ${promotion.discount.toFixed(2)}`;
+
+}
+
+message+=
+`\n\n💰 Total: S/ ${finalTotal.toFixed(2)}`;
 
 message+=
 `\n\n👤 Nombre: ${name}`;
