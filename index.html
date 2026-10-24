@@ -2533,6 +2533,11 @@ header{background:rgba(5,5,5,.97);}
 #productos .product-image{background:#111!important;}
 #productos .product-info{background:#151515!important;}
 
+/* En móvil no se reserva el espacio del menú lateral de escritorio. */
+@media(max-width:800px){
+    #productos{margin-left:0!important;}
+}
+
 @media(max-width:800px){
     .hero-content{
         width:68%;
