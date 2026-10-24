@@ -2488,7 +2488,7 @@ body{
 
 header{background:rgba(5,5,5,.97);}
 .side-menu{background:#111;}
-.hero{background:#03130D;}
+.hero{background:#050505;}
 .info-grid{background:#111;}
 
 #productos{background:#080808;}
@@ -2510,15 +2510,17 @@ header{background:rgba(5,5,5,.97);}
 .cart{background:#111;}
 .modal-content,.toast{background:#151515;}
 
-/* Muestra completa la billetera en el carrusel panorámico. */
-.hero-slide.wallet-slide{display:flex;justify-content:flex-end;}
+/* El collage ocupa todo el hero y elimina el espacio de fondo. */
+.hero-slides,.hero-slide.wallet-slide{width:100%;height:100%;}
+.hero-slide.wallet-slide{display:block;}
 .hero-slide.wallet-slide img{
-    width:auto;
-    max-width:100%;
+    display:block;
+    width:100%;
+    max-width:none;
     height:100%;
-    object-fit:contain;
-    object-position:right center;
-    filter:brightness(1.12) saturate(1.05);
+    object-fit:cover;
+    object-position:center;
+    filter:brightness(.62) saturate(.95);
     transform:none;
 }
 
@@ -2564,9 +2566,12 @@ header{background:rgba(5,5,5,.97);}
     }
 
     .hero-slide.wallet-slide img{
-        height:50%;
-        align-self:flex-end;
-        filter:brightness(1.12) saturate(1.05);
+        width:100%;
+        max-width:none;
+        height:100%;
+        object-fit:cover;
+        object-position:center;
+        filter:brightness(.62) saturate(.95);
     }
 }
 </style>
@@ -2864,15 +2869,7 @@ id="inicio">
 
 <img
 src="hero-combinado.webp"
-alt="Billeteras Urban Essence y colección Valencia">
-
-</div>
-
-<div class="hero-slide">
-
-<img
-src="imagen.png"
-alt="Urban Essence accesorios">
+alt="Collage de billetera y accesorios Urban Essence">
 
 </div>
 
@@ -2906,10 +2903,7 @@ DESCUBRIR COLECCIÓN
 </div>
 
 
-<div
-class="hero-dots"
-id="heroDots">
-</div>
+
 
 </section>
 
