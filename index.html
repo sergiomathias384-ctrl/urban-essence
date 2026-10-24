@@ -2467,6 +2467,50 @@ section:not(.hero){
 }
 </style>
 
+<style id="urban-essence-black-gold-fix">
+/* Fuerza el aspecto negro y dorado de Urban Essence en todas las pantallas. */
+:root{
+    color-scheme:dark;
+    --dark:#080808;
+    --card:#151515;
+    --card2:#1d1d1d;
+    --border:#2c2c2c;
+    --text:#fff;
+    --muted:#999;
+}
+
+html{color-scheme:dark;}
+
+body{
+    background:#080808;
+    color:#fff;
+}
+
+header{background:rgba(5,5,5,.97);}
+.side-menu{background:#111;}
+.hero{background:#050505;}
+.info-grid{background:#111;}
+
+#productos{background:#080808;}
+#sortProducts{background:#151515;color:#fff;}
+.product{background:#151515;border-color:#2c2c2c;}
+.product-image{background:#111;}
+.product-name{color:#fff;}
+.price{color:var(--gold);}
+
+.collection,
+.about-box,
+.shipping-card,
+.social-box{
+    background:#151515;
+    border-color:#2c2c2c;
+}
+
+.mockup-footer{background:#080808;}
+.cart{background:#111;}
+.modal-content,.toast{background:#151515;}
+</style>
+
 </head>
 
 <body>
@@ -2759,7 +2803,7 @@ id="inicio">
 <div class="hero-slide active">
 
 <img
-src="billetera mujer 1.jpeg"
+src="hero-billetera.jpg"
 alt="Billetera para mujer Urban Essence">
 
 </div>
@@ -2767,7 +2811,7 @@ alt="Billetera para mujer Urban Essence">
 <div class="hero-slide">
 
 <img
-src="billetera mujer 2.jpeg"
+src="hero-billetera.jpg"
 alt="Billetera para mujer Urban Essence">
 
 </div>
@@ -2775,7 +2819,7 @@ alt="Billetera para mujer Urban Essence">
 <div class="hero-slide">
 
 <img
-src="billetera varon 1.jpeg"
+src="hero-billetera.jpg"
 alt="Billetera para varón Urban Essence">
 
 </div>
@@ -4038,31 +4082,8 @@ document.body.style.overflow="";
 ========================================================= */
 
 function applyTheme(){
-
-const theme =
-localStorage.getItem("urbanEssenceTheme")
-|| "dark";
-
-const button =
-document.getElementById("themeButton");
-
-if(theme==="light"){
-
-document.body.classList.add("light");
-
-if(button){
-button.textContent="☀️";
-}
-
-}else{
-
 document.body.classList.remove("light");
-
-if(button){
-button.textContent="🌙";
-}
-
-}
+localStorage.removeItem("urbanEssenceTheme");
 
 }
 
@@ -6077,22 +6098,4 @@ createBackToTop();
 
 
 /* =========================================================
-   BUSCADOR DEL ENCABEZADO
-========================================================= */
-const headerSearch = document.getElementById("headerSearch");
-const mainSearch = document.getElementById("searchInput");
-
-if(headerSearch && mainSearch){
-    headerSearch.addEventListener("input",()=>{
-        mainSearch.value = headerSearch.value;
-        renderProducts();
-    });
-
-    mainSearch.addEventListener("input",()=>{
-        headerSearch.value = mainSearch.value;
-    });
-}
-
-</script>
-</body>
-</html>
+   BUS
