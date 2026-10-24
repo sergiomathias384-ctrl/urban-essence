@@ -13,10 +13,10 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Urban Essence | Carteras, billeteras, correas y accesorios en Perú</title>
+<title>Urban Essence Perú | Billeteras, carteras y accesorios</title>
 
 <meta name="description"
-content="Urban Essence: descubre billeteras, carteras, correas, monederos, relojes, fragancias y accesorios. Envíos a todo el Perú.">
+content="Compra en Urban Essence Perú: billeteras, carteras, correas y accesorios para tu estilo. Descubre nuestra colección y recibe tus pedidos con envíos a todo el Perú.">
 
 <meta name="keywords"
 content="Urban Essence, billeteras, carteras, correas, monederos, accesorios, fragancias, relojes, Perú">
@@ -48,6 +48,37 @@ content="https://sergiomathias384-ctrl.github.io/urban-essence/">
 <meta property="og:site_name"
 content="Urban Essence">
 
+<meta property="og:image"
+content="https://sergiomathias384-ctrl.github.io/urban-essence/logo-urban-essence.png">
+
+<meta property="og:image:alt"
+content="Logo de Urban Essence">
+
+<meta name="twitter:card"
+content="summary">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Urban Essence",
+      "url": "https://sergiomathias384-ctrl.github.io/urban-essence/",
+      "logo": "https://sergiomathias384-ctrl.github.io/urban-essence/logo-urban-essence.png"
+    },
+    {
+      "@type": "WebSite",
+      "name": "Urban Essence",
+      "url": "https://sergiomathias384-ctrl.github.io/urban-essence/",
+      "inLanguage": "es-PE"
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/png" href="logo-urban-essence.png">
 
 <style>
 
@@ -183,6 +214,9 @@ header{
 .logo{
     color:var(--gold);
 
+    display:flex;
+    align-items:center;
+
     font-size:25px;
 
     font-weight:bold;
@@ -190,6 +224,18 @@ header{
     letter-spacing:2px;
 
     text-decoration:none;
+}
+
+.logo-image{
+    display:block;
+    width:auto;
+    height:48px;
+    max-width:190px;
+    object-fit:contain;
+}
+
+.logo:hover .logo-image{
+    opacity:.88;
 }
 
 .header-right{
@@ -2606,9 +2652,10 @@ aria-label="Abrir menú">
 
 <a
 href="#inicio"
-class="logo">
+class="logo"
+aria-label="Urban Essence, inicio">
 
-URBAN ESSENCE
+<img src="logo-urban-essence.png" alt="Urban Essence" width="512" height="512" class="logo-image">
 
 </a>
 
