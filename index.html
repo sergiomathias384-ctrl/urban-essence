@@ -2518,7 +2518,7 @@ header{background:rgba(5,5,5,.97);}
     height:100%;
     object-fit:contain;
     object-position:right center;
-    filter:brightness(.9) saturate(1);
+    filter:brightness(1.12) saturate(1.05);
     transform:none;
 }
 
@@ -2532,9 +2532,20 @@ header{background:rgba(5,5,5,.97);}
 #productos .product-info{background:#151515!important;}
 
 @media(max-width:800px){
+    .hero-content{
+        width:60%;
+        max-width:none;
+        padding:15px 20px;
+    }
+
+    .hero::after{
+        background:linear-gradient(90deg,rgba(0,0,0,.58) 0%,rgba(0,0,0,.34) 47%,rgba(0,0,0,0) 72%);
+    }
+
     .hero-slide.wallet-slide img{
-        height:82%;
+        height:55%;
         align-self:flex-end;
+        filter:brightness(1.12) saturate(1.05);
     }
 }
 </style>
